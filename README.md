@@ -24,8 +24,11 @@
 
 ## 从这里开始
 
+**当前共同精读收敛为五篇：MFTCoder → SFT Data Composition / DMT → AgentTuning → Agent-FLAN → DFT。** [五篇阅读指南](reading/top-5.md)列出匹配度、正式发表、OpenAlex 引用与作者项目 Stars，并从第一篇开始讲解。完整资料池继续作为查阅背景。
+
 | 入口 | 主要内容 |
 | --- | --- |
+| [五篇共同精读](reading/top-5.md) | 当前优先名单、筛选理由、引用核查及第一篇导读 |
 | [调研总图](topics/00-research-map.md) | 大问题、已有成果、分歧、研究空间与建议阅读顺序 |
 | [多任务 SFT 与混合](topics/01-multitask-sft-and-mixtures.md) | DiFT、DMO、CoBa、mSFT、DynamixSFT 等 |
 | [Agent 轨迹与保持](topics/02-agent-trajectories-and-retention.md) | Agent-FLAN、AgentBank、SWE-Gym、SWE-smith 等 |

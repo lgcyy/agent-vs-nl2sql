@@ -1,0 +1,856 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-10-29",
+  "purpose": "从已有51项资料中选出恰好5篇共同精读，主分支维护，不新增实验",
+  "selection_method": "先按SFT阶段与问题匹配筛选，再结合正式发表、可核查引用、作者代码深度和Stars，并控制主题/工程重复；是阅读优先级，不是科学质量的数值排名",
+  "citation_provider": "OpenAlex cited_by_count",
+  "citation_policy": [
+    "记录同一索引、日期、Work ID和版本范围，不称Google Scholar总引用",
+    "正式与预印本分开时，不未经施引文献去重就相加",
+    "缺失值不是0，预印本记录0不是全版本总引用0",
+    "新论文与旧论文的累计引用积累期不同，引用只作辅助"
+  ],
+  "selected": [
+    {
+      "rank": 1,
+      "id": "R01",
+      "key": "MFTCoder",
+      "role": "多任务SFT与可读实现",
+      "match": "直接研究多任务SFT，比较单训、简单混合与显式多任务训练",
+      "venue": "KDD 2024 主会",
+      "venue_url": "https://doi.org/10.1145/3637528.3671609",
+      "note": "papers/r-01-mftcoder.md",
+      "repo": "codefuse-ai/MFTCoder",
+      "citations_display": "23（正式与预印本合并条目）",
+      "citation_work": "W4401863706",
+      "why": "问题匹配、正式发表、已核实引用和核心代码兼具，适合作为第一篇"
+    },
+    {
+      "rank": 2,
+      "id": "A04",
+      "key": "DMT / Data Composition",
+      "role": "混合何时协同、何时冲突",
+      "match": "直接研究SFT数据量、组成和顺序与多能力表现",
+      "venue": "ACL 2024 主会长文",
+      "venue_url": "https://aclanthology.org/2024.acl-long.12/",
+      "note": "papers/a-04-dmt-data-composition.md",
+      "repo": null,
+      "citations_display": "55（正式条目）；另有预印本5，未去重不相加",
+      "citation_work": "W4402667025",
+      "why": "直接问题与已核实引用证据较强；以机制与证据阅读入选，非代码复现对象"
+    },
+    {
+      "rank": 3,
+      "id": "B01",
+      "key": "AgentTuning",
+      "role": "Agent与通用监督混合的基准认识",
+      "match": "Agent轨迹混合通用指令与能力保持",
+      "venue": "Findings of ACL 2024",
+      "venue_url": "https://aclanthology.org/2024.findings-acl.181/",
+      "note": "papers/b-01-agenttuning.md",
+      "repo": "THUDM/AgentTuning",
+      "citations_display": "40（正式与预印本合并条目）",
+      "citation_work": "W4402670718",
+      "why": "已核查候选中兼具较强引用与项目关注度；训练公开范围仍需区分"
+    },
+    {
+      "rank": 4,
+      "id": "B02",
+      "key": "Agent-FLAN",
+      "role": "Agent监督结构与行为副作用",
+      "match": "格式、推理和工具能力组成及不同学习速度",
+      "venue": "Findings of ACL 2024",
+      "venue_url": "https://aclanthology.org/2024.findings-acl.557/",
+      "note": "papers/b-02-agent-flan.md",
+      "repo": "InternLM/Agent-FLAN",
+      "citations_display": "13（正式与预印本合并条目）",
+      "citation_work": "W4402683785",
+      "why": "监督结构视角与SQL直出/长程交互差异高度相关；不把363 stars的数据模型仓库冒充完整实现"
+    },
+    {
+      "rank": 5,
+      "id": "C01",
+      "key": "DFT / Dynamic Fine-Tuning",
+      "role": "近期SFT目标函数改进",
+      "match": "SFT泛化与token概率加权，非直接SQL+Agent混合验证",
+      "venue": "ICLR 2026 主会",
+      "venue_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/2e53c02ea028cbf603f4b6b47fef3d97-Abstract-Conference.html",
+      "note": "papers/c-01-dft.md",
+      "repo": "yongliang-wu/DFT",
+      "citations_display": "跨版本引用未核全；不可将预印本条目的0写成总引用",
+      "citation_work": "W6929518238",
+      "why": "保留一篇近期正式顶会方法，且已有核心trainer/loss；不能声称是高被引论文"
+    }
+  ],
+  "github_snapshots": [
+    {
+      "name": "codefuse-ai/MFTCoder",
+      "url": "https://github.com/codefuse-ai/MFTCoder",
+      "stars": 711,
+      "pushed_at": "2024-12-30T06:01:59Z",
+      "archived": false,
+      "checked_on": "2026-10-29",
+      "source": "https://api.github.com/repos/codefuse-ai/MFTCoder",
+      "error": null
+    },
+    {
+      "name": "THUDM/AgentTuning",
+      "url": "https://github.com/THUDM/AgentTuning",
+      "stars": 1509,
+      "pushed_at": "2023-10-31T15:34:43Z",
+      "archived": false,
+      "checked_on": "2026-10-29",
+      "source": "https://api.github.com/repos/THUDM/AgentTuning",
+      "error": null
+    },
+    {
+      "name": "InternLM/Agent-FLAN",
+      "url": "https://github.com/InternLM/Agent-FLAN",
+      "stars": 363,
+      "pushed_at": "2024-03-22T15:12:14Z",
+      "archived": false,
+      "checked_on": "2026-10-29",
+      "source": "https://api.github.com/repos/InternLM/Agent-FLAN",
+      "error": null
+    },
+    {
+      "name": "WooooDyy/AgentGym",
+      "url": "https://github.com/WooooDyy/AgentGym",
+      "stars": 853,
+      "pushed_at": "2026-05-30T14:12:49Z",
+      "archived": false,
+      "checked_on": "2026-10-29",
+      "source": "https://api.github.com/repos/WooooDyy/AgentGym",
+      "error": null
+    },
+    {
+      "name": "Fu-Dayuan/AgentRefine",
+      "url": "https://github.com/Fu-Dayuan/AgentRefine",
+      "stars": 22,
+      "pushed_at": "2025-11-22T07:34:07Z",
+      "archived": false,
+      "checked_on": "2026-10-29",
+      "source": "https://api.github.com/repos/Fu-Dayuan/AgentRefine",
+      "error": null
+    },
+    {
+      "name": "SWE-Gym/SWE-Gym",
+      "url": "https://github.com/SWE-Gym/SWE-Gym",
+      "stars": 754,
+      "pushed_at": "2025-07-29T17:38:25Z",
+      "archived": false,
+      "checked_on": "2026-10-29",
+      "source": "https://api.github.com/repos/SWE-Gym/SWE-Gym",
+      "error": null
+    },
+    {
+      "name": "SWE-bench/SWE-smith",
+      "url": "https://github.com/SWE-bench/SWE-smith",
+      "stars": 818,
+      "pushed_at": "2026-10-26T20:14:00Z",
+      "archived": false,
+      "checked_on": "2026-10-29",
+      "source": "https://api.github.com/repos/SWE-bench/SWE-smith",
+      "error": null
+    },
+    {
+      "name": "yongliang-wu/DFT",
+      "url": "https://github.com/yongliang-wu/DFT",
+      "stars": 928,
+      "pushed_at": "2026-08-01T04:15:51Z",
+      "archived": false,
+      "checked_on": "2026-10-29",
+      "source": "https://api.github.com/repos/yongliang-wu/DFT",
+      "error": null
+    },
+    {
+      "name": "zwhong714/PSFT",
+      "url": "https://github.com/zwhong714/PSFT",
+      "stars": 40,
+      "pushed_at": "2025-09-09T02:28:14Z",
+      "archived": false,
+      "checked_on": "2026-10-29",
+      "source": "https://api.github.com/repos/zwhong714/PSFT",
+      "error": null
+    },
+    {
+      "name": "realYuanLi/Data-Mixing-Optimization",
+      "url": "https://github.com/realYuanLi/Data-Mixing-Optimization",
+      "stars": 0,
+      "pushed_at": "2025-11-11T03:10:44Z",
+      "archived": false,
+      "checked_on": "2026-10-29",
+      "source": "https://api.github.com/repos/realYuanLi/Data-Mixing-Optimization",
+      "error": null
+    },
+    {
+      "name": "reiss-koh/msft",
+      "url": "https://github.com/reiss-koh/msft",
+      "stars": 14,
+      "pushed_at": "2026-03-24T05:55:48Z",
+      "archived": false,
+      "checked_on": "2026-10-29",
+      "source": "https://api.github.com/repos/reiss-koh/msft",
+      "error": null
+    },
+    {
+      "name": "NVIDIA-NeMo/Nemotron",
+      "url": "https://github.com/NVIDIA-NeMo/Nemotron",
+      "stars": 2236,
+      "pushed_at": "2026-10-28T15:10:49Z",
+      "archived": false,
+      "checked_on": "2026-10-29",
+      "source": "https://api.github.com/repos/NVIDIA-NeMo/Nemotron",
+      "error": null
+    }
+  ],
+  "root_citation_verification": [
+    {
+      "work_id": "W4401863706",
+      "title": "MFTCoder: Boosting Code LLMs with Multitask Fine-Tuning",
+      "cited_by_count": 23,
+      "updated_date": "2026-10-24T09:50:30.924529",
+      "locations": [
+        "https://doi.org/10.1145/3637528.3671609",
+        "http://arxiv.org/abs/2311.02303",
+        "https://doi.org/10.48550/arxiv.2311.02303"
+      ],
+      "source_url": "https://api.openalex.org/works/W4401863706"
+    },
+    {
+      "work_id": "W4402667025",
+      "title": "How Abilities in Large Language Models are Affected by Supervised Fine-tuning Data Composition",
+      "cited_by_count": 55,
+      "updated_date": "2026-10-16T09:59:22.235173",
+      "locations": [
+        "https://doi.org/10.18653/v1/2024.acl-long.12"
+      ],
+      "source_url": "https://api.openalex.org/works/W4402667025"
+    },
+    {
+      "work_id": "W4402670718",
+      "title": "AgentTuning: Enabling Generalized Agent Abilities for LLMs",
+      "cited_by_count": 40,
+      "updated_date": "2026-10-27T15:51:10.671819",
+      "locations": [
+        "https://doi.org/10.18653/v1/2024.findings-acl.181",
+        "http://arxiv.org/abs/2310.12823",
+        "https://doi.org/10.48550/arxiv.2310.12823"
+      ],
+      "source_url": "https://api.openalex.org/works/W4402670718"
+    },
+    {
+      "work_id": "W4402683785",
+      "title": "Agent-FLAN: Designing Data and Methods of Effective Agent Tuning for Large Language Models",
+      "cited_by_count": 13,
+      "updated_date": "2026-10-26T11:51:55.731654",
+      "locations": [
+        "https://doi.org/10.18653/v1/2024.findings-acl.557",
+        "http://arxiv.org/abs/2403.12881",
+        "https://doi.org/10.48550/arxiv.2403.12881"
+      ],
+      "source_url": "https://api.openalex.org/works/W4402683785"
+    },
+    {
+      "work_id": "W6929518238",
+      "title": "On the Generalization of SFT: A Reinforcement Learning Perspective with Reward Rectification",
+      "cited_by_count": 0,
+      "updated_date": "2026-09-25T08:18:29.962427",
+      "locations": [
+        "http://arxiv.org/abs/2508.05629",
+        "https://doi.org/10.48550/arxiv.2508.05629"
+      ],
+      "source_url": "https://api.openalex.org/works/W6929518238"
+    }
+  ],
+  "candidate_citation_evidence": {
+    "sft": {
+      "retrieved_at": "2026-10-29",
+      "provider": "OpenAlex API, cited_by_count",
+      "method": "Direct work/DOI lookups succeeded. No counts inferred from search-result totals.",
+      "limitations": [
+        "OpenAlex search endpoints returned HTTP 429: unauthenticated network IP daily budget exhausted; no API key created or personal data used.",
+        "Semantic Scholar direct paper lookup returned HTTP 429.",
+        "Preprint record count 0 is provider-specific and is not a verified all-version count.",
+        "Publication status verified separately using primary proceedings or clearly attributed author declarations."
+      ],
+      "papers": [
+        {
+          "key": "MFTCoder",
+          "formal_venue": "KDD 2024",
+          "formal_status": "confirmed_proceedings",
+          "formal_url": "https://doi.org/10.1145/3637528.3671609",
+          "citation_records": [
+            {
+              "id": "https://openalex.org/W4401863706",
+              "doi": "https://doi.org/10.1145/3637528.3671609",
+              "title": "MFTCoder: Boosting Code LLMs with Multitask Fine-Tuning",
+              "publication_year": 2024,
+              "publication_date": "2024-08-24",
+              "type": "conference-paper",
+              "cited_by_count": 23,
+              "updated_date": "2026-10-24T09:50:30.924529",
+              "counts_by_year": [
+                {
+                  "year": 2026,
+                  "cited_by_count": 11
+                },
+                {
+                  "year": 2025,
+                  "cited_by_count": 9
+                },
+                {
+                  "year": 2024,
+                  "cited_by_count": 3
+                }
+              ],
+              "locations": [
+                {
+                  "id": "doi:10.1145/3637528.3671609",
+                  "doi": "https://doi.org/10.1145/3637528.3671609",
+                  "landing_page_url": "https://doi.org/10.1145/3637528.3671609",
+                  "version": "publishedVersion",
+                  "raw_source_name": "Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+                  "is_published": true,
+                  "is_accepted": true
+                },
+                {
+                  "id": "pmh:oai:arXiv.org:2311.02303",
+                  "doi": null,
+                  "landing_page_url": "http://arxiv.org/abs/2311.02303",
+                  "version": "submittedVersion",
+                  "raw_source_name": null,
+                  "is_published": false,
+                  "is_accepted": false
+                },
+                {
+                  "id": "doi:10.48550/arxiv.2311.02303",
+                  "doi": "https://doi.org/10.48550/arxiv.2311.02303",
+                  "landing_page_url": "https://doi.org/10.48550/arxiv.2311.02303",
+                  "version": null,
+                  "raw_source_name": null,
+                  "is_published": false,
+                  "is_accepted": false
+                }
+              ],
+              "source_url": "https://api.openalex.org/works/W4401863706",
+              "retrieved_at": "2026-10-29"
+            }
+          ],
+          "version_note": "One OpenAlex work contains both KDD DOI 10.1145/3637528.3671609 and arXiv 2311.02303. Count is the work-level cited_by_count, not a sum.",
+          "count_interpretation": "23 on merged record"
+        },
+        {
+          "key": "CoBa",
+          "formal_venue": "EMNLP 2024 main conference",
+          "formal_status": "confirmed_proceedings",
+          "formal_url": "https://aclanthology.org/2024.emnlp-main.459/",
+          "citation_records": [
+            {
+              "id": "https://openalex.org/W4404783008",
+              "doi": "https://doi.org/10.18653/v1/2024.emnlp-main.459",
+              "title": "CoBa: Convergence Balancer for Multitask Finetuning of Large Language Models",
+              "publication_year": 2024,
+              "publication_date": "2024-01-01",
+              "type": "conference-paper",
+              "cited_by_count": 6,
+              "updated_date": "2026-10-24T09:50:30.924529",
+              "counts_by_year": [
+                {
+                  "year": 2026,
+                  "cited_by_count": 3
+                },
+                {
+                  "year": 2025,
+                  "cited_by_count": 3
+                }
+              ],
+              "locations": [
+                {
+                  "id": "doi:10.18653/v1/2024.emnlp-main.459",
+                  "doi": "https://doi.org/10.18653/v1/2024.emnlp-main.459",
+                  "landing_page_url": "https://doi.org/10.18653/v1/2024.emnlp-main.459",
+                  "version": "publishedVersion",
+                  "raw_source_name": "Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing",
+                  "is_published": true,
+                  "is_accepted": true
+                },
+                {
+                  "id": "pmh:oai:arXiv.org:2410.06741",
+                  "doi": null,
+                  "landing_page_url": "http://arxiv.org/abs/2410.06741",
+                  "version": "submittedVersion",
+                  "raw_source_name": null,
+                  "is_published": false,
+                  "is_accepted": false
+                },
+                {
+                  "id": "doi:10.48550/arxiv.2410.06741",
+                  "doi": "https://doi.org/10.48550/arxiv.2410.06741",
+                  "landing_page_url": "https://doi.org/10.48550/arxiv.2410.06741",
+                  "version": null,
+                  "raw_source_name": null,
+                  "is_published": false,
+                  "is_accepted": false
+                }
+              ],
+              "source_url": "https://api.openalex.org/works/W4404783008",
+              "retrieved_at": "2026-10-29"
+            }
+          ],
+          "version_note": "One OpenAlex work contains both EMNLP DOI 10.18653/v1/2024.emnlp-main.459 and arXiv 2410.06741.",
+          "count_interpretation": "6 on merged record"
+        },
+        {
+          "key": "DiFT",
+          "formal_venue": "ICLR 2026",
+          "formal_status": "confirmed_proceedings",
+          "formal_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/b304a04c6a4ac168aa692923814ace17-Abstract-Conference.html",
+          "openreview_id": "aIhn4GhTBW",
+          "citation_records": [],
+          "version_note": "No OpenAlex work ID resolved. Search requests failed because the shared unauthenticated API budget is exhausted.",
+          "count_interpretation": "unverified; do not report 0"
+        },
+        {
+          "key": "DMO",
+          "formal_venue": "ICML 2025, PMLR 267:35419–35437",
+          "formal_status": "confirmed_proceedings",
+          "formal_url": "https://proceedings.mlr.press/v267/li25bh.html",
+          "citation_records": [
+            {
+              "id": "https://openalex.org/W4414459914",
+              "doi": "https://doi.org/10.48550/arxiv.2508.11953",
+              "title": "Data Mixing Optimization for Supervised Fine-Tuning of Large Language Models",
+              "cited_by_count": 0,
+              "publication_year": 2025,
+              "updated_date": "2026-09-24T07:57:37.273135",
+              "counts_by_year": [],
+              "locations": [
+                {
+                  "id": "pmh:oai:arXiv.org:2508.11953",
+                  "landing_page_url": "http://arxiv.org/abs/2508.11953",
+                  "version": "submittedVersion",
+                  "raw_source_name": null
+                },
+                {
+                  "id": "doi:10.48550/arxiv.2508.11953",
+                  "landing_page_url": "https://doi.org/10.48550/arxiv.2508.11953",
+                  "version": null,
+                  "raw_source_name": null
+                }
+              ],
+              "source_url": "https://api.openalex.org/works/W4414459914",
+              "retrieved_at": "2026-10-29"
+            }
+          ],
+          "version_note": "Only the arXiv record 2508.11953 resolved. Its locations contain no ICML proceedings entry. Search for other work records failed on exhausted budget.",
+          "count_interpretation": "0 on resolved preprint record; full-paper/all-version count unverified"
+        },
+        {
+          "key": "DFT",
+          "formal_venue": "ICLR 2026",
+          "formal_status": "confirmed_proceedings",
+          "formal_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/2e53c02ea028cbf603f4b6b47fef3d97-Abstract-Conference.html",
+          "citation_records": [
+            {
+              "id": "https://openalex.org/W6929518238",
+              "doi": "https://doi.org/10.48550/arxiv.2508.05629",
+              "title": "On the Generalization of SFT: A Reinforcement Learning Perspective with Reward Rectification",
+              "publication_year": 2025,
+              "publication_date": "2025-08-07",
+              "type": "preprint",
+              "cited_by_count": 0,
+              "updated_date": "2026-09-25T08:18:29.962427",
+              "counts_by_year": [],
+              "locations": [
+                {
+                  "id": "pmh:oai:arXiv.org:2508.05629",
+                  "doi": null,
+                  "landing_page_url": "http://arxiv.org/abs/2508.05629",
+                  "version": "submittedVersion",
+                  "raw_source_name": null,
+                  "is_published": false,
+                  "is_accepted": false
+                },
+                {
+                  "id": "doi:10.48550/arxiv.2508.05629",
+                  "doi": "https://doi.org/10.48550/arxiv.2508.05629",
+                  "landing_page_url": "https://doi.org/10.48550/arxiv.2508.05629",
+                  "version": null,
+                  "raw_source_name": null,
+                  "is_published": false,
+                  "is_accepted": false
+                }
+              ],
+              "source_url": "https://api.openalex.org/works/W6929518238",
+              "retrieved_at": "2026-10-29"
+            }
+          ],
+          "version_note": "Only arXiv 2508.05629 record resolved. OpenAlex locations contain no ICLR record. No all-version claim.",
+          "count_interpretation": "0 on resolved preprint record; full-paper/all-version count unverified"
+        },
+        {
+          "key": "PSFT",
+          "formal_venue": "ICLR 2026",
+          "formal_status": "confirmed_proceedings",
+          "formal_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/da75d2bbf862b86f10241d0887613b41-Abstract-Conference.html",
+          "citation_records": [
+            {
+              "id": "https://openalex.org/W7077889506",
+              "doi": "https://doi.org/10.48550/arxiv.2508.17784",
+              "title": "Proximal Supervised Fine-Tuning",
+              "publication_year": 2025,
+              "publication_date": "2025-08-25",
+              "type": "preprint",
+              "cited_by_count": 0,
+              "updated_date": "2026-10-15T10:00:46.086208",
+              "counts_by_year": [],
+              "locations": [
+                {
+                  "id": "pmh:oai:arXiv.org:2508.17784",
+                  "doi": null,
+                  "landing_page_url": "https://arxiv.org/abs/2508.17784",
+                  "version": "submittedVersion",
+                  "raw_source_name": null,
+                  "is_published": false,
+                  "is_accepted": false
+                },
+                {
+                  "id": "doi:10.48550/arxiv.2508.17784",
+                  "doi": "https://doi.org/10.48550/arxiv.2508.17784",
+                  "landing_page_url": "https://doi.org/10.48550/arxiv.2508.17784",
+                  "version": null,
+                  "raw_source_name": null,
+                  "is_published": false,
+                  "is_accepted": false
+                }
+              ],
+              "source_url": "https://api.openalex.org/works/W7077889506",
+              "retrieved_at": "2026-10-29"
+            }
+          ],
+          "version_note": "Only arXiv 2508.17784 record resolved. OpenAlex locations contain no ICLR record. No all-version claim.",
+          "count_interpretation": "0 on resolved preprint record; full-paper/all-version count unverified"
+        },
+        {
+          "key": "mSFT",
+          "formal_venue": "AACL 2026 Main Oral (author claim)",
+          "formal_status": "author_confirmed_not_independently_confirmed_in_proceedings",
+          "formal_url": "https://arxiv.org/abs/2603.21606",
+          "author_homepage": "https://reiss-koh.github.io/",
+          "arxiv_version": "v7, 2026-10-26",
+          "citation_records": [
+            {
+              "id": "https://openalex.org/W7140223649",
+              "doi": "https://doi.org/10.48550/arxiv.2603.21606",
+              "title": "mSFT: Addressing Dataset Mixtures Overfitting Heterogeneously in Multi-task SFT",
+              "publication_year": 2026,
+              "publication_date": "2026-03-23",
+              "type": "preprint",
+              "cited_by_count": 0,
+              "updated_date": "2026-10-28T10:33:24.094632",
+              "counts_by_year": [],
+              "locations": [
+                {
+                  "id": "pmh:oai:arXiv.org:2603.21606",
+                  "doi": null,
+                  "landing_page_url": "https://arxiv.org/abs/2603.21606",
+                  "version": "submittedVersion",
+                  "raw_source_name": null,
+                  "is_published": false,
+                  "is_accepted": false
+                },
+                {
+                  "id": "doi:10.48550/arxiv.2603.21606",
+                  "doi": "https://doi.org/10.48550/arxiv.2603.21606",
+                  "landing_page_url": "https://doi.org/10.48550/arxiv.2603.21606",
+                  "version": null,
+                  "raw_source_name": null,
+                  "is_published": false,
+                  "is_accepted": false
+                }
+              ],
+              "source_url": "https://api.openalex.org/works/W7140223649",
+              "retrieved_at": "2026-10-29"
+            }
+          ],
+          "version_note": "arXiv v7 comments and first author homepage both state AACL 2026 Oral. Conference proceedings not independently confirmed within scope. OpenAlex only has preprint locations.",
+          "count_interpretation": "0 on resolved preprint record; not evidence of zero worldwide citations"
+        },
+        {
+          "key": "DMT / How Abilities in Large Language Models are Affected by Supervised Fine-tuning Data Composition",
+          "formal_venue": "ACL 2024 Volume 1: Long Papers, pp.177–198",
+          "formal_status": "confirmed_proceedings",
+          "formal_url": "https://aclanthology.org/2024.acl-long.12/",
+          "citation_records": [
+            {
+              "id": "https://openalex.org/W4402667025",
+              "doi": "https://doi.org/10.18653/v1/2024.acl-long.12",
+              "title": "How Abilities in Large Language Models are Affected by Supervised Fine-tuning Data Composition",
+              "publication_year": 2024,
+              "publication_date": "2024-01-01",
+              "type": "conference-paper",
+              "cited_by_count": 55,
+              "updated_date": "2026-10-16T09:59:22.235173",
+              "counts_by_year": [
+                {
+                  "year": 2026,
+                  "cited_by_count": 20
+                },
+                {
+                  "year": 2025,
+                  "cited_by_count": 26
+                },
+                {
+                  "year": 2024,
+                  "cited_by_count": 9
+                }
+              ],
+              "locations": [
+                {
+                  "id": "doi:10.18653/v1/2024.acl-long.12",
+                  "doi": "https://doi.org/10.18653/v1/2024.acl-long.12",
+                  "landing_page_url": "https://doi.org/10.18653/v1/2024.acl-long.12",
+                  "version": "publishedVersion",
+                  "raw_source_name": "Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+                  "is_published": true,
+                  "is_accepted": true
+                }
+              ],
+              "source_url": "https://api.openalex.org/works/W4402667025",
+              "retrieved_at": "2026-10-29"
+            },
+            {
+              "id": "https://openalex.org/W4387560076",
+              "doi": "https://doi.org/10.48550/arxiv.2310.05492",
+              "title": "How Abilities in Large Language Models are Affected by Supervised Fine-tuning Data Composition",
+              "cited_by_count": 5,
+              "publication_year": 2023,
+              "updated_date": "2026-10-14T16:39:01.820549",
+              "counts_by_year": [
+                {
+                  "year": 2026,
+                  "cited_by_count": 1
+                },
+                {
+                  "year": 2025,
+                  "cited_by_count": 3
+                },
+                {
+                  "year": 2024,
+                  "cited_by_count": 1
+                }
+              ],
+              "locations": [
+                {
+                  "id": "pmh:oai:arXiv.org:2310.05492",
+                  "landing_page_url": "http://arxiv.org/abs/2310.05492",
+                  "version": "submittedVersion",
+                  "raw_source_name": null
+                },
+                {
+                  "id": "doi:10.48550/arxiv.2310.05492",
+                  "landing_page_url": "https://doi.org/10.48550/arxiv.2310.05492",
+                  "version": null,
+                  "raw_source_name": null
+                }
+              ],
+              "source_url": "https://api.openalex.org/works/W4387560076",
+              "retrieved_at": "2026-10-29"
+            }
+          ],
+          "version_note": "Two separate OpenAlex work records: formal ACL record has 55, arXiv 2310.05492 record has 5. Citation overlap not checked, so never sum to 60.",
+          "count_interpretation": "55 formal / 5 preprint, separate; deduplicated total unverified"
+        }
+      ]
+    },
+    "agent": {
+      "checked_at_utc": "2026-10-29T13:00:23.507201+00:00",
+      "citation_index": "OpenAlex",
+      "count_field": "cited_by_count",
+      "notes": [
+        "Counts are API-observed indexed counts, not Google Scholar counts or universal totals.",
+        "Findings entries must not be labeled ACL/EMNLP main-track papers.",
+        "No count from third-party mirrors is adopted.",
+        "Search endpoints returned HTTP 429, restricting duplicate-record verification for AgentRefine and SWE-Gym."
+      ],
+      "papers": [
+        {
+          "name": "AgentTuning",
+          "title": "AgentTuning: Enabling Generalized Agent Abilities for LLMs",
+          "verified_venue": "Findings of ACL 2024",
+          "publication_category": "findings",
+          "venue_source_url": "https://aclanthology.org/2024.findings-acl.181/",
+          "citation_count": 40,
+          "openalex_work_id": "W4402670718",
+          "openalex_url": "https://openalex.org/W4402670718",
+          "citation_api_url": "https://api.openalex.org/works/https://doi.org/10.18653/v1/2024.findings-acl.181",
+          "canonical_doi": "https://doi.org/10.18653/v1/2024.findings-acl.181",
+          "openalex_updated_date": "2026-10-27T15:51:10.671819",
+          "version_note": "Conference DOI and arXiv resolve to the same OpenAlex work.",
+          "additional_records": [
+            {
+              "query_url": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2310.12823",
+              "openalex_work_id": "W4402670718",
+              "citation_count": 40,
+              "title": "AgentTuning: Enabling Generalized Agent Abilities for LLMs",
+              "same_work": true
+            }
+          ]
+        },
+        {
+          "name": "Agent-FLAN",
+          "title": "Agent-FLAN: Designing Data and Methods of Effective Agent Tuning for Large Language Models",
+          "verified_venue": "Findings of ACL 2024",
+          "publication_category": "findings",
+          "venue_source_url": "https://aclanthology.org/2024.findings-acl.557/",
+          "citation_count": 13,
+          "openalex_work_id": "W4402683785",
+          "openalex_url": "https://openalex.org/W4402683785",
+          "citation_api_url": "https://api.openalex.org/works/https://doi.org/10.18653/v1/2024.findings-acl.557",
+          "canonical_doi": "https://doi.org/10.18653/v1/2024.findings-acl.557",
+          "openalex_updated_date": "2026-10-26T11:51:55.731654",
+          "version_note": "Conference DOI and arXiv resolve to the same OpenAlex work.",
+          "additional_records": [
+            {
+              "query_url": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2403.12881",
+              "openalex_work_id": "W4402683785",
+              "citation_count": 13,
+              "title": "Agent-FLAN: Designing Data and Methods of Effective Agent Tuning for Large Language Models",
+              "same_work": true
+            }
+          ]
+        },
+        {
+          "name": "AgentBank",
+          "title": "AgentBank: Towards Generalized LLM Agents via Fine-Tuning on 50000+ Interaction Trajectories",
+          "verified_venue": "Findings of EMNLP 2024",
+          "publication_category": "findings",
+          "venue_source_url": "https://aclanthology.org/2024.findings-emnlp.116/",
+          "citation_count": 5,
+          "openalex_work_id": "W4404783870",
+          "openalex_url": "https://openalex.org/W4404783870",
+          "citation_api_url": "https://api.openalex.org/works/https://doi.org/10.18653/v1/2024.findings-emnlp.116",
+          "canonical_doi": "https://doi.org/10.18653/v1/2024.findings-emnlp.116",
+          "openalex_updated_date": "2026-10-26T11:51:55.731654",
+          "version_note": "Conference DOI and arXiv resolve to the same OpenAlex work.",
+          "additional_records": [
+            {
+              "query_url": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2410.07706",
+              "openalex_work_id": "W4404783870",
+              "citation_count": 5,
+              "title": "AgentBank: Towards Generalized LLM Agents via Fine-Tuning on 50000+ Interaction Trajectories",
+              "same_work": true
+            }
+          ]
+        },
+        {
+          "name": "AgentRefine",
+          "title": "AgentRefine: Enhancing Agent Generalization through Refinement Tuning",
+          "verified_venue": "ICLR 2025 Conference",
+          "publication_category": "main_conference",
+          "venue_source_url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/a3cc50126338b175e56bb3cad134db0b-Abstract-Conference.html",
+          "citation_count": 0,
+          "openalex_work_id": "W4406093020",
+          "openalex_url": "https://openalex.org/W4406093020",
+          "citation_api_url": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2501.01702",
+          "canonical_doi": "https://doi.org/10.48550/arxiv.2501.01702",
+          "openalex_updated_date": "2026-09-30T09:27:27.532063",
+          "version_note": "Count is for arXiv OpenAlex record only. Title searches were rate limited HTTP 429; additional conference record not ruled out. Do not interpret as total citations.",
+          "additional_records": []
+        },
+        {
+          "name": "AgentGym",
+          "title": "AgentGym: Evaluating and Training Large Language Model-based Agents across Diverse Environments",
+          "verified_venue": "ACL 2025, Volume 1: Long Papers",
+          "publication_category": "main_conference",
+          "venue_source_url": "https://aclanthology.org/2025.acl-long.1355/",
+          "citation_count": 5,
+          "openalex_work_id": "W4412889815",
+          "openalex_url": "https://openalex.org/W4412889815",
+          "citation_api_url": "https://api.openalex.org/works/https://doi.org/10.18653/v1/2025.acl-long.1355",
+          "canonical_doi": "https://doi.org/10.18653/v1/2025.acl-long.1355",
+          "openalex_updated_date": "2026-10-21T09:56:26.102985",
+          "version_note": "Conference record and earlier arXiv record are separate (title changed). Counts are reported separately, not summed, because citation overlap is not deduplicated.",
+          "additional_records": [
+            {
+              "query_url": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2406.04151",
+              "openalex_work_id": "W4399455192",
+              "citation_count": 3,
+              "title": "AgentGym: Evolving Large Language Model-based Agents across Diverse Environments",
+              "same_work": false
+            }
+          ]
+        },
+        {
+          "name": "SWE-Gym",
+          "title": "Training Software Engineering Agents and Verifiers with SWE-Gym",
+          "verified_venue": "ICML 2025; PMLR 267:47717-47737",
+          "publication_category": "main_conference",
+          "venue_source_url": "https://proceedings.mlr.press/v267/pan25g.html",
+          "citation_count": 2,
+          "openalex_work_id": "W4405957747",
+          "openalex_url": "https://openalex.org/W4405957747",
+          "citation_api_url": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2412.21139",
+          "canonical_doi": "https://doi.org/10.48550/arxiv.2412.21139",
+          "openalex_updated_date": "2026-10-02T10:15:12.560889",
+          "version_note": "Count is for arXiv OpenAlex record only. Title searches were rate limited HTTP 429; additional ICML record not ruled out. Do not interpret as total citations.",
+          "additional_records": []
+        },
+        {
+          "name": "Nemotron 3 Super",
+          "title": "Nemotron 3 Super: Open, Efficient Mixture-of-Experts Hybrid Mamba-Transformer Model for Agentic Reasoning",
+          "verified_venue": "arXiv technical report, submitted 2026-04-14",
+          "publication_category": "technical_report",
+          "venue_source_url": "https://arxiv.org/abs/2604.12374",
+          "citation_count": 0,
+          "openalex_work_id": "W7154499146",
+          "openalex_url": "https://openalex.org/W7154499146",
+          "citation_api_url": "https://api.openalex.org/works/https://doi.org/10.48550/arXiv.2604.12374",
+          "canonical_doi": "https://doi.org/10.48550/arxiv.2604.12374",
+          "openalex_updated_date": "2026-10-28T10:33:24.094632",
+          "version_note": "Technical report; no top-conference publication claimed. Zero means zero in this OpenAlex work, not zero in all indexes.",
+          "additional_records": []
+        }
+      ]
+    }
+  },
+  "selection_tradeoffs": [
+    {
+      "id": "A05",
+      "name": "CoBa",
+      "decision": "暂不占前五独立名额",
+      "reason": "直接相关且有实现，但与MFTCoder共享工程；本轮优先用MFTCoder建立多任务训练基础，其OpenAlex合并条目23，CoBa为6。这是阅读名额取舍，不是称两篇方法等同"
+    },
+    {
+      "id": "A01",
+      "name": "DiFT",
+      "decision": "延伸阅读",
+      "reason": "问题匹配强、ICLR2026正式发表；作者实现和统一引用计数尚未核实。在本次加强影响力与实现可核查性的筛选中，由DMT承担直接问题证据席位，不据此判定DiFT质量低"
+    },
+    {
+      "id": "A02",
+      "name": "DMO",
+      "decision": "延伸阅读",
+      "reason": "ICML2025且有核心实现，但作者项目0 stars，统一引用仅解析到预印本条目，未作为成熟影响力优先对象"
+    },
+    {
+      "id": "C02",
+      "name": "PSFT",
+      "decision": "延伸阅读",
+      "reason": "ICLR2026且有核心实现，但作者项目40 stars、引用版本未核全；前五已有DFT提供近期目标函数视角"
+    },
+    {
+      "id": "C06",
+      "name": "Nemotron 3 Super",
+      "decision": "保留工程参考",
+      "reason": "工业证据与监督长度有关，但为技术报告，仓库Stars覆盖整个项目；本轮五篇均选正式同行评审发表"
+    },
+    {
+      "id": "B07",
+      "name": "SWE-Gym",
+      "decision": "保留轨迹工程参考",
+      "reason": "ICML2025且有实现；问题重点是SWE轨迹和验证器，与混合SFT双降的直接距离较大"
+    }
+  ]
+}

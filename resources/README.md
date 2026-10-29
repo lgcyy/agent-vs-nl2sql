@@ -4,6 +4,7 @@
 
 | 文件 | 用途 |
 | --- | --- |
+| [前五筛选证据 JSON](top5-selection-evidence.json) | 15 篇候选的 OpenAlex 引用与版本范围、项目 Stars、最终取舍 |
 | [代码与资源地图](repository-catalog.md) | 37 个主要项目的资产范围、作者归属、Stars 与维护快照 |
 | [训练实现与多任务参考库](training-infrastructure.md) | LlamaFactory、TRL、ms-swift、Axolotl、Open Instruct 等关键源码 |
 | [检索与核查说明](search-and-verification.md) | 纳入范围、阅读深度、发表状态、版本与统计口径 |

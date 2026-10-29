@@ -2,7 +2,7 @@
 
 首轮核查日期：**2026-10-29**。共 **51 项资料**，其中 **34 篇形成阅读笔记**，另 **17 项保留初筛记录**。资料包含会议论文、预印本、技术报告及 1 项模型发布说明；不把全部条目统称为已精读论文。
 
-[先读调研总图](../topics/00-research-map.md) · [问题定义](../problem.md) · [机器可读总目录](../resources/paper-catalog.json) · [代码地图](../resources/repository-catalog.md)
+[当前只读五篇](../reading/top-5.md) · [调研总图](../topics/00-research-map.md) · [问题定义](../problem.md) · [机器可读总目录](../resources/paper-catalog.json) · [代码地图](../resources/repository-catalog.md)
 
 ## 阅读方式
 
