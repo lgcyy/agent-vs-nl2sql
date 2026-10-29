@@ -1,0 +1,494 @@
+[
+  {
+    "id": "c01-dft",
+    "title": "On the Generalization of SFT: A Reinforcement Learning Perspective with Reward Rectification",
+    "year": 2026,
+    "status": "已核实正式发表",
+    "venue": "ICLR 2026 Conference",
+    "paper_url": "https://arxiv.org/abs/2508.05629",
+    "repo_url": "https://github.com/yongliang-wu/DFT",
+    "repo_owner_verified": true,
+    "evidence_urls": [
+      "https://proceedings.iclr.cc/paper_files/paper/2026/hash/2e53c02ea028cbf603f4b6b47fef3d97-Abstract-Conference.html",
+      "https://arxiv.org/pdf/2508.05629v3",
+      "https://github.com/yongliang-wu/DFT/blob/master/README.md",
+      "https://github.com/yongliang-wu/DFT/blob/master/verl/verl/trainer/fsdp_dft_trainer.py"
+    ],
+    "reading_depth": "全文重点章节、Tables 1/3/4/5、§4.5 反例；README 与核心 trainer 静态核查；未运行",
+    "priority": "P1",
+    "local_note": "papers/c-01-dft.md",
+    "scope_match": "当前概率的 token 加权；与异构混训间接相关，非 SQL+Agent 受控验证",
+    "repo_notes": "论文首页直接链接作者仓库。真实 trainer 实现含目标 token 概率 detach 与 loss mask。DFT=Dynamic Fine-Tuning，不同于 Differential Fine-Tuning (DiFT)。",
+    "first_publication_date": "2025-08-07",
+    "read_version": "arXiv v3, 2026-02-27",
+    "evidence_locators": [
+      "§3.3；§4.5，PDF p9：NQ base 31.24%、SFT 36.62%、DFT 30.14%；Table 5 不是 NQ 表"
+    ],
+    "repo_checked_files": [
+      "README.md",
+      "verl/verl/trainer/fsdp_dft_trainer.py"
+    ],
+    "repo_checked_blob": "c6961181b5d02ed44fc071547b8be60942eb91f0",
+    "last_checked": "2026-10-29",
+    "repo_stars": 928,
+    "repo_stars_as_of": "2026-10-29",
+    "repo_last_push": "2026-08-01T04:15:51Z",
+    "repo_metadata_method": "GitHub connector fetch: repository REST metadata"
+  },
+  {
+    "id": "c02-psft",
+    "title": "Proximal Supervised Fine-Tuning",
+    "year": 2026,
+    "status": "已核实正式发表",
+    "venue": "ICLR 2026 Conference",
+    "paper_url": "https://arxiv.org/abs/2508.17784",
+    "repo_url": "https://github.com/zwhong714/PSFT",
+    "repo_owner_verified": true,
+    "evidence_urls": [
+      "https://proceedings.iclr.cc/paper_files/paper/2026/hash/da75d2bbf862b86f10241d0887613b41-Abstract-Conference.html",
+      "https://proceedings.iclr.cc/paper_files/paper/2026/file/da75d2bbf862b86f10241d0887613b41-Paper-Conference.pdf",
+      "https://github.com/zwhong714",
+      "https://github.com/zwhong714/PSFT/blob/main/README.md",
+      "https://github.com/zwhong714/PSFT/blob/main/verl/recipe/psft/psft_ray_trainer.py",
+      "https://github.com/zwhong714/PSFT/blob/main/verl/verl/trainer/ppo/core_algos.py"
+    ],
+    "reading_depth": "正文方法/实验与正式 PDF Appendices A/C.3/C.4/C.7；作者身份链、README、trainer 与 clipping 代码静态核查；未运行",
+    "priority": "P1",
+    "local_note": "papers/c-02-psft.md",
+    "scope_match": "离线 SFT 局部更新约束与域外保持；作者明确 mixed data 待评估",
+    "repo_notes": "身份链：会议论文作者邮箱前缀 zwhong714 → 同名 GitHub 作者姓名/机构及置顶 PSFT。已见示范数据、old log-prob 与 actor update，以及 ratio clipping；未复现。",
+    "first_publication_date": "2025-08-25",
+    "read_version": "arXiv v2, 2026-04-12；ICLR 2026 正式 PDF",
+    "evidence_locators": [
+      "§3 Eq. 6；Table 1；Appendix A PDF p15 把 mixed data 留作未来工作",
+      "同一终稿 A 称 MoE 未测，但 C.3/Table 8 p16–17 已新增 Qwen3-30B-A3B-2507-Instruct MoE，需保留版本不一致",
+      "Appendix C.7：full fine-tuning 与 token-mean"
+    ],
+    "repo_checked_files": [
+      "README.md",
+      "verl/recipe/psft/psft_ray_trainer.py",
+      "verl/verl/trainer/ppo/core_algos.py"
+    ],
+    "repo_checked_blob": "bcd00dcff2f5e33845baf72bace72b1854e0405f",
+    "last_checked": "2026-10-29",
+    "repo_stars": 40,
+    "repo_stars_as_of": "2026-10-29",
+    "repo_last_push": "2025-09-09T02:28:14Z",
+    "repo_metadata_method": "GitHub connector fetch: repository REST metadata"
+  },
+  {
+    "id": "c03-iw-sft",
+    "title": "Supervised Fine Tuning on Curated Data is Reinforcement Learning (and can be improved)",
+    "year": 2025,
+    "status": "arXiv 预印本；未核实正式录用",
+    "venue": null,
+    "paper_url": "https://arxiv.org/abs/2507.12856",
+    "repo_url": "https://github.com/emmyqin/iw_sft",
+    "repo_owner_verified": true,
+    "evidence_urls": [
+      "https://arxiv.org/html/2507.12856v2",
+      "https://github.com/emmyqin/iw_sft/blob/main/README.md",
+      "https://github.com/emmyqin/iw_sft/blob/main/bounding_trainers.py",
+      "https://github.com/emmyqin/iw_sft_control"
+    ],
+    "reading_depth": "正文 §3/§4、Appendices A/H、Table 1；README 与 IwSFTLoss 静态核查；未运行",
+    "priority": "P1",
+    "local_note": "papers/c-03-iw-sft.md",
+    "scope_match": "精选示范数据与参考分布的 importance weighting；尚无当前异构混训直接证据",
+    "repo_notes": "论文 Appendix H 分别链接 LLM 与 control 仓库。所列为 LLM 仓库；真实 bounding_trainers.py 含参考 log-prob、停止梯度权重与聚合选项。",
+    "first_publication_date": "2025-07-17",
+    "read_version": "arXiv v2, 2025-09-06",
+    "evidence_locators": [
+      "§3.2–3.3、Appendix A：理论假设与目标联系；Table 1 部分对照来自既有 s1 结果；Appendix H 官方代码"
+    ],
+    "repo_checked_files": [
+      "README.md",
+      "bounding_trainers.py"
+    ],
+    "repo_checked_blob": "814cb538e882b19bdab5845b8d95a18a12ad4cbc",
+    "last_checked": "2026-10-29",
+    "repo_stars": 28,
+    "repo_stars_as_of": "2026-10-29",
+    "repo_last_push": "2025-07-18T08:18:55Z",
+    "repo_metadata_method": "GitHub connector fetch: repository REST metadata"
+  },
+  {
+    "id": "c04-qwen3",
+    "title": "Qwen3 Technical Report",
+    "year": 2025,
+    "status": "官方技术报告／arXiv；不按同行评审论文标注",
+    "venue": null,
+    "paper_url": "https://arxiv.org/abs/2505.09388",
+    "repo_url": "https://github.com/QwenLM/Qwen3",
+    "repo_owner_verified": true,
+    "evidence_urls": [
+      "https://arxiv.org/html/2505.09388v1",
+      "https://github.com/QwenLM/Qwen3/blob/main/README.md",
+      "https://github.com/QwenLM/Qwen3/blob/main/docs/source/training/llama_factory.md"
+    ],
+    "reading_depth": "重点精读 §4 尤其 §4.3 与 Table 22；README、目录与训练说明静态核查",
+    "priority": "P1",
+    "local_note": "papers/c-04-qwen3-thinking-fusion.md",
+    "scope_match": "thinking/non-thinking 模式融合；多阶段含 RL，不能当作纯 SFT 无损混合证据",
+    "repo_notes": "报告链接官方仓库。模型、推理与框架说明不等于原始四阶段训练数据/配方公开；所读 LLaMA-Factory 文档仍待更新 Qwen3、示例为 Qwen2.5。",
+    "first_publication_date": "2025-05-14",
+    "read_version": "arXiv v1, 2025-05-14",
+    "evidence_locators": [
+      "§4.3 模式标记与空 think 区域；§4.7/Table 22 Qwen3-32B AIME24 83.8→81.9→81.4、LiveCodeBench v5 68.4→67.2→65.7"
+    ],
+    "repo_checked_files": [
+      "README.md",
+      "docs/source/training/llama_factory.md"
+    ],
+    "repo_checked_blob": "1eda7a106209d1fdcfb17d4d4bb1577730fc48bd",
+    "last_checked": "2026-10-29",
+    "repo_stars": 27694,
+    "repo_stars_as_of": "2026-10-29",
+    "repo_last_push": "2026-01-09T03:05:47Z",
+    "repo_metadata_method": "GitHub connector fetch: repository REST metadata"
+  },
+  {
+    "id": "c05-ls-mixture",
+    "title": "Long-Short Chain-of-Thought Mixture Supervised Fine-Tuning Eliciting Efficient Reasoning in Large Language Models",
+    "year": 2025,
+    "status": "arXiv 预印本；可见投稿记录但未核实正式录用",
+    "venue": null,
+    "paper_url": "https://arxiv.org/abs/2505.03469",
+    "repo_url": "https://github.com/ZGCA-AI4Edu/LS-Mixture",
+    "repo_owner_verified": true,
+    "evidence_urls": [
+      "https://arxiv.org/html/2505.03469v1",
+      "https://zgca-ai4edu.github.io/LS-Mixture/",
+      "https://github.com/ZGCA-AI4Edu/LS-Mixture/blob/main/README.md",
+      "https://github.com/ZGCA-AI4Edu/LS-Mixture/blob/main/package.json"
+    ],
+    "reading_depth": "正文 §2–4、Tables 2/3/4；README、根目录和 package.json 核查",
+    "priority": "P2",
+    "local_note": "papers/c-05-ls-mixture.md",
+    "scope_match": "同题长短 CoT 的表达混合；短 CoT 不等于 noCoT，非 SQL+Agent 异构混训",
+    "repo_notes": "论文 Code 链接实际指向 Vue/Vite 项目网站。已确认方法展示，未见训练实现；不可标作完整训练代码开源。",
+    "first_publication_date": "2025-05-06",
+    "read_version": "arXiv v1, 2025-05-06",
+    "evidence_locators": [
+      "§2 改写与风格提示；§4.2/Table 3 长/短/混合；§4.3/Table 4 推理提示"
+    ],
+    "repo_checked_files": [
+      "README.md",
+      "package.json",
+      "root directory"
+    ],
+    "repo_checked_blob": "eb7108f7fa0971b7ba4223d0497922304d302e20",
+    "last_checked": "2026-10-29",
+    "repo_stars": 10,
+    "repo_stars_as_of": "2026-10-29",
+    "repo_last_push": "2025-05-10T06:03:53Z",
+    "repo_metadata_method": "GitHub connector fetch: repository REST metadata"
+  },
+  {
+    "id": "c06-nemotron3-super",
+    "title": "Nemotron 3 Super: Open, Efficient Mixture-of-Experts Hybrid Mamba-Transformer Model for Agentic Reasoning",
+    "year": 2026,
+    "status": "官方技术报告／arXiv；未核实同行评审发表",
+    "venue": null,
+    "paper_url": "https://arxiv.org/abs/2604.12374",
+    "repo_url": "https://github.com/NVIDIA-NeMo/Nemotron",
+    "repo_owner_verified": true,
+    "evidence_urls": [
+      "https://research.nvidia.com/labs/nemotron/files/NVIDIA-Nemotron-3-Super-Technical-Report.pdf",
+      "https://docs.nvidia.com/nemotron/latest/nemotron/super3/sft.html",
+      "https://github.com/NVIDIA-NeMo/Nemotron/blob/main/src/nemotron/recipes/super3/stage1_sft/README.md",
+      "https://github.com/NVIDIA-NeMo/Nemotron/blob/main/src/nemotron/recipes/super3/stage1_sft/train.py",
+      "https://github.com/NVIDIA-NeMo/Nemotron/blob/main/src/nemotron/recipes/super3/stage1_sft/config/default.yaml"
+    ],
+    "reading_depth": "重点精读 §3.1/3.1.1、两种归一化公式和 SQL/Agentic 数据；官方 SFT 文档；README/入口/YAML 静态核查",
+    "priority": "P1",
+    "local_note": "papers/c-06-nemotron3-super.md",
+    "scope_match": "SQL+Agentic 同一工业 SFT blend，token→conversation normalization；高度相邻，但非当前双降因果证据",
+    "repo_notes": "报告首页链接 NVIDIA 官方仓库。已见 Megatron Bridge SFT 入口；所读 default.yaml 未显式呈现完整两阶段切换，不能断言原生产训练可完整复现。",
+    "first_publication_date": "2026-04-14",
+    "read_version": "官方 PDF 标注 2026-04-03；arXiv 首次提交 2026-04-14",
+    "evidence_locators": [
+      "§3.1 PDF p18–19 Eqs. 1–2：全局输出 token→conversation 平均",
+      "§3.1.1 Agentic Programming p19；SQL p23",
+      "第二阶段还变更长上下文数据、packing 与 batch；全流程含 RL"
+    ],
+    "repo_checked_files": [
+      "src/nemotron/recipes/super3/stage1_sft/README.md",
+      "src/nemotron/recipes/super3/stage1_sft/train.py",
+      "src/nemotron/recipes/super3/stage1_sft/config/default.yaml"
+    ],
+    "repo_checked_blob": "0540ec284d8cc633a0086cc188c22ec55b7c1221",
+    "last_checked": "2026-10-29",
+    "repo_stars": 2235,
+    "repo_stars_as_of": "2026-10-29",
+    "repo_last_push": "2026-10-28T15:10:49Z",
+    "repo_metadata_method": "GitHub connector fetch: repository REST metadata"
+  },
+  {
+    "id": "c07-lota",
+    "title": "Lottery Ticket Adaptation: Mitigating Destructive Interference in LLMs",
+    "year": 2024,
+    "status": "arXiv 预印本；ICLR 2025 投稿可见，录用未核实",
+    "venue": null,
+    "paper_url": "https://arxiv.org/abs/2406.16797",
+    "repo_url": "https://github.com/kiddyboots216/lottery-ticket-adaptation",
+    "repo_owner_verified": true,
+    "evidence_urls": [
+      "https://arxiv.org/html/2406.16797v2",
+      "https://openreview.net/forum?id=qOqCXEXsX4",
+      "https://github.com/kiddyboots216/lottery-ticket-adaptation/blob/main/README.md",
+      "https://github.com/kiddyboots216/lottery-ticket-adaptation/blob/main/rlaif/apply_mask_in_backward.py",
+      "https://github.com/kiddyboots216/lottery-ticket-adaptation/blob/main/rlaif/scripts/continual_learning.sh"
+    ],
+    "reading_depth": "§3/Algorithm 1、§5/Tables 3/5/6；README 与 mask/continual 脚本静态核查；未运行",
+    "priority": "P2",
+    "local_note": "papers/c-07-lota.md",
+    "scope_match": "稀疏参数更新与连续任务/模型合并；非当前同批混训",
+    "repo_notes": "论文链接作者仓库。已见 mask 后向实现与连续训练脚本；README 标 work in progress。",
+    "first_publication_date": "2024-06-24",
+    "read_version": "arXiv v2, 2024-06-25",
+    "evidence_locators": [
+      "§3 校准/重置/稀疏更新；Table 3 的 SQL 指标为 ROUGE-1，非执行正确率；Tables 5/6 为顺序学习/合并"
+    ],
+    "repo_checked_files": [
+      "README.md",
+      "rlaif/apply_mask_in_backward.py",
+      "rlaif/scripts/continual_learning.sh"
+    ],
+    "repo_checked_blob": "57d711276b615502ab2dd24056acd4b6e9bb7982",
+    "last_checked": "2026-10-29",
+    "repo_stars": 40,
+    "repo_stars_as_of": "2026-10-29",
+    "repo_last_push": "2024-11-20T23:31:17Z",
+    "repo_metadata_method": "GitHub connector fetch: repository REST metadata"
+  },
+  {
+    "id": "c08-hft",
+    "title": "HFT: Half Fine-Tuning for Large Language Models",
+    "year": 2025,
+    "status": "已核实正式发表",
+    "venue": "ACL 2025 Long Papers",
+    "paper_url": "https://aclanthology.org/2025.acl-long.626/",
+    "repo_url": null,
+    "repo_owner_verified": false,
+    "evidence_urls": [
+      "https://aclanthology.org/2025.acl-long.626/",
+      "https://aclanthology.org/2025.acl-long.626.pdf",
+      "https://zhenyu.ac.cn/"
+    ],
+    "reading_depth": "ACL 正式全文重点 §2–4、Tables 3/4、Appendix Algorithm 1；官方代码未确认",
+    "priority": "P2",
+    "local_note": "papers/c-08-hft.md",
+    "scope_match": "按阶段冻结部分参数的能力保持；顺序遗忘证据，非当前异构混训",
+    "repo_notes": "未确认作者官方实现；不以同名仓库猜测归属。伪代码不等于已发布训练实现。",
+    "first_publication_date": "2024-04-29",
+    "read_version": "ACL 2025 最终版，pp. 12791–12819",
+    "evidence_locators": [
+      "Algorithm 1：PDF p14 / 印刷页12804；每个 fine-tuning stage 选择，不是每个 epoch",
+      "§4.2 TRACE OP/BWT；Table 4 选择粒度"
+    ],
+    "repo_checked_files": [],
+    "last_checked": "2026-10-29",
+    "repo_stars": null,
+    "repo_stars_as_of": null,
+    "repo_last_push": null,
+    "repo_metadata_method": "未核实"
+  },
+  {
+    "id": "c09-lora-learning-forgetting",
+    "title": "LoRA Learns Less and Forgets Less",
+    "year": 2024,
+    "status": "已核实 TMLR 2024 接收；Featured Certification",
+    "venue": "Transactions on Machine Learning Research",
+    "paper_url": "https://arxiv.org/abs/2405.09673",
+    "repo_url": "https://github.com/danbider/lora-tradeoffs",
+    "repo_owner_verified": true,
+    "evidence_urls": [
+      "https://arxiv.org/abs/2405.09673",
+      "https://arxiv.org/html/2405.09673v2",
+      "https://openreview.net/forum?id=aloEru2qCG",
+      "https://github.com/danbider/lora-tradeoffs/blob/main/README.md",
+      "https://huggingface.co/LoRA-TMLR-2024"
+    ],
+    "reading_depth": "最终 v2 §4.3–4.7、Appendix C/Table S13；README 与根目录检查",
+    "priority": "P2",
+    "local_note": "papers/c-09-lora-learning-forgetting.md",
+    "scope_match": "目标学习与遗忘的二维权衡，含混合指令数据；并非27B SQL+Agent直接验证",
+    "repo_notes": "最终版首页链接作者仓库。根目录主要 README/assets/checkpoint与配方说明，未见训练源码；不能把模型发布等同训练代码公开。",
+    "first_publication_date": "2024-05-15",
+    "read_version": "arXiv v2, 2024-09-20；TMLR acceptance August 2024",
+    "evidence_locators": [
+      "§4.3/Figure 3 数据依赖权衡；§4.4 和 Appendix C/Table S13 Tülu-v2-mix；§4.7 参数敏感性"
+    ],
+    "repo_checked_files": [
+      "README.md",
+      "root directory"
+    ],
+    "repo_checked_blob": "dba704fd9cd8d69a8602ff370c4fa8cae68ae818",
+    "last_checked": "2026-10-29",
+    "repo_stars": 22,
+    "repo_stars_as_of": "2026-10-29",
+    "repo_last_push": "2024-09-27T04:34:48Z",
+    "repo_metadata_method": "GitHub connector fetch: repository REST metadata"
+  },
+  {
+    "id": "c10-mixed-sft-next-chunk",
+    "title": "Is Next-Chunk Reasoning RL Really Better than SFT? Revisiting Training Strategies under no-CoT Data",
+    "year": 2026,
+    "status": "已核实正式论文集；仅初筛摘要",
+    "venue": "EMNLP 2026 Main Conference",
+    "paper_url": "https://aclanthology.org/2026.emnlp-main.921/",
+    "repo_url": null,
+    "repo_owner_verified": false,
+    "evidence_urls": [
+      "https://aclanthology.org/2026.emnlp-main.921/",
+      "https://arxiv.org/abs/2608.23256"
+    ],
+    "reading_depth": "仅正式论文集页面与摘要；本次全文获取未成功，未作全文结论核验",
+    "priority": "P1-follow-up",
+    "local_note": null,
+    "scope_match": "no-CoT+长CoT Mixed SFT 相邻；需区分 SFT 即时表现与后续 RLVR 结果",
+    "repo_notes": "未确认官方代码，未检查实现。摘要涉及的预算优势不能替代全文公平性核验。",
+    "read_version": "EMNLP 2026 正式页面，2026年10月",
+    "evidence_locators": [
+      "正式页 pp.21209–21228；仅摘要"
+    ],
+    "repo_checked_files": [],
+    "last_checked": "2026-10-29",
+    "repo_stars": null,
+    "repo_stars_as_of": null,
+    "repo_last_push": null,
+    "repo_metadata_method": "未核实"
+  },
+  {
+    "id": "c11-rho1",
+    "title": "Not All Tokens Are What You Need for Pretraining",
+    "year": 2024,
+    "status": "已核实正式发表；仅初筛",
+    "venue": "NeurIPS 2024",
+    "paper_url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/3322a9a72a1707de14badd5e552ff466-Abstract-Conference.html",
+    "repo_url": "https://github.com/microsoft/rho",
+    "repo_owner_verified": false,
+    "evidence_urls": [
+      "https://proceedings.neurips.cc/paper_files/paper/2024/hash/3322a9a72a1707de14badd5e552ff466-Abstract-Conference.html",
+      "https://arxiv.org/abs/2404.07965",
+      "https://github.com/microsoft/rho"
+    ],
+    "reading_depth": "论文集元数据、摘要与候选项目描述初筛；未全文精读/代码静态核验",
+    "priority": "P3-background",
+    "local_note": null,
+    "scope_match": "预训练中的 token 选择；不能直接外推成异构 SFT 解决方案",
+    "repo_notes": "列出候选微软仓库；本线未沿论文链接完成所有权核验，也未检查实际训练实现，stars 未核实。",
+    "read_version": "NeurIPS 2024 最终标题；早期 arXiv 标题为 Rho-1: Not All Tokens Are What You Need",
+    "repo_checked_files": [],
+    "last_checked": "2026-10-29",
+    "repo_stars": null,
+    "repo_stars_as_of": null,
+    "repo_last_push": null,
+    "repo_metadata_method": "未核实"
+  },
+  {
+    "id": "c12-lima",
+    "title": "LIMA: Less Is More for Alignment",
+    "year": 2023,
+    "status": "已核实正式发表；仅初筛",
+    "venue": "NeurIPS 2023",
+    "paper_url": "https://papers.neurips.cc/paper_files/paper/2023/hash/ac662d74829e4407ce1d126477f4a03a-Abstract-Conference.html",
+    "repo_url": null,
+    "repo_owner_verified": false,
+    "evidence_urls": [
+      "https://papers.neurips.cc/paper_files/paper/2023/hash/ac662d74829e4407ce1d126477f4a03a-Abstract-Conference.html",
+      "https://arxiv.org/abs/2305.11206"
+    ],
+    "reading_depth": "正式论文集页面与摘要初筛",
+    "priority": "P3-background",
+    "local_note": null,
+    "scope_match": "精选少量监督与已有能力表达的经典背景；不覆盖现代长 Agent/SQL 双降",
+    "repo_notes": "本线未核实作者仓库或代码。",
+    "repo_checked_files": [],
+    "last_checked": "2026-10-29",
+    "repo_stars": null,
+    "repo_stars_as_of": null,
+    "repo_last_push": null,
+    "repo_metadata_method": "未核实"
+  },
+  {
+    "id": "c13-sft-memorizes-rl-generalizes",
+    "title": "SFT Memorizes, RL Generalizes: A Comparative Study of Foundation Model Post-training",
+    "year": 2025,
+    "status": "已核实正式发表；仅初筛",
+    "venue": "ICML 2025 / PMLR 267",
+    "paper_url": "https://proceedings.mlr.press/v267/chu25c.html",
+    "repo_url": null,
+    "repo_owner_verified": false,
+    "evidence_urls": [
+      "https://proceedings.mlr.press/v267/chu25c.html"
+    ],
+    "reading_depth": "正式论文集页面与摘要初筛",
+    "priority": "P3-boundary",
+    "local_note": null,
+    "scope_match": "文本/视觉 OOD 下 SFT 与 RL 的比较；标题不是所有 SFT 的普适定理",
+    "repo_notes": "页面有项目链接，但本线未进一步核查实现或所有权；不列猜测仓库。",
+    "evidence_locators": [
+      "PMLR267，pp.10818–10838；GeneralPoints 与 V-IRL 设置"
+    ],
+    "repo_checked_files": [],
+    "last_checked": "2026-10-29",
+    "repo_stars": null,
+    "repo_stars_as_of": null,
+    "repo_last_push": null,
+    "repo_metadata_method": "未核实"
+  },
+  {
+    "id": "c14-rft-mitigates-forgetting",
+    "title": "Reinforcement Fine-Tuning Naturally Mitigates Forgetting in Continual Post-Training",
+    "year": 2026,
+    "status": "已核实正式发表；仅初筛",
+    "venue": "ICML 2026 / PMLR 306",
+    "paper_url": "https://proceedings.mlr.press/v306/lai26h.html",
+    "repo_url": null,
+    "repo_owner_verified": false,
+    "evidence_urls": [
+      "https://proceedings.mlr.press/v306/lai26h.html"
+    ],
+    "reading_depth": "正式论文集页面与摘要初筛",
+    "priority": "P3-boundary",
+    "local_note": null,
+    "scope_match": "多模态连续后训练中的 RFT 保持性；不直接覆盖本轮纯 SFT 同批混训",
+    "repo_notes": "本线未核实官方仓库或实现。",
+    "evidence_locators": [
+      "PMLR306，pp.62363–62378；摘要中的连续多模态设置"
+    ],
+    "repo_checked_files": [],
+    "last_checked": "2026-10-29",
+    "repo_stars": null,
+    "repo_stars_as_of": null,
+    "repo_last_push": null,
+    "repo_metadata_method": "未核实"
+  },
+  {
+    "id": "c15-sft-as-context",
+    "title": "SFT-as-Context Mitigates Forgetting in Supervised Fine-Tuning",
+    "year": 2026,
+    "status": "arXiv 预印本；仅初筛",
+    "venue": null,
+    "paper_url": "https://arxiv.org/abs/2610.11132",
+    "repo_url": null,
+    "repo_owner_verified": false,
+    "evidence_urls": [
+      "https://arxiv.org/abs/2610.11132"
+    ],
+    "reading_depth": "arXiv 元数据与摘要初筛",
+    "priority": "P3-out-of-scope",
+    "local_note": null,
+    "scope_match": "训练后将 SFT 输出作为 parent 模型上下文的组合；不满足同一混训 checkpoint 的核心要求",
+    "repo_notes": "未核实作者仓库/实现；不作为本轮同模型 SFT 的直接候选。",
+    "first_publication_date": "2026-10-08",
+    "repo_checked_files": [],
+    "last_checked": "2026-10-29",
+    "repo_stars": null,
+    "repo_stars_as_of": null,
+    "repo_last_push": null,
+    "repo_metadata_method": "未核实"
+  }
+]

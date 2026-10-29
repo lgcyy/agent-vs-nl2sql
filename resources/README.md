@@ -1,21 +1,23 @@
 # 相关资源
 
-收纳尚未进入论文笔记或专题综述的 GitHub 项目、官方技术博客、数据集与其他资料。
+更新时间：2026-10-29。集中保存代码、训练实现入口、资料目录和来源核查信息。
 
-[返回首页](../README.md)
+| 文件 | 用途 |
+| --- | --- |
+| [代码与资源地图](repository-catalog.md) | 37 个主要项目的资产范围、作者归属、Stars 与维护快照 |
+| [训练实现与多任务参考库](training-infrastructure.md) | LlamaFactory、TRL、ms-swift、Axolotl、Open Instruct 等关键源码 |
+| [检索与核查说明](search-and-verification.md) | 纳入范围、阅读深度、发表状态、版本与统计口径 |
+| [资料总目录 JSON](paper-catalog.json) | 51 项论文／技术资料的统一 ID、来源、卡片、优先级与代码关联 |
+| [仓库元数据 JSON](repository-metadata.json) | 37 个项目的 canonical 地址、星数、活动时间及来源 |
 
-## 资源索引
+## 详细来源登记
 
-暂未收录。新增资源时，先在下表留下简短说明即可。
+[A 线：多任务混合](a-source-register.json) · [B 线：Agent 轨迹](b-source-register.json) · [C 线：监督与保持](c-source-register.json) · [基础补充](root-source-register.json)
 
-| 资源与原始链接 | 类型 | 主要内容／关联主题 | 核查日期 |
-| --- | --- | --- | --- |
+[通用与基础项目核查快照](root-repository-metadata.json) · [Agent 项目元数据快照](agent-repository-metadata.json)
 
-## 记录方式
+分线登记保留原始阅读和代码核查细节，总目录是本轮汇总视图。技术报告、模型卡、数据集链接和作者文档也保存在对应论文卡中；AgentBank 等没有核实专门 GitHub 的资料不会用第三方同名项目补位。
 
-- 说明资源提供什么内容，以及它与调研主题的关系。
-- 优先保留作者、项目维护者或官方发布的原始链接。
-- GitHub 项目可按需记录维护情况、版本和星数，并注明核查日期。
-- 技术文章和社区讨论需区分作者观点与有原始证据支持的结论。
-- 论文官方代码可直接链接对应论文笔记，避免重复维护。
-- 值得详细整理的资源可另存为 `resource-name.md`，再从本页链接。
+这些资源帮助定位“论文提出了什么”和“公开实现到哪里”。本轮未执行训练或宣称完成复现，具体限制逐项记录。
+
+[调研总图](../topics/00-research-map.md) · [论文索引](../papers/README.md) · [返回首页](../README.md)

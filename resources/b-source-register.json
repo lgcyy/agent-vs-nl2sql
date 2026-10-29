@@ -1,0 +1,306 @@
+[
+  {
+    "id": "B01",
+    "title": "AgentTuning: Enabling Generalized Agent Abilities for LLMs",
+    "year": 2024,
+    "status": "正式发表；预印本首发于2023",
+    "venue": "Findings of ACL 2024",
+    "paper_url": "https://aclanthology.org/2024.findings-acl.181/",
+    "repo_url": "https://github.com/THUDM/AgentTuning",
+    "repo_owner_verified": true,
+    "evidence_urls": [
+      "https://aclanthology.org/2024.findings-acl.181.pdf",
+      "https://thudm.github.io/AgentTuning/",
+      "https://github.com/THUDM/AgentTuning/blob/main/README.md",
+      "https://api.github.com/repos/THUDM/AgentTuning/git/trees/main?recursive=1",
+      "https://github.com/THUDM/AgentTuning/blob/main/eval_general/eval_mmlu_hf.py"
+    ],
+    "reading_depth": "原文重点章节与表格（§2、§3.4、表3—4）；README、递归目录、MMLU评测源码",
+    "priority": "P1",
+    "local_note": "papers/b-01-agenttuning.md",
+    "scope_match": "Agent/通用指令混合与能力保持的直接相邻工作；不是NL2SQL-noCoT与长轨迹混训同一checkpoint双低base的同题对照",
+    "repo_notes": "2026-10-29核查。主要含部署、评测、模型/数据入口；未发现可明确对应AgentLM主混训的独立入口。嵌套环境训练文件不算主训练实现。未运行。"
+  },
+  {
+    "id": "B02",
+    "title": "Agent-FLAN: Designing Data and Methods of Effective Agent Tuning for Large Language Models",
+    "year": 2024,
+    "status": "正式发表",
+    "venue": "Findings of ACL 2024",
+    "paper_url": "https://aclanthology.org/2024.findings-acl.557/",
+    "repo_url": "https://github.com/InternLM/Agent-FLAN",
+    "repo_owner_verified": true,
+    "evidence_urls": [
+      "https://aclanthology.org/2024.findings-acl.557.pdf",
+      "https://github.com/InternLM/Agent-FLAN/blob/main/README.md",
+      "https://api.github.com/repos/InternLM/Agent-FLAN/git/trees/main?recursive=1"
+    ],
+    "reading_depth": "原文§3—5与表4；README与递归目录",
+    "priority": "P1",
+    "local_note": "papers/b-02-agent-flan.md",
+    "scope_match": "监督格式、能力组成和Agent副作用的直接相邻工作；未验证当前混训双降机制",
+    "repo_notes": "2026-10-29核查。论文直接给出作者仓库。递归目录仅README、LICENSE和文档图片；模型/数据可获取，主训练和数据构造源码未在该仓库核实。"
+  },
+  {
+    "id": "B03",
+    "title": "AgentBank: Towards Generalized LLM Agents via Fine-Tuning on 50000+ Interaction Trajectories",
+    "year": 2024,
+    "status": "正式发表",
+    "venue": "Findings of EMNLP 2024",
+    "paper_url": "https://aclanthology.org/2024.findings-emnlp.116/",
+    "repo_url": null,
+    "repo_owner_verified": false,
+    "evidence_urls": [
+      "https://aclanthology.org/2024.findings-emnlp.116.pdf",
+      "https://huggingface.co/datasets/Solaris99/AgentBank"
+    ],
+    "reading_depth": "原文§7.2—7.4、图4—5、表6—7；论文指定作者数据页",
+    "priority": "P1",
+    "local_note": "papers/b-03-agentbank.md",
+    "scope_match": "混合比例、技能迁移和外部能力保留的直接相邻工作；含Agent轨迹CoT消融，但不能解释为SQL-noCoT混合对照",
+    "repo_notes": "2026-10-29核查。官方Hugging Face数据来源已由论文首页确认；专门官方GitHub训练仓库未核实。不用第三方同名项目补位。"
+  },
+  {
+    "id": "B04",
+    "title": "AgentGym: Evaluating and Training Large Language Model-based Agents across Diverse Environments",
+    "year": 2025,
+    "status": "正式发表；2024预印本旧题名为Evolving Large Language Model-based Agents across Diverse Environments",
+    "venue": "ACL 2025 Main Conference Long Papers",
+    "paper_url": "https://aclanthology.org/2025.acl-long.1355/",
+    "repo_url": "https://github.com/WooooDyy/AgentGym",
+    "repo_owner_verified": true,
+    "evidence_urls": [
+      "https://aclanthology.org/2025.acl-long.1355.pdf",
+      "https://arxiv.org/abs/2406.04151",
+      "https://agentgym.github.io/",
+      "https://github.com/WooooDyy/AgentGym/blob/main/README.md",
+      "https://github.com/WooooDyy/AgentGym/blob/main/agentenv/agentenv/trainer/bc_trainer.py"
+    ],
+    "reading_depth": "正式论文§4—6、表2—3；README、行为克隆源码",
+    "priority": "P2",
+    "local_note": "papers/b-04-agentgym.md",
+    "scope_match": "跨环境轨迹表达和SFT数据来源；包含BIRD-SQL，但不是当前SQL-noCoT加长轨迹双降的同题证据",
+    "repo_notes": "2026-10-29核查。已读取bc_trainer.py的角色标签、输入屏蔽、截断实现；主行为克隆入口存在。后续RL扩展与原论文区分。未安装或运行。"
+  },
+  {
+    "id": "B05",
+    "title": "AgentRefine: Enhancing Agent Generalization through Refinement Tuning",
+    "year": 2025,
+    "status": "正式发表",
+    "venue": "ICLR 2025",
+    "paper_url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/a3cc50126338b175e56bb3cad134db0b-Abstract-Conference.html",
+    "repo_url": "https://github.com/Fu-Dayuan/AgentRefine",
+    "repo_owner_verified": true,
+    "evidence_urls": [
+      "https://proceedings.iclr.cc/paper_files/paper/2025/file/a3cc50126338b175e56bb3cad134db0b-Paper-Conference.pdf",
+      "https://agentrefine.github.io/",
+      "https://github.com/Fu-Dayuan/AgentRefine/blob/main/README.md",
+      "https://api.github.com/repos/Fu-Dayuan/AgentRefine/contents"
+    ],
+    "reading_depth": "正式论文§4.2、表1—2；README与目录",
+    "priority": "P1",
+    "local_note": "papers/b-05-agentrefine.md",
+    "scope_match": "Agent泛化退化、错误/修正片段监督；部分base对照下降，但不是两个训练目标混合共同跌base",
+    "repo_notes": "2026-10-29核查。根目录只有README与picture，作者数据链接可核实。README仍称推理代码与模型将提供；完整合成/训练主实现未发布在所查目录。"
+  },
+  {
+    "id": "B06",
+    "title": "Agent-R: Training Language Model Agents to Reflect via Iterative Self-Training",
+    "year": 2025,
+    "status": "预印本；核查arXiv v3（2025-03-24），正式会议状态未核实",
+    "venue": "arXiv",
+    "paper_url": "https://arxiv.org/abs/2501.11425",
+    "repo_url": "https://github.com/ByteDance-Seed/Agent-R",
+    "repo_owner_verified": true,
+    "evidence_urls": [
+      "https://arxiv.org/pdf/2501.11425",
+      "https://github.com/ByteDance-Seed/Agent-R",
+      "https://github.com/ByteDance-Seed/Agent-R/blob/main/README.md",
+      "https://github.com/ByteDance-Seed/Agent-R/blob/main/path_collection.py"
+    ],
+    "reading_depth": "原文§3—4、表2、图3；README与路径构造源码",
+    "priority": "P2",
+    "local_note": "papers/b-06-agent-r.md",
+    "scope_match": "错误恢复轨迹与监督质量；含通用数据混合，但未建立当前双目标双低base或广泛外部保留结论",
+    "repo_notes": "2026-10-29核查。原论文bytedance/Agent-R链接转到ByteDance-Seed/Agent-R；GitHub显示2025-10-20归档。已读path_collection.py，存在采集、修正和评测脚本；训练依赖XTuner，未运行。"
+  },
+  {
+    "id": "B07",
+    "title": "Training Software Engineering Agents and Verifiers with SWE-Gym",
+    "year": 2025,
+    "status": "正式发表；预印本首发于2024",
+    "venue": "ICML 2025 / PMLR 267",
+    "paper_url": "https://proceedings.mlr.press/v267/pan25g.html",
+    "repo_url": "https://github.com/SWE-Gym/SWE-Gym",
+    "repo_owner_verified": true,
+    "evidence_urls": [
+      "https://arxiv.org/pdf/2412.21139",
+      "https://github.com/SWE-Gym/SWE-Gym/blob/main/README.md",
+      "https://github.com/SWE-Gym/SWE-Gym/blob/main/docs/OpenHands.md",
+      "https://github.com/SWE-Gym/SWE-Gym/blob/main/scripts/training/openhands/configs/policy/1116-sonnet-4o-491i-32k-qwen25_coder_32b_full-lr1e-4.yaml"
+    ],
+    "reading_depth": "论文§4、表3；README、OpenHands文档与策略训练配置",
+    "priority": "P1",
+    "local_note": "papers/b-07-swe-gym.md",
+    "scope_match": "可验证软件环境中的成功轨迹SFT和验证器；无SQL-noCoT混合或全面外部能力保持证据",
+    "repo_notes": "2026-10-29核查。训练配置、主脚本、验证器和轨迹资产存在。README要求特定OpenHands fork；32% Verified摘要成绩包含验证器，不是纯SFT。未运行。"
+  },
+  {
+    "id": "B08",
+    "title": "SWE-smith: Scaling Data for Software Engineering Agents",
+    "year": 2025,
+    "status": "正式发表；作者仓库标注Spotlight",
+    "venue": "NeurIPS 2025 Datasets and Benchmarks Track",
+    "paper_url": "https://papers.nips.cc/paper_files/paper/2025/hash/8b86cf5ace600c48fd188efbb8dedec8-Abstract-Datasets_and_Benchmarks_Track.html",
+    "repo_url": "https://github.com/SWE-bench/SWE-smith",
+    "repo_owner_verified": true,
+    "evidence_urls": [
+      "https://papers.nips.cc/paper_files/paper/2025/file/8b86cf5ace600c48fd188efbb8dedec8-Paper-Datasets_and_Benchmarks_Track.pdf",
+      "https://swesmith.com",
+      "https://github.com/SWE-bench/SWE-smith/blob/main/docs/guides/train_swe_agent.md",
+      "https://github.com/SWE-bench/SWE-smith/blob/main/swesmith/train/traj_mgr/collect_trajs.py",
+      "https://github.com/SWE-bench/SWE-smith/blob/main/swesmith/train/run/ft_torchtune.py"
+    ],
+    "reading_depth": "正式论文§3—4、表3—5、附录F.4及图18；README、训练文档和关键源码",
+    "priority": "P1",
+    "local_note": "papers/b-08-swe-smith.md",
+    "scope_match": "可验证任务合成、成功轨迹筛选、数据质量与行为分析；非异质任务混训能力保持研究",
+    "repo_notes": "2026-10-29核查。有环境/任务构造、轨迹处理和训练调用实现，依赖SWE-agent及外部训练库。当前资产规模与论文统计不同，不能混用。未运行。"
+  },
+  {
+    "id": "B09",
+    "title": "PG-SFT: Balancing Capability Acquisition and Retention in Offline Agent Fine-Tuning",
+    "year": 2026,
+    "status": "预印本；2026-10-01首次提交；作者实验室标为In Submission",
+    "venue": "arXiv",
+    "paper_url": "https://arxiv.org/abs/2610.00949",
+    "repo_url": null,
+    "repo_owner_verified": false,
+    "evidence_urls": [
+      "https://arxiv.org/abs/2610.00949",
+      "https://naisslab.github.io/"
+    ],
+    "reading_depth": "仅原始摘要与作者发表列表；全文抓取失败，本轮HTML重试仍失败",
+    "priority": "P2",
+    "local_note": "papers/b-09-pg-sft.md",
+    "scope_match": "Agent目标能力获取与外部能力保留直接相邻；摘要不等同两个参与训练目标混合后共同低于base",
+    "repo_notes": "2026-10-29核查。对应官方代码未核实；不采信聚合站对模型、结果、消融或实现的分析。"
+  },
+  {
+    "id": "B10",
+    "title": "Selecting Long-Horizon Trajectories for Reliable and Efficient Terminal-Agent Training",
+    "year": 2026,
+    "status": "预印本；2026-10-05首次提交；仅核实Submitted to ICLR 2027投稿状态，录用未核实",
+    "venue": "arXiv / submitted to ICLR 2027",
+    "paper_url": "https://arxiv.org/abs/2610.05831",
+    "repo_url": null,
+    "repo_owner_verified": false,
+    "evidence_urls": [
+      "https://arxiv.org/pdf/2610.05831",
+      "https://captaincuong.github.io/"
+    ],
+    "reading_depth": "原文§3—6、表2、附录A；作者主页",
+    "priority": "P2",
+    "local_note": "papers/b-10-terminal-supervision-horizon.md",
+    "scope_match": "同类终端轨迹内监督长度与可靠性；不是SQL-noCoT和Agent异质数据混合双降",
+    "repo_notes": "2026-10-29核查。原文和作者主页未找到对应官方GitHub；已有训练库和语料不等于本文完整实现已发布。"
+  },
+  {
+    "id": "B11",
+    "title": "AgentOhana: Design Unified Data and Training Pipeline for Effective Agent Learning",
+    "year": 2024,
+    "status": "预印本；可核实LLMAgents@ICLR 2024 workshop版本，不标作ICLR主会",
+    "venue": "arXiv / LLMAgents@ICLR 2024 workshop",
+    "paper_url": "https://arxiv.org/abs/2402.15506",
+    "repo_url": null,
+    "repo_owner_verified": false,
+    "evidence_urls": [
+      "https://arxiv.org/abs/2402.15506",
+      "https://openreview.net/pdf?id=trppoyhdAD",
+      "https://weirayao.github.io/papers/agent-ohana",
+      "https://huggingface.co/Salesforce/xLAM-v0.1-r"
+    ],
+    "reading_depth": "筛查级：原始摘要、作者页和资产指向；未深读全文",
+    "priority": "P3",
+    "local_note": null,
+    "scope_match": "多源Agent轨迹统一格式和数据管线相邻；不直接覆盖业务双降，暂不单独深读",
+    "repo_notes": "2026-10-29核查。作者页面Code链接实际指向Salesforce/xLAM-v0.1-r模型；未核实专门官方GitHub训练实现。"
+  },
+  {
+    "id": "B12",
+    "title": "OpenHands LM 32B / openhands-lm-32b-v0.1",
+    "year": 2025,
+    "status": "作者模型发布与官方技术博客，非独立会议论文",
+    "venue": "Official model release",
+    "paper_url": "https://www.openhands.dev/blog/introducing-openhands-lm-32b-a-strong-open-coding-agent-model",
+    "repo_url": null,
+    "repo_owner_verified": false,
+    "evidence_urls": [
+      "https://www.openhands.dev/blog/introducing-openhands-lm-32b-a-strong-open-coding-agent-model",
+      "https://huggingface.co/OpenHands/openhands-lm-32b-v0.1"
+    ],
+    "reading_depth": "筛查级：作者发布说明与模型卡",
+    "priority": "P3",
+    "local_note": null,
+    "scope_match": "SWE-Gym后续模型资产；与SWE-Gym去重，不作为新的混训保持证据",
+    "repo_notes": "2026-10-29核查。官方发布日2025-03-31；模型卡指向SWE-Gym。平台仓库不自动代表该模型完整训练发布，故不填独立论文代码仓库。"
+  },
+  {
+    "id": "B13",
+    "title": "OpenHands: An Open Platform for AI Software Developers as Generalist Agents",
+    "year": 2025,
+    "status": "正式发表；只筛查基础设施定位",
+    "venue": "ICLR 2025",
+    "paper_url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/a4b6ad6b48850c0c331d1259fc66a69c-Abstract-Conference.html",
+    "repo_url": "https://github.com/All-Hands-AI/OpenHands",
+    "repo_owner_verified": true,
+    "evidence_urls": [
+      "https://proceedings.iclr.cc/paper_files/paper/2025/file/a4b6ad6b48850c0c331d1259fc66a69c-Paper-Conference.pdf",
+      "https://github.com/All-Hands-AI/OpenHands"
+    ],
+    "reading_depth": "筛查级：正式摘要与论文首页代码链接；本线不深审平台",
+    "priority": "P3",
+    "local_note": null,
+    "scope_match": "运行接口与评测基础设施；不等同离线SFT训练方法，留给通用基础设施整理",
+    "repo_notes": "2026-10-29核查。论文首页直接给出All-Hands-AI/OpenHands；保留论文原始链接，后续若重定向由统一资源元数据记录。"
+  },
+  {
+    "id": "B14",
+    "title": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering",
+    "year": 2024,
+    "status": "正式发表；只筛查接口定位",
+    "venue": "NeurIPS 2024 Main Conference",
+    "paper_url": "https://papers.nips.cc/paper_files/paper/2024/hash/5a7c947568c1b1328ccc5230172e1e7c-Abstract-Conference.html",
+    "repo_url": "https://github.com/SWE-agent/SWE-agent",
+    "repo_owner_verified": true,
+    "evidence_urls": [
+      "https://papers.nips.cc/paper_files/paper/2024/hash/5a7c947568c1b1328ccc5230172e1e7c-Abstract-Conference.html",
+      "https://swe-agent.com/latest/installation/source/",
+      "https://github.com/SWE-bench/SWE-smith/blob/main/docs/guides/train_swe_agent.md"
+    ],
+    "reading_depth": "筛查级：正式摘要、官方安装文档与SWE-smith作者文档的代码来源链",
+    "priority": "P3",
+    "local_note": null,
+    "scope_match": "接口设计影响Agent表现；非离线轨迹SFT或两目标混训退化的主研究",
+    "repo_notes": "2026-10-29核查。官方安装文档确认SWE-agent/SWE-agent；本线没有展开实现评审，避免与通用基础设施重复。"
+  },
+  {
+    "id": "B15",
+    "title": "Agent Q: Advanced Reasoning and Learning for Autonomous AI Agents",
+    "year": 2024,
+    "status": "预印本；本轮未核实正式会议发表",
+    "venue": "arXiv",
+    "paper_url": "https://arxiv.org/abs/2408.07199",
+    "repo_url": null,
+    "repo_owner_verified": false,
+    "evidence_urls": [
+      "https://arxiv.org/abs/2408.07199"
+    ],
+    "reading_depth": "筛查级：原始摘要",
+    "priority": "P3",
+    "local_note": null,
+    "scope_match": "行为克隆局限的相邻背景；主方法涉及搜索与DPO，本轮不扩展RL/偏好优化综述",
+    "repo_notes": "2026-10-29核查。搜索发现社区实现，但作者来源链未核实，故不将社区代码填作官方仓库。"
+  }
+]
+

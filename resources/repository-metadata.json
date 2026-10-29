@@ -1,0 +1,898 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-10-29",
+  "scope": "主要索引项目；代码阅读深度见repository-catalog.md与逐篇笔记",
+  "repositories": [
+    {
+      "full_name": "allenai/olmix",
+      "url": "https://github.com/allenai/olmix",
+      "stars": 42,
+      "pushed_at": "2026-05-26T03:17:48Z",
+      "default_branch": "main",
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/allenai/olmix",
+      "paper_ids": [
+        "A10"
+      ],
+      "author_attribution": "verified_author_link",
+      "paper_notes": [
+        {
+          "paper_id": "A10",
+          "note": "papers/a-10-olmix.md",
+          "repo_notes": "作者机构博客链接Code且README回链论文；有generate/fit/launch，读过run_fit核心；WIP和内部到开源迁移中，端到端launch涉及Beaker及结果导出；未运行。",
+          "evidence_urls": [
+            "https://github.com/allenai/olmix/blob/main/README.md",
+            "https://github.com/allenai/olmix/blob/main/olmix/fit/core.py"
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "allenai/open-instruct",
+      "url": "https://github.com/allenai/open-instruct",
+      "stars": 3916,
+      "pushed_at": "2026-10-29T11:09:01Z",
+      "archived": false,
+      "default_branch": "main",
+      "license": "Apache-2.0",
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/allenai/open-instruct",
+      "paper_ids": [],
+      "author_attribution": "infrastructure",
+      "paper_notes": []
+    },
+    {
+      "full_name": "axolotl-ai-cloud/axolotl",
+      "url": "https://github.com/axolotl-ai-cloud/axolotl",
+      "stars": 12645,
+      "pushed_at": "2026-10-29T12:27:56Z",
+      "archived": false,
+      "default_branch": "main",
+      "license": "Apache-2.0",
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/axolotl-ai-cloud/axolotl",
+      "paper_ids": [],
+      "author_attribution": "infrastructure",
+      "paper_notes": []
+    },
+    {
+      "full_name": "ByteDance-Seed/Agent-R",
+      "url": "https://github.com/ByteDance-Seed/Agent-R",
+      "stars": 175,
+      "pushed_at": "2025-10-20T02:30:17Z",
+      "archived": true,
+      "default_branch": "main",
+      "license": "Apache-2.0",
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/ByteDance-Seed/Agent-R",
+      "paper_ids": [
+        "B06"
+      ],
+      "author_attribution": "verified_author_link",
+      "paper_notes": [
+        {
+          "paper_id": "B06",
+          "note": "papers/b-06-agent-r.md",
+          "repo_notes": "2026-10-29核查。原论文bytedance/Agent-R链接转到ByteDance-Seed/Agent-R；GitHub显示2025-10-20归档。已读path_collection.py，存在采集、修正和评测脚本；训练依赖XTuner，未运行。",
+          "evidence_urls": [
+            "https://github.com/ByteDance-Seed/Agent-R",
+            "https://github.com/ByteDance-Seed/Agent-R/blob/main/README.md",
+            "https://github.com/ByteDance-Seed/Agent-R/blob/main/path_collection.py"
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "codefuse-ai/MFTCoder",
+      "url": "https://github.com/codefuse-ai/MFTCoder",
+      "stars": 711,
+      "pushed_at": "2024-12-30T06:01:59Z",
+      "archived": false,
+      "default_branch": "main",
+      "license": "NOASSERTION",
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/codefuse-ai/MFTCoder",
+      "paper_ids": [
+        "A05",
+        "R01"
+      ],
+      "author_attribution": "verified_author_link",
+      "paper_notes": [
+        {
+          "paper_id": "A05",
+          "note": "papers/a-05-coba.md",
+          "repo_notes": "论文首页直接链接MFTCoder；代码有CoBaStatus、coba加权loss与训练配置；stars属于整个框架；未运行。",
+          "evidence_urls": [
+            "https://github.com/codefuse-ai/MFTCoder/blob/main/README.md",
+            "https://github.com/codefuse-ai/MFTCoder/blob/main/mftcoder_accelerate/src/utils/loss_utils.py",
+            "https://github.com/codefuse-ai/MFTCoder/blob/main/mftcoder_accelerate/src/configs/coba_train_config.json"
+          ]
+        },
+        {
+          "paper_id": "R01",
+          "note": "papers/r-01-mftcoder.md",
+          "repo_notes": "有实质多任务损失与训练入口；代码还包含后续CoBa；未执行",
+          "evidence_urls": [
+            "https://github.com/codefuse-ai/MFTCoder/blob/8ba13f44e2036f1412a343bc343dc6cda7383d73/mftcoder_accelerate/src/utils/loss_utils.py"
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "Cranial-XIX/CAGrad",
+      "url": "https://github.com/Cranial-XIX/CAGrad",
+      "stars": 161,
+      "pushed_at": "2023-11-09T23:49:04Z",
+      "archived": false,
+      "default_branch": "main",
+      "license": "MIT",
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/Cranial-XIX/CAGrad",
+      "paper_ids": [
+        "R03"
+      ],
+      "author_attribution": "verified_author_link",
+      "paper_notes": [
+        {
+          "paper_id": "R03",
+          "note": "papers/r-03-cagrad.md",
+          "repo_notes": "有toy/视觉/MTRL实现；非LLM即用工程",
+          "evidence_urls": [
+            "https://github.com/Cranial-XIX/CAGrad/blob/dc3d48152b6196945cfd56144879b9d42353b095/toy.py"
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "danbider/lora-tradeoffs",
+      "url": "https://github.com/danbider/lora-tradeoffs",
+      "stars": 22,
+      "pushed_at": "2024-09-27T04:34:48Z",
+      "archived": false,
+      "default_branch": "main",
+      "license": null,
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/danbider/lora-tradeoffs",
+      "paper_ids": [
+        "C09"
+      ],
+      "author_attribution": "verified_author_link",
+      "paper_notes": [
+        {
+          "paper_id": "C09",
+          "note": "papers/c-09-lora-learning-forgetting.md",
+          "repo_notes": "最终版首页链接作者仓库。根目录主要 README/assets/checkpoint与配方说明，未见训练源码；不能把模型发布等同训练代码公开。",
+          "evidence_urls": [
+            "https://github.com/danbider/lora-tradeoffs/blob/main/README.md"
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "davidandym/Multitask-Transfer-Instruction-Tuning",
+      "url": "https://github.com/davidandym/Multitask-Transfer-Instruction-Tuning",
+      "stars": 1,
+      "pushed_at": "2024-05-28T13:53:43Z",
+      "archived": false,
+      "default_branch": "main",
+      "license": "MIT",
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/davidandym/Multitask-Transfer-Instruction-Tuning",
+      "paper_ids": [
+        "R05"
+      ],
+      "author_attribution": "verified_author_link",
+      "paper_notes": [
+        {
+          "paper_id": "R05",
+          "note": "papers/r-05-instruction-transfer.md",
+          "repo_notes": "递归目录仅README和LICENSE，未发现实质训练实现",
+          "evidence_urls": [
+            "https://github.com/davidandym/Multitask-Transfer-Instruction-Tuning"
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "emmyqin/iw_sft",
+      "url": "https://github.com/emmyqin/iw_sft",
+      "stars": 28,
+      "pushed_at": "2025-07-18T08:18:55Z",
+      "archived": false,
+      "default_branch": "main",
+      "license": null,
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/emmyqin/iw_sft",
+      "paper_ids": [
+        "C03"
+      ],
+      "author_attribution": "verified_author_link",
+      "paper_notes": [
+        {
+          "paper_id": "C03",
+          "note": "papers/c-03-iw-sft.md",
+          "repo_notes": "论文 Appendix H 分别链接 LLM 与 control 仓库。所列为 LLM 仓库；真实 bounding_trainers.py 含参考 log-prob、停止梯度权重与聚合选项。",
+          "evidence_urls": [
+            "https://github.com/emmyqin/iw_sft/blob/main/README.md",
+            "https://github.com/emmyqin/iw_sft/blob/main/bounding_trainers.py",
+            "https://github.com/emmyqin/iw_sft_control"
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "feiyang-k/AutoScale",
+      "url": "https://github.com/feiyang-k/AutoScale",
+      "stars": 14,
+      "pushed_at": "2025-08-08T02:21:41Z",
+      "default_branch": "main",
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/feiyang-k/AutoScale",
+      "paper_ids": [
+        "A14"
+      ],
+      "author_attribution": "verified_author_link",
+      "paper_notes": [
+        {
+          "paper_id": "A14",
+          "note": null,
+          "repo_notes": "README声明official code并回链论文，包含DDO/AutoScale说明及training示例入口；核心实现未审计。OpenReview论坛正文受浏览验证页阻挡。",
+          "evidence_urls": [
+            "https://github.com/feiyang-k/AutoScale/blob/main/README.md"
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "Fu-Dayuan/AgentRefine",
+      "url": "https://github.com/Fu-Dayuan/AgentRefine",
+      "stars": 22,
+      "pushed_at": "2025-11-22T07:34:07Z",
+      "archived": false,
+      "default_branch": "main",
+      "license": null,
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/Fu-Dayuan/AgentRefine",
+      "paper_ids": [
+        "B05"
+      ],
+      "author_attribution": "verified_author_link",
+      "paper_notes": [
+        {
+          "paper_id": "B05",
+          "note": "papers/b-05-agentrefine.md",
+          "repo_notes": "2026-10-29核查。根目录只有README与picture，作者数据链接可核实。README仍称推理代码与模型将提供；完整合成/训练主实现未发布在所查目录。",
+          "evidence_urls": [
+            "https://github.com/Fu-Dayuan/AgentRefine/blob/main/README.md",
+            "https://api.github.com/repos/Fu-Dayuan/AgentRefine/contents"
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "HazyResearch/skill-it",
+      "url": "https://github.com/HazyResearch/skill-it",
+      "stars": 49,
+      "pushed_at": "2023-10-31T00:32:12Z",
+      "default_branch": "main",
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/HazyResearch/skill-it",
+      "paper_ids": [
+        "A12"
+      ],
+      "author_attribution": "verified_author_link",
+      "paper_notes": [
+        {
+          "paper_id": "A12",
+          "note": null,
+          "repo_notes": "README列论文作者且回链论文；提供采样、trainer、evaluator和脚本；README明确未提供技能图学习代码，部分数据只有基线脚本；核心实现未审计。",
+          "evidence_urls": [
+            "https://github.com/HazyResearch/skill-it/blob/main/README.md"
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "hiyouga/LlamaFactory",
+      "url": "https://github.com/hiyouga/LlamaFactory",
+      "stars": 75773,
+      "pushed_at": "2026-10-29T04:03:03Z",
+      "archived": false,
+      "default_branch": "main",
+      "license": "Apache-2.0",
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/hiyouga/LlamaFactory",
+      "paper_ids": [],
+      "author_attribution": "infrastructure",
+      "paper_notes": []
+    },
+    {
+      "full_name": "huggingface/trl",
+      "url": "https://github.com/huggingface/trl",
+      "stars": 19628,
+      "pushed_at": "2026-10-29T12:20:50Z",
+      "archived": false,
+      "default_branch": "main",
+      "license": "Apache-2.0",
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/huggingface/trl",
+      "paper_ids": [],
+      "author_attribution": "infrastructure",
+      "paper_notes": []
+    },
+    {
+      "full_name": "InternLM/Agent-FLAN",
+      "url": "https://github.com/InternLM/Agent-FLAN",
+      "stars": 363,
+      "pushed_at": "2024-03-22T15:12:14Z",
+      "archived": false,
+      "default_branch": "main",
+      "license": "Apache-2.0",
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/InternLM/Agent-FLAN",
+      "paper_ids": [
+        "B02"
+      ],
+      "author_attribution": "verified_author_link",
+      "paper_notes": [
+        {
+          "paper_id": "B02",
+          "note": "papers/b-02-agent-flan.md",
+          "repo_notes": "2026-10-29核查。论文直接给出作者仓库。递归目录仅README、LICENSE和文档图片；模型/数据可获取，主训练和数据构造源码未在该仓库核实。",
+          "evidence_urls": [
+            "https://github.com/InternLM/Agent-FLAN/blob/main/README.md",
+            "https://api.github.com/repos/InternLM/Agent-FLAN/git/trees/main?recursive=1"
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "kiddyboots216/lottery-ticket-adaptation",
+      "url": "https://github.com/kiddyboots216/lottery-ticket-adaptation",
+      "stars": 40,
+      "pushed_at": "2024-11-20T23:31:17Z",
+      "archived": false,
+      "default_branch": "main",
+      "license": "Apache-2.0",
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/kiddyboots216/lottery-ticket-adaptation",
+      "paper_ids": [
+        "C07"
+      ],
+      "author_attribution": "verified_author_link",
+      "paper_notes": [
+        {
+          "paper_id": "C07",
+          "note": "papers/c-07-lota.md",
+          "repo_notes": "论文链接作者仓库。已见 mask 后向实现与连续训练脚本；README 标 work in progress。",
+          "evidence_urls": [
+            "https://github.com/kiddyboots216/lottery-ticket-adaptation/blob/main/README.md",
+            "https://github.com/kiddyboots216/lottery-ticket-adaptation/blob/main/rlaif/apply_mask_in_backward.py",
+            "https://github.com/kiddyboots216/lottery-ticket-adaptation/blob/main/rlaif/scripts/continual_learning.sh"
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "median-research-group/LibMTL",
+      "url": "https://github.com/median-research-group/LibMTL",
+      "stars": 2597,
+      "pushed_at": "2025-05-14T15:06:50Z",
+      "archived": false,
+      "default_branch": "main",
+      "license": "MIT",
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/median-research-group/LibMTL",
+      "paper_ids": [
+        "R04"
+      ],
+      "author_attribution": "third_party_reference",
+      "paper_notes": [
+        {
+          "paper_id": "R04",
+          "note": "papers/r-04-gradnorm.md",
+          "repo_notes": "LibMTL是第三方参考实现，不标成GradNorm作者代码",
+          "evidence_urls": [
+            "https://github.com/median-research-group/LibMTL/blob/4336804847eaa5e0b924b743d76beec7ac3fdc97/LibMTL/weighting/GradNorm.py"
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "microsoft/rho",
+      "url": "https://github.com/microsoft/rho",
+      "stars": 474,
+      "pushed_at": "2024-04-18T07:28:16Z",
+      "archived": false,
+      "default_branch": "main",
+      "license": "MIT",
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/microsoft/rho",
+      "paper_ids": [
+        "C11"
+      ],
+      "author_attribution": "candidate_unverified",
+      "paper_notes": [
+        {
+          "paper_id": "C11",
+          "note": null,
+          "repo_notes": "列出候选微软仓库；本线未沿论文链接完成所有权核验，也未检查实际训练实现，stars 未核实。",
+          "evidence_urls": [
+            "https://github.com/microsoft/rho"
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "modelscope/ms-swift",
+      "url": "https://github.com/modelscope/ms-swift",
+      "stars": 15985,
+      "pushed_at": "2026-10-29T09:45:01Z",
+      "archived": false,
+      "default_branch": "main",
+      "license": "Apache-2.0",
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/modelscope/ms-swift",
+      "paper_ids": [],
+      "author_attribution": "infrastructure",
+      "paper_notes": []
+    },
+    {
+      "full_name": "NVIDIA-NeMo/Nemotron",
+      "url": "https://github.com/NVIDIA-NeMo/Nemotron",
+      "stars": 2235,
+      "pushed_at": "2026-10-28T15:10:49Z",
+      "archived": false,
+      "default_branch": "main",
+      "license": "Apache-2.0",
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/NVIDIA-NeMo/Nemotron",
+      "paper_ids": [
+        "C06"
+      ],
+      "author_attribution": "verified_author_link",
+      "paper_notes": [
+        {
+          "paper_id": "C06",
+          "note": "papers/c-06-nemotron3-super.md",
+          "repo_notes": "报告首页链接 NVIDIA 官方仓库。已见 Megatron Bridge SFT 入口；所读 default.yaml 未显式呈现完整两阶段切换，不能断言原生产训练可完整复现。",
+          "evidence_urls": [
+            "https://github.com/NVIDIA-NeMo/Nemotron/blob/main/src/nemotron/recipes/super3/stage1_sft/README.md",
+            "https://github.com/NVIDIA-NeMo/Nemotron/blob/main/src/nemotron/recipes/super3/stage1_sft/train.py",
+            "https://github.com/NVIDIA-NeMo/Nemotron/blob/main/src/nemotron/recipes/super3/stage1_sft/config/default.yaml"
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "Olivia-fsm/DoGE",
+      "url": "https://github.com/Olivia-fsm/DoGE",
+      "stars": 21,
+      "pushed_at": "2024-02-29T10:57:12Z",
+      "default_branch": "master",
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/Olivia-fsm/DoGE",
+      "paper_ids": [
+        "A08"
+      ],
+      "author_attribution": "verified_author_link",
+      "paper_notes": [
+        {
+          "paper_id": "A08",
+          "note": "papers/a-08-doge.md",
+          "repo_notes": "作者主页识别Olivia-fsm为Simin Fan并列论文，仓库描述匹配标题；实现DoGETrainer及域梯度/权重更新，含proxy/OoD/base脚本；未运行。",
+          "evidence_urls": [
+            "https://github.com/Olivia-fsm/DoGE",
+            "https://github.com/Olivia-fsm/DoGE/blob/master/src/trainer.py"
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "OpenHands/OpenHands",
+      "url": "https://github.com/OpenHands/OpenHands",
+      "stars": 92179,
+      "pushed_at": "2026-10-29T12:32:48Z",
+      "archived": false,
+      "default_branch": "main",
+      "license": "MIT",
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/OpenHands/OpenHands",
+      "paper_ids": [
+        "B13"
+      ],
+      "author_attribution": "verified_author_link",
+      "paper_notes": [
+        {
+          "paper_id": "B13",
+          "note": null,
+          "repo_notes": "2026-10-29核查。论文首页直接给出All-Hands-AI/OpenHands；保留论文原始链接，后续若重定向由统一资源元数据记录。",
+          "evidence_urls": [
+            "https://github.com/All-Hands-AI/OpenHands"
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "QwenLM/Qwen3",
+      "url": "https://github.com/QwenLM/Qwen3",
+      "stars": 27694,
+      "pushed_at": "2026-01-09T03:05:47Z",
+      "archived": false,
+      "default_branch": "main",
+      "license": null,
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/QwenLM/Qwen3",
+      "paper_ids": [
+        "C04"
+      ],
+      "author_attribution": "verified_author_link",
+      "paper_notes": [
+        {
+          "paper_id": "C04",
+          "note": "papers/c-04-qwen3-thinking-fusion.md",
+          "repo_notes": "报告链接官方仓库。模型、推理与框架说明不等于原始四阶段训练数据/配方公开；所读 LLaMA-Factory 文档仍待更新 Qwen3、示例为 Qwen2.5。",
+          "evidence_urls": [
+            "https://github.com/QwenLM/Qwen3/blob/main/README.md",
+            "https://github.com/QwenLM/Qwen3/blob/main/docs/source/training/llama_factory.md"
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "realYuanLi/Data-Mixing-Optimization",
+      "url": "https://github.com/realYuanLi/Data-Mixing-Optimization",
+      "stars": 0,
+      "pushed_at": "2025-11-11T03:10:44Z",
+      "default_branch": "main",
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/realYuanLi/Data-Mixing-Optimization",
+      "paper_ids": [
+        "A02"
+      ],
+      "author_attribution": "verified_author_link",
+      "paper_notes": [
+        {
+          "paper_id": "A02",
+          "note": "papers/a-02-data-mixing-optimization.md",
+          "repo_notes": "README明确关联论文及作者；已确认数据预处理/采样、SFT启动、参数校准与权重优化；已读SLSQP求解实现；非占位，未运行。",
+          "evidence_urls": [
+            "https://github.com/realYuanLi/Data-Mixing-Optimization/blob/main/README.md",
+            "https://github.com/realYuanLi/Data-Mixing-Optimization/blob/main/domain_weights/weight_optimizer.py"
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "reiss-koh/msft",
+      "url": "https://github.com/reiss-koh/msft",
+      "stars": 14,
+      "pushed_at": "2026-03-24T05:55:48Z",
+      "default_branch": "main",
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/reiss-koh/msft",
+      "paper_ids": [
+        "A06"
+      ],
+      "author_attribution": "verified_author_link",
+      "paper_notes": [
+        {
+          "paper_id": "A06",
+          "note": "papers/a-06-msft.md",
+          "repo_notes": "作者投稿页链接仓库且README回链论文；有数据、训练/评测、过拟合分析、checkpoint及数据集更新；推送2026-03-24早于论文v7，版本一致性未核实。",
+          "evidence_urls": [
+            "https://github.com/reiss-koh/msft/blob/main/README.md",
+            "https://github.com/reiss-koh/msft/blob/main/sft/run_mSFT.sh"
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "sail-sg/regmix",
+      "url": "https://github.com/sail-sg/regmix",
+      "stars": 217,
+      "pushed_at": "2025-02-17T05:43:05Z",
+      "default_branch": "main",
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/sail-sg/regmix",
+      "paper_ids": [
+        "A09"
+      ],
+      "author_attribution": "verified_author_link",
+      "paper_notes": [
+        {
+          "paper_id": "A09",
+          "note": "papers/a-09-regmix.md",
+          "repo_notes": "官方proceedings直接链接作者repo；有比例生成、回归notebook和proxy/大模型训练；README评测标WIP但实际已有评测说明及脚本；未完整运行。",
+          "evidence_urls": [
+            "https://github.com/sail-sg/regmix/blob/main/README.md",
+            "https://github.com/sail-sg/regmix/blob/main/evaluation/README.md"
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "sangmichaelxie/doremi",
+      "url": "https://github.com/sangmichaelxie/doremi",
+      "stars": 361,
+      "pushed_at": "2023-12-26T15:05:44Z",
+      "default_branch": "main",
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/sangmichaelxie/doremi",
+      "paper_ids": [
+        "A11"
+      ],
+      "author_attribution": "verified_author_link",
+      "paper_notes": [
+        {
+          "paper_id": "A11",
+          "note": null,
+          "repo_notes": "README回链论文；说明有域加权dataloader、reference/proxy/main训练流水线与评测；本轮仅README级核查，核心实现未审计。",
+          "evidence_urls": [
+            "https://github.com/sangmichaelxie/doremi/blob/main/README.md"
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "SWE-agent/SWE-agent",
+      "url": "https://github.com/SWE-agent/SWE-agent",
+      "stars": 20682,
+      "pushed_at": "2026-10-26T22:40:23Z",
+      "archived": false,
+      "default_branch": "main",
+      "license": "MIT",
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/SWE-agent/SWE-agent",
+      "paper_ids": [
+        "B14"
+      ],
+      "author_attribution": "verified_author_link",
+      "paper_notes": [
+        {
+          "paper_id": "B14",
+          "note": null,
+          "repo_notes": "2026-10-29核查。官方安装文档确认SWE-agent/SWE-agent；本线没有展开实现评审，避免与通用基础设施重复。",
+          "evidence_urls": [
+            "https://github.com/SWE-bench/SWE-smith/blob/main/docs/guides/train_swe_agent.md"
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "SWE-bench/SWE-smith",
+      "url": "https://github.com/SWE-bench/SWE-smith",
+      "stars": 818,
+      "pushed_at": "2026-10-26T20:14:00Z",
+      "archived": false,
+      "default_branch": "main",
+      "license": "MIT",
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/SWE-bench/SWE-smith",
+      "paper_ids": [
+        "B08"
+      ],
+      "author_attribution": "verified_author_link",
+      "paper_notes": [
+        {
+          "paper_id": "B08",
+          "note": "papers/b-08-swe-smith.md",
+          "repo_notes": "2026-10-29核查。有环境/任务构造、轨迹处理和训练调用实现，依赖SWE-agent及外部训练库。当前资产规模与论文统计不同，不能混用。未运行。",
+          "evidence_urls": [
+            "https://github.com/SWE-bench/SWE-smith/blob/main/docs/guides/train_swe_agent.md",
+            "https://github.com/SWE-bench/SWE-smith/blob/main/swesmith/train/traj_mgr/collect_trajs.py",
+            "https://github.com/SWE-bench/SWE-smith/blob/main/swesmith/train/run/ft_torchtune.py"
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "SWE-Gym/SWE-Gym",
+      "url": "https://github.com/SWE-Gym/SWE-Gym",
+      "stars": 754,
+      "pushed_at": "2025-07-29T17:38:25Z",
+      "archived": false,
+      "default_branch": "main",
+      "license": "Apache-2.0",
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/SWE-Gym/SWE-Gym",
+      "paper_ids": [
+        "B07"
+      ],
+      "author_attribution": "verified_author_link",
+      "paper_notes": [
+        {
+          "paper_id": "B07",
+          "note": "papers/b-07-swe-gym.md",
+          "repo_notes": "2026-10-29核查。训练配置、主脚本、验证器和轨迹资产存在。README要求特定OpenHands fork；32% Verified摘要成绩包含验证器，不是纯SFT。未运行。",
+          "evidence_urls": [
+            "https://github.com/SWE-Gym/SWE-Gym/blob/main/README.md",
+            "https://github.com/SWE-Gym/SWE-Gym/blob/main/docs/OpenHands.md",
+            "https://github.com/SWE-Gym/SWE-Gym/blob/main/scripts/training/openhands/configs/policy/1116-sonnet-4o-491i-32k-qwen25_coder_32b_full-lr1e-4.yaml"
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "THUDM/AgentTuning",
+      "url": "https://github.com/THUDM/AgentTuning",
+      "stars": 1509,
+      "pushed_at": "2023-10-31T15:34:43Z",
+      "archived": false,
+      "default_branch": "main",
+      "license": null,
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/THUDM/AgentTuning",
+      "paper_ids": [
+        "B01"
+      ],
+      "author_attribution": "verified_author_link",
+      "paper_notes": [
+        {
+          "paper_id": "B01",
+          "note": "papers/b-01-agenttuning.md",
+          "repo_notes": "2026-10-29核查。主要含部署、评测、模型/数据入口；未发现可明确对应AgentLM主混训的独立入口。嵌套环境训练文件不算主训练实现。未运行。",
+          "evidence_urls": [
+            "https://github.com/THUDM/AgentTuning/blob/main/README.md",
+            "https://api.github.com/repos/THUDM/AgentTuning/git/trees/main?recursive=1",
+            "https://github.com/THUDM/AgentTuning/blob/main/eval_general/eval_mmlu_hf.py"
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "tianheyu927/PCGrad",
+      "url": "https://github.com/tianheyu927/PCGrad",
+      "stars": 374,
+      "pushed_at": "2020-04-28T22:44:55Z",
+      "archived": false,
+      "default_branch": "master",
+      "license": "MIT",
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/tianheyu927/PCGrad",
+      "paper_ids": [
+        "R02"
+      ],
+      "author_attribution": "verified_author_link",
+      "paper_notes": [
+        {
+          "paper_id": "R02",
+          "note": "papers/r-02-pcgrad.md",
+          "repo_notes": "作者实现为TensorFlow 1风格；未执行",
+          "evidence_urls": [
+            "https://github.com/tianheyu927/PCGrad/blob/c5fbd7c856526373828074f06875230f7f3ee79e/PCGrad_tf.py"
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "WooooDyy/AgentGym",
+      "url": "https://github.com/WooooDyy/AgentGym",
+      "stars": 853,
+      "pushed_at": "2026-05-30T14:12:49Z",
+      "archived": false,
+      "default_branch": "main",
+      "license": "MIT",
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/WooooDyy/AgentGym",
+      "paper_ids": [
+        "B04"
+      ],
+      "author_attribution": "verified_author_link",
+      "paper_notes": [
+        {
+          "paper_id": "B04",
+          "note": "papers/b-04-agentgym.md",
+          "repo_notes": "2026-10-29核查。已读取bc_trainer.py的角色标签、输入屏蔽、截断实现；主行为克隆入口存在。后续RL扩展与原论文区分。未安装或运行。",
+          "evidence_urls": [
+            "https://github.com/WooooDyy/AgentGym/blob/main/README.md",
+            "https://github.com/WooooDyy/AgentGym/blob/main/agentenv/agentenv/trainer/bc_trainer.py"
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "yegcjs/mixinglaws",
+      "url": "https://github.com/yegcjs/mixinglaws",
+      "stars": 113,
+      "pushed_at": "2025-07-15T07:42:16Z",
+      "default_branch": "main",
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/yegcjs/mixinglaws",
+      "paper_ids": [
+        "A13"
+      ],
+      "author_attribution": "verified_author_link",
+      "paper_notes": [
+        {
+          "paper_id": "A13",
+          "note": null,
+          "repo_notes": "README论文引用含作者；列2/3/5域notebook及prediction pipeline/run.sh；本轮未核查核心实现或训练覆盖。",
+          "evidence_urls": [
+            "https://github.com/yegcjs/mixinglaws/blob/main/README.md"
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "yongliang-wu/DFT",
+      "url": "https://github.com/yongliang-wu/DFT",
+      "stars": 928,
+      "pushed_at": "2026-08-01T04:15:51Z",
+      "archived": false,
+      "default_branch": "master",
+      "license": null,
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/yongliang-wu/DFT",
+      "paper_ids": [
+        "C01"
+      ],
+      "author_attribution": "verified_author_link",
+      "paper_notes": [
+        {
+          "paper_id": "C01",
+          "note": "papers/c-01-dft.md",
+          "repo_notes": "论文首页直接链接作者仓库。真实 trainer 实现含目标 token 概率 detach 与 loss mask。DFT=Dynamic Fine-Tuning，不同于 Differential Fine-Tuning (DiFT)。",
+          "evidence_urls": [
+            "https://github.com/yongliang-wu/DFT/blob/master/README.md",
+            "https://github.com/yongliang-wu/DFT/blob/master/verl/verl/trainer/fsdp_dft_trainer.py"
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "ZGCA-AI4Edu/LS-Mixture",
+      "url": "https://github.com/ZGCA-AI4Edu/LS-Mixture",
+      "stars": 10,
+      "pushed_at": "2025-05-10T06:03:53Z",
+      "archived": false,
+      "default_branch": "main",
+      "license": null,
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/ZGCA-AI4Edu/LS-Mixture",
+      "paper_ids": [
+        "C05"
+      ],
+      "author_attribution": "verified_author_link",
+      "paper_notes": [
+        {
+          "paper_id": "C05",
+          "note": "papers/c-05-ls-mixture.md",
+          "repo_notes": "论文 Code 链接实际指向 Vue/Vite 项目网站。已确认方法展示，未见训练实现；不可标作完整训练代码开源。",
+          "evidence_urls": [
+            "https://github.com/ZGCA-AI4Edu/LS-Mixture/blob/main/README.md",
+            "https://github.com/ZGCA-AI4Edu/LS-Mixture/blob/main/package.json"
+          ]
+        }
+      ]
+    },
+    {
+      "full_name": "zwhong714/PSFT",
+      "url": "https://github.com/zwhong714/PSFT",
+      "stars": 40,
+      "pushed_at": "2025-09-09T02:28:14Z",
+      "archived": false,
+      "default_branch": "main",
+      "license": null,
+      "checked_on": "2026-10-29",
+      "metadata_source": "https://api.github.com/repos/zwhong714/PSFT",
+      "paper_ids": [
+        "C02"
+      ],
+      "author_attribution": "verified_author_link",
+      "paper_notes": [
+        {
+          "paper_id": "C02",
+          "note": "papers/c-02-psft.md",
+          "repo_notes": "身份链：会议论文作者邮箱前缀 zwhong714 → 同名 GitHub 作者姓名/机构及置顶 PSFT。已见示范数据、old log-prob 与 actor update，以及 ratio clipping；未复现。",
+          "evidence_urls": [
+            "https://github.com/zwhong714",
+            "https://github.com/zwhong714/PSFT/blob/main/README.md",
+            "https://github.com/zwhong714/PSFT/blob/main/verl/recipe/psft/psft_ray_trainer.py",
+            "https://github.com/zwhong714/PSFT/blob/main/verl/verl/trainer/ppo/core_algos.py"
+          ]
+        }
+      ]
+    }
+  ]
+}

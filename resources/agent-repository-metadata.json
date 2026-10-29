@@ -1,0 +1,110 @@
+[
+  {
+    "requested_name": "THUDM/AgentTuning",
+    "full_name": "THUDM/AgentTuning",
+    "html_url": "https://github.com/THUDM/AgentTuning",
+    "stars": 1509,
+    "default_branch": "main",
+    "pushed_at": "2023-10-31T15:34:43Z",
+    "archived": false,
+    "license": null,
+    "metadata_source": "https://api.github.com/repos/THUDM/AgentTuning",
+    "checked_on": "2026-10-29"
+  },
+  {
+    "requested_name": "InternLM/Agent-FLAN",
+    "full_name": "InternLM/Agent-FLAN",
+    "html_url": "https://github.com/InternLM/Agent-FLAN",
+    "stars": 363,
+    "default_branch": "main",
+    "pushed_at": "2024-03-22T15:12:14Z",
+    "archived": false,
+    "license": "Apache-2.0",
+    "metadata_source": "https://api.github.com/repos/InternLM/Agent-FLAN",
+    "checked_on": "2026-10-29"
+  },
+  {
+    "requested_name": "WooooDyy/AgentGym",
+    "full_name": "WooooDyy/AgentGym",
+    "html_url": "https://github.com/WooooDyy/AgentGym",
+    "stars": 853,
+    "default_branch": "main",
+    "pushed_at": "2026-05-30T14:12:49Z",
+    "archived": false,
+    "license": "MIT",
+    "metadata_source": "https://api.github.com/repos/WooooDyy/AgentGym",
+    "checked_on": "2026-10-29"
+  },
+  {
+    "requested_name": "Fu-Dayuan/AgentRefine",
+    "full_name": "Fu-Dayuan/AgentRefine",
+    "html_url": "https://github.com/Fu-Dayuan/AgentRefine",
+    "stars": 22,
+    "default_branch": "main",
+    "pushed_at": "2025-11-22T07:34:07Z",
+    "archived": false,
+    "license": null,
+    "metadata_source": "https://api.github.com/repos/Fu-Dayuan/AgentRefine",
+    "checked_on": "2026-10-29"
+  },
+  {
+    "requested_name": "ByteDance-Seed/Agent-R",
+    "full_name": "ByteDance-Seed/Agent-R",
+    "html_url": "https://github.com/ByteDance-Seed/Agent-R",
+    "stars": 175,
+    "default_branch": "main",
+    "pushed_at": "2025-10-20T02:30:17Z",
+    "archived": true,
+    "license": "Apache-2.0",
+    "metadata_source": "https://api.github.com/repos/ByteDance-Seed/Agent-R",
+    "checked_on": "2026-10-29"
+  },
+  {
+    "requested_name": "SWE-Gym/SWE-Gym",
+    "full_name": "SWE-Gym/SWE-Gym",
+    "html_url": "https://github.com/SWE-Gym/SWE-Gym",
+    "stars": 754,
+    "default_branch": "main",
+    "pushed_at": "2025-07-29T17:38:25Z",
+    "archived": false,
+    "license": "Apache-2.0",
+    "metadata_source": "https://api.github.com/repos/SWE-Gym/SWE-Gym",
+    "checked_on": "2026-10-29"
+  },
+  {
+    "requested_name": "SWE-bench/SWE-smith",
+    "full_name": "SWE-bench/SWE-smith",
+    "html_url": "https://github.com/SWE-bench/SWE-smith",
+    "stars": 818,
+    "default_branch": "main",
+    "pushed_at": "2026-10-26T20:14:00Z",
+    "archived": false,
+    "license": "MIT",
+    "metadata_source": "https://api.github.com/repos/SWE-bench/SWE-smith",
+    "checked_on": "2026-10-29"
+  },
+  {
+    "requested_name": "OpenHands/OpenHands",
+    "full_name": "OpenHands/OpenHands",
+    "html_url": "https://github.com/OpenHands/OpenHands",
+    "stars": 92179,
+    "default_branch": "main",
+    "pushed_at": "2026-10-29T12:32:48Z",
+    "archived": false,
+    "license": "MIT",
+    "metadata_source": "https://api.github.com/repos/OpenHands/OpenHands",
+    "checked_on": "2026-10-29"
+  },
+  {
+    "requested_name": "SWE-agent/SWE-agent",
+    "full_name": "SWE-agent/SWE-agent",
+    "html_url": "https://github.com/SWE-agent/SWE-agent",
+    "stars": 20682,
+    "default_branch": "main",
+    "pushed_at": "2026-10-26T22:40:23Z",
+    "archived": false,
+    "license": "MIT",
+    "metadata_source": "https://api.github.com/repos/SWE-agent/SWE-agent",
+    "checked_on": "2026-10-29"
+  }
+]

@@ -1,0 +1,121 @@
+[
+  {
+    "id": "R01",
+    "title": "MFTCoder: Boosting Code LLMs with Multitask Fine-Tuning",
+    "year": 2024,
+    "status": "published",
+    "venue": "KDD 2024",
+    "paper_url": "https://doi.org/10.1145/3637528.3671609",
+    "repo_url": "https://github.com/codefuse-ai/MFTCoder",
+    "repo_owner_verified": true,
+    "repo_type": "author",
+    "evidence_urls": [
+      "https://arxiv.org/pdf/2311.02303",
+      "https://github.com/codefuse-ai/MFTCoder/blob/8ba13f44e2036f1412a343bc343dc6cda7383d73/mftcoder_accelerate/src/utils/loss_utils.py"
+    ],
+    "reading_depth": "关键正文（可获取预印本v1）+README+损失与训练源码；正式发表另核实",
+    "priority": "P1",
+    "local_note": "papers/r-01-mftcoder.md",
+    "scope_match": "direct_multitask_sft",
+    "repo_notes": "有实质多任务损失与训练入口；代码还包含后续CoBa；未执行",
+    "code_status": "implementation_present",
+    "checked_on": "2026-10-29",
+    "github_stars": 711,
+    "metadata_checked_at": "2026-10-29"
+  },
+  {
+    "id": "R02",
+    "title": "Gradient Surgery for Multi-Task Learning",
+    "year": 2020,
+    "status": "published",
+    "venue": "NeurIPS 2020",
+    "paper_url": "https://papers.neurips.cc/paper_files/paper/2020/hash/3fe78a8acf5fda99de95303940a2420c-Abstract.html",
+    "repo_url": "https://github.com/tianheyu927/PCGrad",
+    "repo_owner_verified": true,
+    "repo_type": "author",
+    "evidence_urls": [
+      "https://arxiv.org/abs/2001.06782",
+      "https://github.com/tianheyu927/PCGrad/blob/c5fbd7c856526373828074f06875230f7f3ee79e/PCGrad_tf.py"
+    ],
+    "reading_depth": "问题定义+作者TensorFlow实现",
+    "priority": "P2",
+    "local_note": "papers/r-02-pcgrad.md",
+    "scope_match": "foundational_not_llm",
+    "repo_notes": "作者实现为TensorFlow 1风格；未执行",
+    "code_status": "implementation_present",
+    "checked_on": "2026-10-29",
+    "github_stars": 374,
+    "metadata_checked_at": "2026-10-29"
+  },
+  {
+    "id": "R03",
+    "title": "Conflict-Averse Gradient Descent for Multi-task Learning",
+    "year": 2021,
+    "status": "published",
+    "venue": "NeurIPS 2021",
+    "paper_url": "https://proceedings.neurips.cc/paper/2021/hash/9d27fdf2477ffbff837d73ef7ae23db9-Abstract.html",
+    "repo_url": "https://github.com/Cranial-XIX/CAGrad",
+    "repo_owner_verified": true,
+    "repo_type": "author",
+    "evidence_urls": [
+      "https://arxiv.org/abs/2110.14048",
+      "https://github.com/Cranial-XIX/CAGrad/blob/dc3d48152b6196945cfd56144879b9d42353b095/toy.py"
+    ],
+    "reading_depth": "摘要与目标定义+README+演示实现",
+    "priority": "P2",
+    "local_note": "papers/r-03-cagrad.md",
+    "scope_match": "foundational_not_llm",
+    "repo_notes": "有toy/视觉/MTRL实现；非LLM即用工程",
+    "code_status": "implementation_present",
+    "checked_on": "2026-10-29",
+    "github_stars": 161,
+    "metadata_checked_at": "2026-10-29"
+  },
+  {
+    "id": "R04",
+    "title": "GradNorm: Gradient Normalization for Adaptive Loss Balancing in Deep Multitask Networks",
+    "year": 2018,
+    "status": "published",
+    "venue": "ICML 2018",
+    "paper_url": "https://proceedings.mlr.press/v80/chen18a.html",
+    "repo_url": "https://github.com/median-research-group/LibMTL",
+    "repo_owner_verified": false,
+    "repo_type": "third_party_reference",
+    "evidence_urls": [
+      "https://github.com/median-research-group/LibMTL/blob/4336804847eaa5e0b924b743d76beec7ac3fdc97/LibMTL/weighting/GradNorm.py"
+    ],
+    "reading_depth": "正式摘要+第三方参考实现",
+    "priority": "P2",
+    "local_note": "papers/r-04-gradnorm.md",
+    "scope_match": "foundational_not_llm",
+    "repo_notes": "LibMTL是第三方参考实现，不标成GradNorm作者代码",
+    "code_status": "third_party_implementation",
+    "checked_on": "2026-10-29",
+    "github_stars": 2597,
+    "metadata_checked_at": "2026-10-29"
+  },
+  {
+    "id": "R05",
+    "title": "Multi-Task Transfer Matters During Instruction-Tuning",
+    "year": 2024,
+    "status": "published",
+    "venue": "Findings ACL 2024",
+    "paper_url": "https://aclanthology.org/2024.findings-acl.883/",
+    "repo_url": "https://github.com/davidandym/Multitask-Transfer-Instruction-Tuning",
+    "repo_owner_verified": true,
+    "repo_type": "author",
+    "evidence_urls": [
+      "https://aclanthology.org/2024.findings-acl.883.pdf",
+      "https://github.com/davidandym/Multitask-Transfer-Instruction-Tuning"
+    ],
+    "reading_depth": "正式摘要+原文入口与仓库目录；正文待精读",
+    "priority": "P2",
+    "local_note": "papers/r-05-instruction-transfer.md",
+    "scope_match": "heldout_transfer_not_target_regression",
+    "repo_notes": "递归目录仅README和LICENSE，未发现实质训练实现",
+    "code_status": "placeholder",
+    "checked_on": "2026-10-29",
+    "github_stars": 1,
+    "metadata_checked_at": "2026-10-29"
+  }
+]
