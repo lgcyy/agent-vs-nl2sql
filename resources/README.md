@@ -5,6 +5,7 @@
 | 文件 | 用途 |
 | --- | --- |
 | [当前五篇名单 JSON](top5-v2-proposal.json) | 已确认的第二版、阅读顺序、候选取舍及指标快照 |
+| [DiFT 混训与消融重算](dift-mix-evidence.json) | 六组目标分数、相对混训／单训的比较、随机对照与证据限制 |
 | [第一版筛选证据 JSON](top5-selection-evidence.json) | 15 篇候选的 OpenAlex 引用与版本范围、项目 Stars、初选及年代复核 |
 | [代码与资源地图](repository-catalog.md) | 37 个主要项目的资产范围、作者归属、Stars 与维护快照 |
 | [训练实现与多任务参考库](training-infrastructure.md) | LlamaFactory、TRL、ms-swift、Axolotl、Open Instruct 等关键源码 |

@@ -1,0 +1,314 @@
+{
+  "schema_version": "1.0",
+  "paper_id": "A01",
+  "checked_on": "2026-10-30",
+  "source_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/b304a04c6a4ac168aa692923814ace17-Paper-Conference.pdf",
+  "source_version": "ICLR 2026 proceedings PDF, 31 pages",
+  "source_locations": {
+    "corresponding_single_references": "Table 1, printed p.4",
+    "mixed_results": "Table 2, printed p.8",
+    "random_ablation": "D.4 / Table 11, printed p.21",
+    "checkpoint_selection": "B.5, printed p.16"
+  },
+  "scope": "Main Table 2 mixed section only: three task pairs across two models; not all experiments in the paper.",
+  "provenance": "Raw reported scores transcribed and checked against PDF screenshots; differences and classifications independently computed with decimal arithmetic.",
+  "rows": [
+    {
+      "model": "Llama3-8B",
+      "task_order": [
+        "Math",
+        "Code"
+      ],
+      "metric_order": [
+        "GSM8k",
+        "xGLUE"
+      ],
+      "ordinary_mixed_reported": [
+        64.82,
+        1.0956
+      ],
+      "dift_reported": [
+        67.02,
+        1.0735
+      ],
+      "corresponding_single_task_reference": [
+        61.64,
+        1.1203
+      ],
+      "dift_minus_ordinary_mixed": [
+        2.2,
+        -0.0221
+      ],
+      "comparison_vs_mixed": "tradeoff",
+      "dift_minus_single_reference": [
+        5.38,
+        -0.0468
+      ],
+      "comparison_vs_single_reference": "tradeoff",
+      "ata_reported": {
+        "ordinary_mixed": 59.8,
+        "dift": 60.35
+      }
+    },
+    {
+      "model": "Llama3-8B",
+      "task_order": [
+        "Code",
+        "Logic"
+      ],
+      "metric_order": [
+        "xGLUE",
+        "LogiQA2"
+      ],
+      "ordinary_mixed_reported": [
+        1.0779,
+        32.57
+      ],
+      "dift_reported": [
+        1.1359,
+        33.4
+      ],
+      "corresponding_single_task_reference": [
+        1.1203,
+        37.02
+      ],
+      "dift_minus_ordinary_mixed": [
+        0.058,
+        0.83
+      ],
+      "comparison_vs_mixed": "both_improved",
+      "dift_minus_single_reference": [
+        0.0156,
+        -3.62
+      ],
+      "comparison_vs_single_reference": "tradeoff",
+      "ata_reported": {
+        "ordinary_mixed": 43.23,
+        "dift": 45.1
+      }
+    },
+    {
+      "model": "Llama3-8B",
+      "task_order": [
+        "Logic",
+        "CSQA"
+      ],
+      "metric_order": [
+        "LogiQA2",
+        "CSQA"
+      ],
+      "ordinary_mixed_reported": [
+        32.44,
+        77.4
+      ],
+      "dift_reported": [
+        32.38,
+        78.95
+      ],
+      "corresponding_single_task_reference": [
+        37.02,
+        79.36
+      ],
+      "dift_minus_ordinary_mixed": [
+        -0.06,
+        1.55
+      ],
+      "comparison_vs_mixed": "tradeoff",
+      "dift_minus_single_reference": [
+        -4.64,
+        -0.41
+      ],
+      "comparison_vs_single_reference": "both_decreased",
+      "ata_reported": {
+        "ordinary_mixed": 54.92,
+        "dift": 55.67
+      }
+    },
+    {
+      "model": "Mistral-7B",
+      "task_order": [
+        "Math",
+        "Code"
+      ],
+      "metric_order": [
+        "GSM8k",
+        "xGLUE"
+      ],
+      "ordinary_mixed_reported": [
+        41.17,
+        1.2913
+      ],
+      "dift_reported": [
+        42.46,
+        1.3429
+      ],
+      "corresponding_single_task_reference": [
+        59.14,
+        1.7146
+      ],
+      "dift_minus_ordinary_mixed": [
+        1.29,
+        0.0516
+      ],
+      "comparison_vs_mixed": "both_improved",
+      "dift_minus_single_reference": [
+        -16.68,
+        -0.3717
+      ],
+      "comparison_vs_single_reference": "both_decreased",
+      "ata_reported": {
+        "ordinary_mixed": 52.87,
+        "dift": 54.8
+      }
+    },
+    {
+      "model": "Mistral-7B",
+      "task_order": [
+        "Code",
+        "Logic"
+      ],
+      "metric_order": [
+        "xGLUE",
+        "LogiQA2"
+      ],
+      "ordinary_mixed_reported": [
+        1.2342,
+        31.17
+      ],
+      "dift_reported": [
+        1.2555,
+        32.51
+      ],
+      "corresponding_single_task_reference": [
+        1.7146,
+        31.23
+      ],
+      "dift_minus_ordinary_mixed": [
+        0.0213,
+        1.34
+      ],
+      "comparison_vs_mixed": "both_improved",
+      "dift_minus_single_reference": [
+        -0.4591,
+        1.28
+      ],
+      "comparison_vs_single_reference": "tradeoff",
+      "ata_reported": {
+        "ordinary_mixed": 46.44,
+        "dift": 47.64
+      }
+    },
+    {
+      "model": "Mistral-7B",
+      "task_order": [
+        "Logic",
+        "CSQA"
+      ],
+      "metric_order": [
+        "LogiQA2",
+        "CSQA"
+      ],
+      "ordinary_mixed_reported": [
+        31.11,
+        74.69
+      ],
+      "dift_reported": [
+        31.68,
+        74.45
+      ],
+      "corresponding_single_task_reference": [
+        31.23,
+        70.93
+      ],
+      "dift_minus_ordinary_mixed": [
+        0.57,
+        -0.24
+      ],
+      "comparison_vs_mixed": "tradeoff",
+      "dift_minus_single_reference": [
+        0.45,
+        3.52
+      ],
+      "comparison_vs_single_reference": "both_improved",
+      "ata_reported": {
+        "ordinary_mixed": 52.9,
+        "dift": 53.07
+      }
+    }
+  ],
+  "summary": {
+    "configurations": 6,
+    "vs_ordinary_mixed": {
+      "tradeoff": 3,
+      "both_improved": 3
+    },
+    "vs_corresponding_single_reference": {
+      "tradeoff": 3,
+      "both_decreased": 2,
+      "both_improved": 1
+    },
+    "reported_ata_improved": 6
+  },
+  "mistral_code_logic_gap_closure": {
+    "metric": "xGLUE in original reported scale",
+    "ordinary_mixed": 1.2342,
+    "dift": 1.2555,
+    "single": 1.7146,
+    "single_minus_mixed": 0.4804,
+    "dift_minus_mixed": 0.0213,
+    "ratio": 0.044338051623646964,
+    "approx_percent_of_gap": 4.4,
+    "definition": "(dift - mixed) / (single - mixed)",
+    "interpretation": "Own one-column gap-closure calculation; not a paper metric, a pass-rate percentage gain, or statistical significance."
+  },
+  "random_ablation": {
+    "model": "Llama3-8B",
+    "setting": "Mix-Math-Code",
+    "metric_order": [
+      "GSM8k",
+      "xGLUE"
+    ],
+    "ordinary_mixed": [
+      64.82,
+      1.0956
+    ],
+    "dift": [
+      67.02,
+      1.0735
+    ],
+    "random": [
+      62.35,
+      1.0294
+    ],
+    "dift_minus_random": [
+      4.67,
+      0.0441
+    ],
+    "dift_minus_ordinary_mixed": [
+      2.2,
+      -0.0221
+    ],
+    "matching_claim": "D.4 calls random DiFT same-scale / same rows.",
+    "matching_limit": "Per-layer random-mask construction, final union counts, actual trainable parameter counts and repeated random-mask results are not sufficiently specified to independently establish exact matching.",
+    "seed_limit": "No multi-training-seed uncertainty is supplied for this table; section 3.3 seeds 42-46 are DSR probe-data resampling.",
+    "printed_parenthetical_discrepancies": [
+      "Mix random xGLUE: printed -0.0662 equals random minus ordinary mixed; random minus DiFT is -0.0441.",
+      "Continual random GSM8k: 42.46 minus 46.32 equals -3.86, not printed -4.03."
+    ]
+  },
+  "caveats": [
+    "Counts describe reported point estimates, not statistically established wins or future success probabilities.",
+    "Each single-task reference vector combines two different task-specific models; it is not one jointly achieving checkpoint.",
+    "B.5 selects the best of three evaluated checkpoints; whether all metric columns use one selected checkpoint is not sufficiently specified.",
+    "CodeXGLUE subtask and scale are under-specified; retain xGLUE numbers without interpreting them as probabilities.",
+    "Small differences such as -0.06 and -0.24 do not establish robust degradation without uncertainty information.",
+    "This paper does not verify the user's Qwen-3.8-27B SQL-noCoT plus long-horizon interactive Agent case."
+  ],
+  "assessment": {
+    "reading_relevance": "high",
+    "method_role": "parameter-selection hypothesis and potential comparator",
+    "business_solution_established": false
+  },
+  "training_or_replication_run": false,
+  "reading_guide": "reading/01-dift-evidence.md"
+}

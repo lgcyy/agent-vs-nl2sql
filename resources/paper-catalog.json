@@ -24,7 +24,7 @@
         "https://proceedings.iclr.cc/paper_files/paper/2026/file/b304a04c6a4ac168aa692923814ace17-Paper-Conference.pdf",
         "https://proceedings.iclr.cc/paper_files/paper/2026/file/b304a04c6a4ac168aa692923814ace17-Supplemental-Conference.zip"
       ],
-      "reading_depth": "methods_tables_algorithm_and_official_supplement_static_audit",
+      "reading_depth": "methods_tables_ablations_algorithm_and_official_supplement_static_audit",
       "priority": "P0",
       "local_note": "papers/a-01-dift.md",
       "scope_match": "直接多任务/连续SFT；Table 1有一个数值上双侧低于对应单训和共同base的组合，任务为代码与逻辑而非SQL+长程Agent；表内箭头及小幅下降须谨慎核读。",
@@ -45,7 +45,15 @@
         "Algorithm 1",
         "Appendix B.5",
         "Appendix D.1",
-        "Appendix D.4"
+        "Appendix D.4",
+        "3.3",
+        "5.5",
+        "Table 4",
+        "Appendix D.2",
+        "Appendix D.3",
+        "Table 9",
+        "Table 10",
+        "Table 11"
       ],
       "version_read": "ICLR 2026 proceedings PDF",
       "code_audit_depth": "official_supplement_static_review_not_reproduced",
@@ -125,6 +133,29 @@
         "continual_limit": "主文/Algorithm 1与附录对差集和补集存在不一致，未统一为已验证实施方案。",
         "code_metric_limit": "B.5关联CodeXGLUE，但具体子任务与单位未充分说明；原表值不自行换算为概率。",
         "ata_code_logic": "(50 * code_column + logic_column) / 2"
+      },
+      "reading_guides": [
+        "reading/01-dift.md",
+        "reading/01-dift-evidence.md"
+      ],
+      "effectiveness_audit": {
+        "checked_on": "2026-10-30",
+        "scope": "Table 2 main mixed section (6 model/task-pair configurations)",
+        "evidence_record": "resources/dift-mix-evidence.json",
+        "guide": "reading/01-dift-evidence.md",
+        "vs_mixed": {
+          "tradeoff": 3,
+          "both_improved": 3
+        },
+        "vs_single_reference": {
+          "tradeoff": 3,
+          "both_decreased": 2,
+          "both_improved": 1
+        },
+        "interpretation": "DSR selection has local empirical support; reported average gains do not establish both-target recovery to corresponding single-task levels.",
+        "same_checkpoint_verified": false,
+        "business_solution_established": false,
+        "experiment_run": false
       }
     },
     {

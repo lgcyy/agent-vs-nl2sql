@@ -46,6 +46,25 @@
         "training_limit": "默认初始化调用freeze_global_top_param_ds；所见切片requires_grad路径、未接入的mask辅助函数及缺失mask/config/package依赖不足以核实主文混训并集更新。",
         "repo_url": null,
         "repo_stars": null
+      },
+      "effectiveness_audit": {
+        "checked_on": "2026-10-30",
+        "scope": "Table 2 main mixed section (6 model/task-pair configurations)",
+        "evidence_record": "resources/dift-mix-evidence.json",
+        "guide": "reading/01-dift-evidence.md",
+        "vs_mixed": {
+          "tradeoff": 3,
+          "both_improved": 3
+        },
+        "vs_single_reference": {
+          "tradeoff": 3,
+          "both_decreased": 2,
+          "both_improved": 1
+        },
+        "interpretation": "DSR selection has local empirical support; reported average gains do not establish both-target recovery to corresponding single-task levels.",
+        "same_checkpoint_verified": false,
+        "business_solution_established": false,
+        "experiment_run": false
       }
     },
     {
@@ -172,6 +191,13 @@
   "current_reading": {
     "id": "A01",
     "guide": "reading/01-dift.md",
-    "started_on": "2026-10-30"
+    "started_on": "2026-10-30",
+    "latest_guide": "reading/01-dift-evidence.md",
+    "guides": [
+      "reading/01-dift.md",
+      "reading/01-dift-evidence.md"
+    ],
+    "last_reviewed_on": "2026-10-30",
+    "latest_focus": "效果强度、随机消融、参数位置与更新方向的区别"
   }
 }

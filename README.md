@@ -26,12 +26,13 @@
 
 **当前共同精读：DiFT → MFTCoder → DMO → Agent-FLAN → DFT。** 用户于 **2026-10-30** 确认并开始第一篇。[五篇名单与取舍](reading/top-5-v2-proposal.md)保留选入理由、指标范围和局限。
 
-**正在学习：[第一篇 DiFT：问题、参数选择与原始证据](reading/01-dift.md)。** 新增官方补充源码的静态核查；尚未运行论文复现。早期名单及年代偏差复核保存在[第一版记录](reading/top-5.md)，完整资料池继续作为查阅背景。
+**正在学习 DiFT：[第一轮：问题、参数选择与原始证据](reading/01-dift.md) · [第二轮：效果与消融的证据强度](reading/01-dift-evidence.md)。** 第二轮重算六组混训结果，区分平均改善、双目标改善及达到单训；保留官方补充源码的静态核查，尚未运行论文复现。早期名单及年代偏差复核保存在[第一版记录](reading/top-5.md)，完整资料池继续作为查阅背景。
 
 | 入口 | 主要内容 |
 | --- | --- |
 | [五篇共同精读](reading/top-5-v2-proposal.md) | 已确认名单、筛选理由与指标范围 |
 | [第一篇：DiFT 精读](reading/01-dift.md) | 参数行选择的教学例子、原表比较及官方源码核查 |
+| [DiFT 第二轮：效果与消融](reading/01-dift-evidence.md) | 六组混训重算、随机对照、位置选择与方向冲突的区别 |
 | [调研总图](topics/00-research-map.md) | 大问题、已有成果、分歧、研究空间与建议阅读顺序 |
 | [多任务 SFT 与混合](topics/01-multitask-sft-and-mixtures.md) | DiFT、DMO、CoBa、mSFT、DynamixSFT 等 |
 | [Agent 轨迹与保持](topics/02-agent-trajectories-and-retention.md) | Agent-FLAN、AgentBank、SWE-Gym、SWE-smith 等 |

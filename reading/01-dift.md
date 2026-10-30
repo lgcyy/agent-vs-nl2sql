@@ -2,6 +2,8 @@
 
 日期：**2026-10-30**。当前主读顺序已确认：DiFT → MFTCoder → DMO → Agent-FLAN → DFT。
 
+**续读：[效果有多强，消融究竟证明了什么](01-dift-evidence.md)**——六组混训逐项重算、随机对照、参数位置与更新方向的区别。
+
 [五篇名单](top-5-v2-proposal.md) · [论文卡片与表格证据](../papers/a-01-dift.md) · [正式论文](https://proceedings.iclr.cc/paper_files/paper/2026/file/b304a04c6a4ac168aa692923814ace17-Paper-Conference.pdf) · [官方补充源码 ZIP](https://proceedings.iclr.cc/paper_files/paper/2026/file/b304a04c6a4ac168aa692923814ace17-Supplemental-Conference.zip)
 
 这一篇先理解混训版本的主线。下面区分原文报告、我们构造的教学例子、静态源码观察及独立分析；不把阅读过程变成已经验证的业务方案。
