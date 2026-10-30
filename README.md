@@ -24,14 +24,16 @@
 
 ## 从这里开始
 
-**当前共同精读：MFTCoder → DMO → Agent-FLAN → DFT。** 用户于 **2026-10-30** 决定暂不优先考虑 DiFT 方法，已读资料保留为背景。[原确认名单与当前进度](reading/top-5-v2-proposal.md)保留选入理由、后续判断和指标范围。
+**已完成 DiFT 与 MFTCoder 的本轮核心阅读；后续顺序：DMO → Agent-FLAN → DFT。** 用户于 **2026-10-30** 决定暂不优先考虑 DiFT 方法，已读资料保留为背景。[原确认名单与当前进度](reading/top-5-v2-proposal.md)保留选入理由、后续判断和指标范围。
 
-**正在学习：[第二篇 MFTCoder：混合数据怎样变成训练目标](reading/02-mftcoder.md)。** 从有效监督 token、序列行与任务级 loss 汇聚出发，结合原始主表和固定版本代码。DiFT 的[第一轮方法讲义](reading/01-dift.md)与[第二轮效果审阅](reading/01-dift-evidence.md)继续保留；早期名单及年代偏差复核见[第一版记录](reading/top-5.md)。
+**最新整理：[DiFT 与 MFTCoder 的 idea 总结](reading/ideas-dift-mftcoder.md)。** 对照参数更新范围与监督权重，区分原始思路、设计假设、实证和业务边界。MFTCoder 的[前半篇](reading/02-mftcoder.md)讲损失汇聚，[后半篇](reading/02-mftcoder-balance.md)讲难度、收敛速度与任务划分；早期名单及年代偏差复核见[第一版记录](reading/top-5.md)。
 
 | 入口 | 主要内容 |
 | --- | --- |
 | [五篇共同精读](reading/top-5-v2-proposal.md) | 已确认名单、筛选理由与指标范围 |
-| [当前：MFTCoder 精读](reading/02-mftcoder.md) | 有效 token、序列与任务汇聚的教学例子、主结果与源码边界 |
+| [两篇 idea 总结](reading/ideas-dift-mftcoder.md) | DiFT／MFTCoder 的原始思路、设计假设、证据与当前取舍 |
+| [MFTCoder 前半篇](reading/02-mftcoder.md) | 有效 token、序列与任务汇聚的教学例子、主结果与源码边界 |
+| [MFTCoder 后半篇](reading/02-mftcoder-balance.md) | focal、收敛反馈、任务划分及“平衡不等于共同改善” |
 | [第一篇：DiFT 精读](reading/01-dift.md) | 参数行选择的教学例子、原表比较及官方源码核查 |
 | [DiFT 第二轮：效果与消融](reading/01-dift-evidence.md) | 六组混训重算、随机对照、位置选择与方向冲突的区别 |
 | [调研总图](topics/00-research-map.md) | 大问题、已有成果、分歧、研究空间与建议阅读顺序 |

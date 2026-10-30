@@ -4,7 +4,7 @@
 
 [返回首页](../README.md) · [完整资料目录](../papers/README.md) · [筛选证据 JSON](../resources/top5-selection-evidence.json)
 
-**当前已确认名单与进度（2026-10-30）：**见[第二版五篇共同精读](top-5-v2-proposal.md)。DiFT 两轮阅读后转为背景，当前学习[MFTCoder](02-mftcoder.md)。本页保留第一版及筛选复核记录。
+**当前已确认名单与进度（2026-10-30）：**见[第二版五篇共同精读](top-5-v2-proposal.md)。DiFT 与 MFTCoder 的本轮核心阅读已完成，[两篇 idea 总结](ideas-dift-mftcoder.md)已整理；DiFT 保留为背景，下一篇 DMO。本页保留第一版及筛选复核记录。
 
 ## 0. 年代偏差复核：为何四篇来自 2024 年？
 

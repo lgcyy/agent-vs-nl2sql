@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "paper_id": "R01",
   "checked_on": "2026-10-30",
   "formal_publication": {
@@ -15,7 +15,10 @@
       "3.5 Eq.1",
       "4.1",
       "4.3 Tables 2/3/5",
-      "6"
+      "6",
+      "3.5 Eq.2/3/4",
+      "4.3.1 Table 2 base provenance",
+      "Appendix B Figure 7"
     ],
     "conference_final_full_text_equivalence_verified": false
   },
@@ -36,7 +39,8 @@
         "ordinary_mixed": 57.93,
         "mft_5tasks": 60.37,
         "mft_minus_mixed_pp": 2.44,
-        "mft_minus_single_pp": 0.61
+        "mft_minus_single_pp": 0.61,
+        "quoted_base": 43.3
       },
       {
         "metric": "MBPP",
@@ -45,11 +49,14 @@
         "ordinary_mixed": 53.6,
         "mft_5tasks": 56.0,
         "mft_minus_mixed_pp": 2.4,
-        "mft_minus_single_pp": 1.8
+        "mft_minus_single_pp": 1.8,
+        "quoted_base": 49.0
       }
     ],
     "corresponding_single_reference_is_two_models": true,
-    "multi_run_uncertainty_reported": false
+    "multi_run_uncertainty_reported": false,
+    "base_provenance": "The table attributes its base numbers to the CodeLlama paper; same-protocol re-evaluation in MFTCoder is not established.",
+    "ordinary_mixed_below_quoted_base_on_both_metrics": false
   },
   "experimental_scope": {
     "mixed_and_mft_same_five_task_data_reported": true,
@@ -62,7 +69,8 @@
     "stopping": "Each model independently stopped using its validation-loss criterion.",
     "equal_total_tokens_or_steps_verified": false,
     "sql_evaluation": "Text-to-SQL is an unseen-task transfer evaluation, not SQL-plus-Agent mixed training.",
-    "business_dual_regression_reproduced": false
+    "business_dual_regression_reproduced": false,
+    "causal_attribution_limit": "The reported comparison supports the Eq.1-based training scheme; independent early stopping and unverified total budgets prevent attributing every gain solely to one isolated loss operator."
   },
   "code_audit": {
     "repository": "https://github.com/codefuse-ai/MFTCoder",
@@ -93,6 +101,12 @@
         "git_blob_sha": "f7226bd3fca94931c198127ef6a6d47f13bbdbfe",
         "url": "https://github.com/codefuse-ai/MFTCoder/blob/8ba13f44e2036f1412a343bc343dc6cda7383d73/mftcoder_accelerate/src/data/preprocess_data.py",
         "focus": "role-dependent loss mask, packing and sequence-row units"
+      },
+      {
+        "path": "README.md",
+        "git_blob_sha": "468cc888a129543fe2670b0f06253cf82a9164f0",
+        "url": "https://github.com/codefuse-ai/MFTCoder/blob/8ba13f44e2036f1412a343bc343dc6cda7383d73/README.md",
+        "focus": "2024-10-31 v0.5 release notes distinguish later CoBa from original MFTCoder v1."
       }
     ],
     "reductions": {
@@ -127,7 +141,8 @@
     "packing_limit": "case2/case4 average tensor rows, not necessarily original data records or trajectories.",
     "local_normalization_limit": "Only current rank/microbatch tasks enter weights_sum; the loss function does not aggregate denominators across microbatches or ranks before normalization.",
     "denominator_assumption": "All relevant per-row/per-task denominators are positive.",
-    "auxiliary_loss_scope": "The formulas describe the CE component; some model configurations may add auxiliary losses."
+    "auxiliary_loss_scope": "The formulas describe the CE component; some model configurations may add auxiliary losses.",
+    "focal_scope_limit": "The inspected accelerate loss_func_mft has case1/2/3/4/coba branches and no Eq.2/3 focal modulation. This is not an assertion about every historical file in the repository."
   },
   "teaching_example": {
     "origin": "Original illustrative arithmetic, not observed business data or a paper experiment.",
@@ -158,7 +173,138 @@
     },
     "limit": "Objective coefficients do not equal measured gradient norms or task-performance gains."
   },
-  "current_assessment": "A directly inspectable framework for defining the mixture objective; equal task weights are not established as the business optimum or a cure for dual regression.",
+  "current_assessment": "Core reading completed. Retain task-objective definition, partition sensitivity, and distinct learning-progress signals as references; neither this paper nor DiFT establishes a business solution or the cause of the reported dual regression.",
   "reading_guide": "reading/02-mftcoder.md",
-  "training_or_replication_run": false
+  "training_or_replication_run": false,
+  "reading_status": "completed_core_reading",
+  "reading_guides": [
+    "reading/02-mftcoder.md",
+    "reading/02-mftcoder-balance.md"
+  ],
+  "idea_summary": "reading/ideas-dift-mftcoder.md",
+  "method_extensions": {
+    "source": "https://arxiv.org/html/2311.02303v1",
+    "sample_focal": {
+      "location": "Section 3.5 Eq.2, PDF printed p.7",
+      "probability": "Arithmetic mean of supervised target-token probabilities within a sample; not sequence or task success probability.",
+      "loss": "Mean token NLL per sample, then alpha_i*(1-Pbar_ij)^gamma weighting and global sample mean.",
+      "stop_gradient_specified": false
+    },
+    "task_focal": {
+      "location": "Section 3.5 Eq.3, PDF printed p.8",
+      "probability": "Within-task average of per-sample mean target-token probabilities.",
+      "loss": "Within-task average of per-sample NLL means, then alpha_i*(1-Pbar_i)^gamma and equal task aggregation.",
+      "gamma_zero_limit": "Does not generally reduce to Eq.1 when effective sample lengths differ."
+    },
+    "convergence": {
+      "location": "Section 3.5 Eq.4; Section 6; Appendix B Figure 7",
+      "signal": "Relative validation-loss improvement under a candidate direction; weighting aims to help the slowest progressing task.",
+      "notation_limit": "g_t is defined, but theta_t-alpha*d_t appears without a definition of d_t in the same passage.",
+      "implementation_fully_specified": false,
+      "author_reported_limit": "The authors report unfavorable cost versus gain in their attempted FAMO-style balancing; not a verified claim that original FAMO inherently requires two model backpropagations.",
+      "figure_7": "Convergence curves under data-balanced loss, not an ablation proving Eq.4 benefits."
+    },
+    "evidence_limit": "Main comparison explicitly uses Eq.1, so main-table deltas do not separately establish focal or convergence-balancing gains."
+  },
+  "later_work_boundary": {
+    "paper": "CoBa",
+    "venue": "EMNLP 2024 main",
+    "url": "https://aclanthology.org/2024.emnlp-main.459/",
+    "release_note_date": "2024-10-31",
+    "attributed_to_original_main_results": false
+  },
+  "continuation_teaching_examples": {
+    "origin": "Original mathematical examples, not paper experiments or measured business data.",
+    "focal": {
+      "alpha": 1,
+      "gamma": 2,
+      "mean_target_probabilities": [
+        0.9,
+        0.5
+      ],
+      "multiplicative_factors": [
+        0.01,
+        0.25
+      ],
+      "factor_ratio": 25,
+      "is_gradient_norm_ratio": false
+    },
+    "sparse_critical_position": {
+      "routine_positions": 99,
+      "routine_target_probability": 0.99,
+      "critical_positions": 1,
+      "critical_target_probability": 0.01,
+      "mean_probability": 0.9802,
+      "gamma_2_factor": 0.00039204,
+      "limit": "Low target probability is not a measured deterministic action failure."
+    },
+    "validation_progress": {
+      "time_points": [
+        "t0",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "sql": [
+        1.0,
+        0.65,
+        0.6,
+        0.66
+      ],
+      "agent": [
+        2.0,
+        1.6,
+        1.3,
+        1.1
+      ],
+      "relative_drop_t1_to_t2": [
+        0.07692307692307693,
+        0.1875
+      ],
+      "relative_drop_t2_to_t3": [
+        -0.1,
+        0.15384615384615385
+      ],
+      "formula_scope": "Historical finite differences for teaching only; not an implementation of Eq.4."
+    },
+    "task_partition": {
+      "condition": "Split SQL into five groups with equal total supervised-token counts; keep Agent as one group.",
+      "before_coefficients": [
+        0.5,
+        0.5
+      ],
+      "after_coefficients": [
+        0.8333333333333334,
+        0.16666666666666666
+      ],
+      "same_records_and_labels": true
+    },
+    "gradient_direction": {
+      "sql_gradient": [
+        1,
+        0
+      ],
+      "agent_gradient": [
+        -2,
+        1
+      ],
+      "equal_weight_direction": [
+        -0.5,
+        0.5
+      ],
+      "equal_weight_task_inner_products": [
+        -0.5,
+        1.5
+      ],
+      "sql_weight_0_7_direction": [
+        0.1,
+        0.3
+      ],
+      "sql_weight_0_7_task_inner_products": [
+        0.1,
+        0.1
+      ],
+      "scope": "Fixed weights, ordinary gradient descent, small-step first-order reasoning; not Adam behavior, business metrics, or an explanation of dual regression below the common start."
+    }
+  }
 }

@@ -3,7 +3,7 @@
 - **论文**：Differential Fine-Tuning Large Language Models Towards Better Diverse Reasoning Abilities，Yuan et al.
 - **发表**：ICLR 2026 正式会议论文；以[官方 proceedings](https://proceedings.iclr.cc/paper_files/paper/2026/hash/b304a04c6a4ac168aa692923814ace17-Abstract-Conference.html)为准。
 - **优先级 / 范围**：P0；直接涉及多任务 SFT，任务组合与本仓库不同。
-- **当前处置（2026-10-30）**：两轮已读，用户暂不优先考虑此方法；保留为背景，后续进入 [MFTCoder](../reading/02-mftcoder.md)。P0 保留为最初问题相关性标记，不表示当前方法采用优先级。
+- **当前处置（2026-10-30）**：两轮已读，用户暂不优先考虑此方法；保留为背景。后续 MFTCoder 核心阅读已完成，见[两篇 idea 总结](../reading/ideas-dift-mftcoder.md)。P0 保留为最初问题相关性标记，不表示当前方法采用优先级。
 - **核查**：2026-10-29 初读；2026-10-30 复核方法、Table 1／2、Algorithm 1 与官方补充源码，未做复现。[第一篇精读讲义](../reading/01-dift.md)
 
 ## 原文证据

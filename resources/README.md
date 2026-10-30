@@ -6,7 +6,8 @@
 | --- | --- |
 | [当前五篇名单 JSON](top5-v2-proposal.json) | 已确认的第二版、阅读顺序、候选取舍及指标快照 |
 | [DiFT 混训与消融重算](dift-mix-evidence.json) | 六组目标分数、相对混训／单训的比较、随机对照与证据限制 |
-| [MFTCoder 精读核查](mftcoder-reading-evidence.json) | 原文任务归一化、主表差值、固定版本 loss／mask／packing 边界 |
+| [MFTCoder 精读核查](mftcoder-reading-evidence.json) | 两轮方法阅读、主表及引用 base、focal／收敛反馈、固定版本边界与教学算术 |
+| [DiFT 与 MFTCoder idea 总结](../reading/ideas-dift-mftcoder.md) | 两篇的原始思路、设计假设、证据范围与当前处置 |
 | [第一版筛选证据 JSON](top5-selection-evidence.json) | 15 篇候选的 OpenAlex 引用与版本范围、项目 Stars、初选及年代复核 |
 | [代码与资源地图](repository-catalog.md) | 37 个主要项目的资产范围、作者归属、Stars 与维护快照 |
 | [训练实现与多任务参考库](training-infrastructure.md) | LlamaFactory、TRL、ms-swift、Axolotl、Open Instruct 等关键源码 |

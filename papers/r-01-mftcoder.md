@@ -4,7 +4,7 @@
 - **原文：**[arXiv:2311.02303](https://arxiv.org/abs/2311.02303)；本轮技术阅读对应可获取的 v1 正文 §3、§4.1，注意与正式版本及后续代码区分。
 - **作者代码：**[codefuse-ai/MFTCoder](https://github.com/codefuse-ai/MFTCoder)，论文原文直接链接；711 stars（2026-10-29 API）。
 - **阅读深度：**关键正文、README、损失与训练入口；未运行代码。**优先级：P1**。
-- **当前进度（2026-10-30）**：第二篇共同精读已开始。[讲义：混合数据怎样变成训练目标](../reading/02-mftcoder.md) · [原始结果与源码核查](../resources/mftcoder-reading-evidence.json)
+- **当前进度（2026-10-30）**：本轮核心阅读已完成，下一篇 DMO。[前半篇：损失汇聚](../reading/02-mftcoder.md) · [后半篇：难度与收敛平衡](../reading/02-mftcoder-balance.md) · [两篇 idea 总结](../reading/ideas-dift-mftcoder.md) · [核查记录](../resources/mftcoder-reading-evidence.json)
 
 ## 问题与做法
 
@@ -24,7 +24,11 @@ v1 的 Eq.1 先在任务内按有效监督 token 平均，再在任务间等权�
 
 v1 Table 2 的 HumanEval／MBPP 中，对应单训分别为 59.76%／54.2%，SFT-Mixed 为 57.93%／53.6%，MFT-5Tasks 为 60.37%／56.0%。单训参考来自两个模型；按原表重算，MFT 相对 Mixed 提高 2.44／2.40 个百分点，相对单训提高 0.61／1.80 个百分点。该表未报告多次训练误差范围。
 
+同表 base 为 43.3%／49.0%，来自 CodeLlama 原文，未核为本文同设置重新评测。Mixed 仍高于引用 base；该表没有复现本业务“两侧都低于共同起点”的严格现象。
+
 §4.1 使用共同 CodeLlama-13B-Python 底座、相同 QLoRA 初始化与位置、pack 数据；各自按验证 loss 早停，不能称严格同训练步数或同累计 token 预算。§6 承认任务划分、收敛不同步及更新冲突仍未解决。Text-to-SQL 是迁移评测，不是训练 SQL＋Agent 的混合研究。以上数字来自作者预印本 v1，不声称已经逐项核对会议终版。
+
+后半篇补充：Eq.2／3 用平均目标概率调制样本／任务损失，并非直接度量任务成功率；样本均值与 Eq.1 的 token 均值也不能混同。v1 没有明确 focal stop-gradient，固定 accelerate loss 函数不足以核实其实现。Eq.4 的收敛反馈不能由主表归因，§6 对相关尝试的成本收益仍保留负面判断。结果支持的是采用 Eq.1 的训练方案，不把全部改善说成已独立隔离的 loss 因果效应。
 
 ## 与本问题的关系与局限
 

@@ -165,7 +165,9 @@
         "evidence_preserved": true,
         "claim_of_method_invalidity": false,
         "next_paper_id": "R01"
-      }
+      },
+      "idea_summary": "reading/ideas-dift-mftcoder.md",
+      "idea_summary_reviewed_at": "2026-10-30"
     },
     {
       "id": "A02",
@@ -1687,7 +1689,7 @@
         "https://github.com/codefuse-ai/MFTCoder/blob/8ba13f44e2036f1412a343bc343dc6cda7383d73/mftcoder_accelerate/src/pefts/mft_accelerate.py",
         "https://github.com/codefuse-ai/MFTCoder/blob/8ba13f44e2036f1412a343bc343dc6cda7383d73/mftcoder_accelerate/src/data/preprocess_data.py"
       ],
-      "reading_depth": "arxiv_v1_methods_results_discussion_and_pinned_loss_caller_collator_preprocessing_static_audit",
+      "reading_depth": "arxiv_v1_core_methods_results_discussion_and_pinned_static_code_audit_completed",
       "priority": "P1",
       "local_note": "papers/r-01-mftcoder.md",
       "scope_match": "direct_multitask_sft",
@@ -1702,7 +1704,7 @@
       "record_type": "paper",
       "evidence_reviewed_at": "2026-10-30",
       "reading_guide": "reading/02-mftcoder.md",
-      "reading_status": "in_progress",
+      "reading_status": "completed_core_reading",
       "version_read": "arXiv:2311.02303v1; formal KDD identity verified separately",
       "code_commit": "8ba13f44e2036f1412a343bc343dc6cda7383d73",
       "code_audit_depth": "static_source_review_not_executed",
@@ -1731,8 +1733,24 @@
       "experimental_limits": [
         "Main comparison specifies Eq.1; later CoBa is separate.",
         "Independent early stopping does not establish equal cumulative training budget.",
-        "No direct SQL-plus-long-horizon-Agent mixed-training validation."
-      ]
+        "No direct SQL-plus-long-horizon-Agent mixed-training validation.",
+        "Table 2 base scores are quoted from the CodeLlama report; ordinary mixed is above both quoted base scores.",
+        "The scheme-level comparison does not isolate the entire gain as the causal effect of one loss operator."
+      ],
+      "idea_summary": "reading/ideas-dift-mftcoder.md",
+      "idea_summary_reviewed_at": "2026-10-30",
+      "reading_guides": [
+        "reading/02-mftcoder.md",
+        "reading/02-mftcoder-balance.md"
+      ],
+      "latest_reading_guide": "reading/02-mftcoder-balance.md",
+      "reading_completed_on": "2026-10-30",
+      "extensions_audit": {
+        "focal": "Eq.2/3 use arithmetic mean target-token probabilities and sample-mean NLL; stop-gradient unspecified in v1.",
+        "convergence": "Eq.4 is a FAMO-inspired relative validation-improvement objective; section 6 reports unresolved cost and effectiveness limitations.",
+        "main_comparison": "Eq.1 scheme; no separate attribution of main-table improvements to focal or convergence balancing.",
+        "code_version": "Inspected accelerate loss has case1/2/3/4/coba, not an Eq.2/3 focal branch; later CoBa is separate."
+      }
     },
     {
       "id": "R02",

@@ -3,7 +3,7 @@
   "proposed_on": "2026-10-30",
   "status": "confirmed",
   "effective": true,
-  "purpose": "已确认的五篇共同精读名单；当前开始DiFT，不新增实验",
+  "purpose": "已确认的五篇共同精读名单；DiFT与MFTCoder核心阅读已完成，下一篇DMO，不新增实验",
   "prior_selection": "resources/top5-selection-evidence.json",
   "selection_principle": "问题及比较对象匹配优先；核读证据与局限，再综合正式发表、实质代码、考虑公开时长的引用和Stars。阅读顺序按内容依赖安排。",
   "proposed": [
@@ -75,7 +75,8 @@
         "evidence_preserved": true,
         "claim_of_method_invalidity": false,
         "next_paper_id": "R01"
-      }
+      },
+      "idea_summary": "reading/ideas-dift-mftcoder.md"
     },
     {
       "rank": 2,
@@ -90,9 +91,16 @@
       "citations_display": "OpenAlex合并条目23（2026-10-29）",
       "citation_work": "W4401863706",
       "caveat": "当前代码含后续CoBa，需与原论文贡献区分；代码任务证据不等于当前业务适用",
-      "reading_status": "in_progress",
+      "reading_status": "completed_core_reading",
       "reading_guide": "reading/02-mftcoder.md",
-      "reading_evidence": "resources/mftcoder-reading-evidence.json"
+      "reading_evidence": "resources/mftcoder-reading-evidence.json",
+      "idea_summary": "reading/ideas-dift-mftcoder.md",
+      "reading_guides": [
+        "reading/02-mftcoder.md",
+        "reading/02-mftcoder-balance.md"
+      ],
+      "latest_reading_guide": "reading/02-mftcoder-balance.md",
+      "completed_on": "2026-10-30"
     },
     {
       "rank": 3,
@@ -204,13 +212,7 @@
   "experiment_run": false,
   "confirmed_on": "2026-10-30",
   "confirmation_context": "用户同意并要求从第一篇开始讲解。",
-  "current_reading": {
-    "id": "R01",
-    "guide": "reading/02-mftcoder.md",
-    "started_on": "2026-10-30",
-    "last_reviewed_on": "2026-10-30",
-    "latest_focus": "有效监督token、输入行和任务级损失汇聚；主表效果与局部实现边界"
-  },
+  "current_reading": null,
   "reading_history": [
     {
       "id": "A01",
@@ -226,10 +228,25 @@
       "status": "background_after_two_sessions",
       "paused_on": "2026-10-30",
       "reason": "user_deprioritized_method"
+    },
+    {
+      "id": "R01",
+      "guide": "reading/02-mftcoder.md",
+      "guides": [
+        "reading/02-mftcoder.md",
+        "reading/02-mftcoder-balance.md"
+      ],
+      "latest_guide": "reading/02-mftcoder-balance.md",
+      "started_on": "2026-10-30",
+      "last_reviewed_on": "2026-10-30",
+      "completed_on": "2026-10-30",
+      "status": "completed_core_reading",
+      "latest_focus": "难度、收敛反馈、任务划分；与DiFT的idea对照和业务边界",
+      "completion_scope": "本轮核心方法与证据阅读；未认证会议终版全文或完成复现",
+      "idea_summary": "reading/ideas-dift-mftcoder.md"
     }
   ],
   "active_reading_queue": [
-    "R01",
     "A02",
     "B02",
     "C01"
@@ -243,6 +260,35 @@
       "evidence_preserved": true,
       "claim_of_method_invalidity": false,
       "next_paper_id": "R01"
+    },
+    "R01": {
+      "updated_on": "2026-10-30",
+      "source": "research_assessment_not_user_adoption_decision",
+      "status": "objective_definition_reference_not_validated_business_solution",
+      "reason": "保留目标定义、监督汇聚及学习进展的分析价值；未认定现有业务缺少类似设计，也未证明可解决双侧回退。"
     }
-  }
+  },
+  "last_completed_reading": {
+    "id": "R01",
+    "guide": "reading/02-mftcoder.md",
+    "guides": [
+      "reading/02-mftcoder.md",
+      "reading/02-mftcoder-balance.md"
+    ],
+    "latest_guide": "reading/02-mftcoder-balance.md",
+    "started_on": "2026-10-30",
+    "last_reviewed_on": "2026-10-30",
+    "completed_on": "2026-10-30",
+    "status": "completed_core_reading",
+    "latest_focus": "难度、收敛反馈、任务划分；与DiFT的idea对照和业务边界",
+    "completion_scope": "本轮核心方法与证据阅读；未认证会议终版全文或完成复现",
+    "idea_summary": "reading/ideas-dift-mftcoder.md"
+  },
+  "next_reading": {
+    "id": "A02",
+    "note": "papers/a-02-data-mixing-optimization.md",
+    "status": "queued",
+    "focus": "定义任务损失之后，如何选择混合权重及评价其目标"
+  },
+  "idea_summary": "reading/ideas-dift-mftcoder.md"
 }
