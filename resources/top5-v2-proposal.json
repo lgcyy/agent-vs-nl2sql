@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "proposed_on": "2026-10-30",
+  "status": "awaiting_user_confirmation",
+  "effective": false,
+  "purpose": "供用户审阅并确认新版五篇共同精读名单；不新增实验",
+  "prior_selection": "resources/top5-selection-evidence.json",
+  "selection_principle": "问题及比较对象匹配优先；核读证据与局限，再综合正式发表、实质代码、考虑公开时长的引用和Stars。阅读顺序按内容依赖安排。",
+  "proposed": [
+    {
+      "rank": 1,
+      "id": "A01",
+      "key": "DiFT",
+      "venue": "ICLR 2026",
+      "venue_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/b304a04c6a4ac168aa692923814ace17-Abstract-Conference.html",
+      "role": "最先对齐混训、单训与共同起点的比较证据",
+      "note": "papers/a-01-dift.md",
+      "repo": null,
+      "stars": null,
+      "citations_display": "跨版本未核全",
+      "caveat": "原表相邻组合的部分降幅很小，箭头与数值不一致；不是SQL+Agent；作者实现未核实"
+    },
+    {
+      "rank": 2,
+      "id": "R01",
+      "key": "MFTCoder",
+      "venue": "KDD 2024",
+      "venue_url": "https://doi.org/10.1145/3637528.3671609",
+      "role": "有效token、样本、任务级loss汇聚的实现入口",
+      "note": "papers/r-01-mftcoder.md",
+      "repo": "codefuse-ai/MFTCoder",
+      "stars": 711,
+      "citations_display": "OpenAlex合并条目23（2026-10-29）",
+      "citation_work": "W4401863706",
+      "caveat": "当前代码含后续CoBa，需与原论文贡献区分；代码任务证据不等于当前业务适用"
+    },
+    {
+      "rank": 3,
+      "id": "A02",
+      "key": "DMO",
+      "venue": "ICML 2025",
+      "venue_url": "https://proceedings.mlr.press/v267/li25bh.html",
+      "role": "SFT数据混合权重的定义与选择",
+      "note": "papers/a-02-data-mixing-optimization.md",
+      "repo": "realYuanLi/Data-Mixing-Optimization",
+      "stars": 0,
+      "citations_display": "跨版本未核全",
+      "caveat": "0 Stars是查询值；已有实质代码，未复现；平均验证损失不保证两业务指标同时恢复"
+    },
+    {
+      "rank": 4,
+      "id": "B02",
+      "key": "Agent-FLAN",
+      "venue": "Findings of ACL 2024",
+      "venue_url": "https://aclanthology.org/2024.findings-acl.557/",
+      "role": "Agent轨迹格式、推理和工具使用的监督结构",
+      "note": "papers/b-02-agent-flan.md",
+      "repo": "InternLM/Agent-FLAN",
+      "stars": 363,
+      "citations_display": "OpenAlex合并条目13（2026-10-29）",
+      "citation_work": "W4402683785",
+      "caveat": "公开仓库主要为数据/模型发布与文档，主训练实现未核实；不能据此认定当前原因"
+    },
+    {
+      "rank": 5,
+      "id": "C01",
+      "key": "DFT / Dynamic Fine-Tuning",
+      "venue": "ICLR 2026",
+      "venue_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/2e53c02ea028cbf603f4b6b47fef3d97-Abstract-Conference.html",
+      "role": "示范token概率加权与SFT泛化",
+      "note": "papers/c-01-dft.md",
+      "repo": "yongliang-wu/DFT",
+      "stars": 928,
+      "citations_display": "跨版本未核全",
+      "caveat": "与DiFT不同；必须连同事实知识负例阅读，未直接验证SQL+Agent混训"
+    }
+  ],
+  "changes": {
+    "added": [
+      "A01",
+      "A02"
+    ],
+    "retained": [
+      "R01",
+      "B02",
+      "C01"
+    ],
+    "moved_to_background": [
+      "A04",
+      "B01"
+    ]
+  },
+  "additional_tradeoff": {
+    "id": "C02",
+    "key": "PSFT",
+    "decision": "本轮不占五篇名额",
+    "reason": "与DFT机制不同，但混合数据有效性仍待验证；当前优先保留MFTCoder的实际混合目标定义入口。"
+  },
+  "github_snapshots": [
+    {
+      "repo": "InternLM/Agent-FLAN",
+      "stars": 363,
+      "default_branch": "main",
+      "pushed_at": "2024-03-22T15:12:14Z",
+      "checked_on": "2026-10-30",
+      "source_url": "https://api.github.com/repos/InternLM/Agent-FLAN"
+    },
+    {
+      "repo": "codefuse-ai/MFTCoder",
+      "stars": 711,
+      "default_branch": "main",
+      "pushed_at": "2024-12-30T06:01:59Z",
+      "checked_on": "2026-10-30",
+      "source_url": "https://api.github.com/repos/codefuse-ai/MFTCoder"
+    },
+    {
+      "repo": "realYuanLi/Data-Mixing-Optimization",
+      "stars": 0,
+      "default_branch": "main",
+      "pushed_at": "2025-11-11T03:10:44Z",
+      "checked_on": "2026-10-30",
+      "source_url": "https://api.github.com/repos/realYuanLi/Data-Mixing-Optimization"
+    },
+    {
+      "repo": "yongliang-wu/DFT",
+      "stars": 928,
+      "default_branch": "master",
+      "pushed_at": "2026-08-01T04:15:51Z",
+      "checked_on": "2026-10-30",
+      "source_url": "https://api.github.com/repos/yongliang-wu/DFT"
+    }
+  ],
+  "citation_snapshot_date": "2026-10-29",
+  "citation_policy": [
+    "单一OpenAlex索引的条目计数，不是Google Scholar总引用",
+    "未知值不记0，版本未核全不记整篇0",
+    "不声称五篇均高被引或高星"
+  ],
+  "independent_review": "已由独立审阅者复核六篇候选的匹配与互补性，支持保留MFTCoder、暂不以PSFT替代；无论文实验复现",
+  "active_shortlist_changed": false,
+  "experiment_run": false
+}
