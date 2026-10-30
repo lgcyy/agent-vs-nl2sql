@@ -10,13 +10,14 @@
     "repo_owner_verified": false,
     "evidence_urls": [
       "https://proceedings.iclr.cc/paper_files/paper/2026/hash/b304a04c6a4ac168aa692923814ace17-Abstract-Conference.html",
-      "https://proceedings.iclr.cc/paper_files/paper/2026/file/b304a04c6a4ac168aa692923814ace17-Paper-Conference.pdf"
+      "https://proceedings.iclr.cc/paper_files/paper/2026/file/b304a04c6a4ac168aa692923814ace17-Paper-Conference.pdf",
+      "https://proceedings.iclr.cc/paper_files/paper/2026/file/b304a04c6a4ac168aa692923814ace17-Supplemental-Conference.zip"
     ],
-    "reading_depth": "primary_paper_methods_main_tables_appendix_B6",
+    "reading_depth": "methods_tables_algorithm_and_official_supplement_static_audit",
     "priority": "P0",
     "local_note": "papers/a-01-dift.md",
     "scope_match": "直接多任务/连续SFT；Table 1有一个数值上双侧低于对应单训和共同base的组合，任务为代码与逻辑而非SQL+长程Agent；表内箭头及小幅下降须谨慎核读。",
-    "repo_notes": "官方公开GitHub仓库未核实；正式页有Supplemental入口，但附件代码未核实；不要混入同名图像DiFT或token-loss DFT。",
+    "repo_notes": "GitHub仓库未核实；官方会议Supplemental已见激活分析、参数行选择与Trainer相关源码，完整复现链未核实。不要混入同名图像DiFT或token-loss DFT。",
     "metadata_checked_at": "2026-10-29",
     "github_stars": null,
     "paper_sections_read": [
@@ -26,10 +27,17 @@
       "5.3",
       "Table 1",
       "Table 2",
-      "Appendix B.6"
+      "Appendix B.6",
+      "3.2",
+      "4.1",
+      "4.2",
+      "Algorithm 1",
+      "Appendix B.5",
+      "Appendix D.1",
+      "Appendix D.4"
     ],
     "version_read": "ICLR 2026 proceedings PDF",
-    "code_audit_depth": "unverified",
+    "code_audit_depth": "official_supplement_static_review_not_reproduced",
     "evidence_reviewed_at": "2026-10-30",
     "adjacent_dual_regression_case": {
       "model": "Mistral-7B",
@@ -63,8 +71,45 @@
         "Table 1部分箭头与相对base的数值不一致；已核对PDF截图，保留矛盾。",
         "部分降幅很小；该行没有误差范围，不主张稳健普遍双降。",
         "Logic-only本身低于逻辑侧base；不能声称两个单训都超过base。",
-        "代码与逻辑任务，不是NL2SQL-noCoT与长程Agent；没有本业务复现。"
+        "代码与逻辑任务，不是NL2SQL-noCoT与长程Agent；没有本业务复现。",
+        "B.5称每次训练评估三个checkpoint取最好；跨指标是否统一选点未充分说明，表内同一行尚不足以核实同一checkpoint的严格比较条件。"
       ]
+    },
+    "reading_guide": "reading/01-dift.md",
+    "supplemental_code": {
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/b304a04c6a4ac168aa692923814ace17-Supplemental-Conference.zip",
+      "checked_on": "2026-10-30",
+      "bytes": 5125837,
+      "sha256": "103534afbbafd6d9b680a0e6e47c982c8dd727ea2a830ccad2c89e54ead7b831",
+      "files": [
+        {
+          "path": "DiFT-core-codes/delta_scale_rows_analysis.py",
+          "sha256": "70fe854e82ad0899817e20cbcc4b1f2775b175ab05d3fc9e3d345550afaf6cc4"
+        },
+        {
+          "path": "DiFT-core-codes/delta_scale_rows_select.py",
+          "sha256": "7140281c743156268a8939199ec337bd71c8c20c65709900308597b4561e667b"
+        },
+        {
+          "path": "DiFT-core-codes/trainers_zero2.py",
+          "sha256": "e80475aed72c7f16a44c7e0c0388fed68a0ebac46fea1c782f790f2f799616ae"
+        }
+      ],
+      "audit_depth": "static_source_review_only",
+      "executed": false,
+      "coverage": "激活差分析、逐层行选择与Trainer修改片段；不是完整训练工程",
+      "analysis_detail": "同一query+response分别前向base和单训模型；逐层实际输出差的token平方和按样本数累计平均。",
+      "normalization_note": "固定数据/层下，样本数与总token数作为最终分母只差公共常数，不改变Top-C；每样本先按长度平均才改变样本相对权重。",
+      "training_limit": "默认初始化调用freeze_global_top_param_ds；所见切片requires_grad路径、未接入的mask辅助函数及缺失mask/config/package依赖不足以核实主文混训并集更新。",
+      "repo_url": null,
+      "repo_stars": null
+    },
+    "method_audit": {
+      "mixed_rule": "逐层top-C行的跨任务并集；交集保留；起点模型在混合数据上更新并集，冻结其余。",
+      "sensitivity_limit": "各自前向的激活差包含上游输入变化；不是局部权重效应或梯度冲突方向的直接测量。",
+      "continual_limit": "主文/Algorithm 1与附录对差集和补集存在不一致，未统一为已验证实施方案。",
+      "code_metric_limit": "B.5关联CodeXGLUE，但具体子任务与单位未充分说明；原表值不自行换算为概率。",
+      "ata_code_logic": "(50 * code_column + logic_column) / 2"
     }
   },
   {

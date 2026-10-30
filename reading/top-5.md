@@ -4,7 +4,7 @@
 
 [返回首页](../README.md) · [完整资料目录](../papers/README.md) · [筛选证据 JSON](../resources/top5-selection-evidence.json)
 
-**新版候选名单（2026-10-30，待用户确认）：**见[五篇主读提案 v2](top-5-v2-proposal.md)。本页保留第一版及筛选复核记录。
+**当前已确认名单（2026-10-30）：**见[第二版五篇共同精读](top-5-v2-proposal.md)，已开始[第一篇 DiFT](01-dift.md)。本页保留第一版及筛选复核记录。
 
 ## 0. 年代偏差复核：为何四篇来自 2024 年？
 

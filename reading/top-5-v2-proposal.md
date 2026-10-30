@@ -1,6 +1,6 @@
-# 新版五篇主读名单 · 待用户确认
+# 五篇共同精读 · 已确认的第二版
 
-日期：**2026-10-30**。状态：**候选方案，尚未确认为当前主读名单**。
+提出与确认日期：**2026-10-30**。状态：**用户已确认，并从 DiFT 开始学习**。文件路径保留，以保持历史链接可用。[第一篇精读讲义](01-dift.md)
 
 [返回首页](../README.md) · [第一版及年代复核](top-5.md) · [本版筛选证据](../resources/top5-v2-proposal.json)
 
@@ -12,7 +12,7 @@
 
 | 顺序 | 论文／正式发表 | 本轮核心阅读问题 | 作者代码与关注度 |
 | --- | --- | --- | --- |
-| 1 | [DiFT](https://proceedings.iclr.cc/paper_files/paper/2026/hash/b304a04c6a4ac168aa692923814ace17-Abstract-Conference.html)，ICLR 2026 | 多任务 SFT 何时协同、何时冲突？混训、单训、base 的比较是否与我们一致？ | 作者实现及 Stars 未核实；先作为问题与证据论文 |
+| 1 | [DiFT](https://proceedings.iclr.cc/paper_files/paper/2026/hash/b304a04c6a4ac168aa692923814ace17-Abstract-Conference.html)，ICLR 2026 | 多任务 SFT 何时协同、何时冲突？混训、单训、base 的比较是否与我们一致？ | 官方补充材料已见分析／选择／训练相关源码；完整复现链与 GitHub 仓库仍未核实，Stars 未知 |
 | 2 | [MFTCoder](https://doi.org/10.1145/3637528.3671609)，KDD 2024 | 任务配比如何通过有效 token、样本和任务级 loss 汇聚变成实际训练目标？ | [作者仓库](https://github.com/codefuse-ai/MFTCoder)：**711 Stars**；已见核心 loss／trainer |
 | 3 | [DMO](https://proceedings.mlr.press/v267/li25bh.html)，ICML 2025 | 如何定义与选择 SFT 各数据域的混合权重？ | [作者仓库](https://github.com/realYuanLi/Data-Mixing-Optimization)：**0 Stars**；已见混合、SFT 启动及权重求解代码 |
 | 4 | [Agent-FLAN](https://aclanthology.org/2024.findings-acl.557/)，Findings of ACL 2024 | Agent 轨迹中的格式、推理、工具选择和参数理解应如何拆开描述？ | [作者仓库](https://github.com/InternLM/Agent-FLAN)：**363 Stars**；数据／模型发布，主训练源码未核实 |
@@ -68,4 +68,4 @@ PSFT 本轮不占五篇名额。它与 DFT 的公式和作用并不相同，具�
 
 本轮优先关系为：**问题及比较对象匹配 → 结果证据与局限 → 正式发表及实质实现 → 考虑公开时间的引用和 Stars**。没有为了新年份预设名额，也没有为这些指标编造精确分数。
 
-本文件作为待确认提案保存。用户确认后，再统一更新主读入口与后续逐篇学习顺序。
+用户已确认本版并开始[第一篇 DiFT](01-dift.md)。这五篇构成当前主读顺序；第一版及其指标快照保留为历史记录。

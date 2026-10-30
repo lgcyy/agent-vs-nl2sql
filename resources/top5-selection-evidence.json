@@ -948,11 +948,17 @@
         "Table 1部分箭头与相对base的数值不一致；已核对PDF截图，保留矛盾。",
         "部分降幅很小；该行没有误差范围，不主张稳健普遍双降。",
         "Logic-only本身低于逻辑侧base；不能声称两个单训都超过base。",
-        "代码与逻辑任务，不是NL2SQL-noCoT与长程Agent；没有本业务复现。"
+        "代码与逻辑任务，不是NL2SQL-noCoT与长程Agent；没有本业务复现。",
+        "B.5称每次训练评估三个checkpoint取最好；跨指标是否统一选点未充分说明，表内同一行尚不足以核实同一checkpoint的严格比较条件。"
       ]
     },
     "recommendation": "保留第一版五篇及当时取舍作为记录，不在解释轮次无声重排；若严格保留五篇且优先问题匹配，优先考虑DiFT替换AgentTuning，保留Agent-FLAN的监督结构视角。",
     "next_reading_focus": "DiFT原文中单训、混训与共同base的对照及证据限制。",
-    "experiment_run": false
+    "experiment_run": false,
+    "subsequent_reading_update": {
+      "checked_on": "2026-10-30",
+      "guide": "reading/01-dift.md",
+      "finding": "官方补充材料已见分析/筛选/Trainer源码；完整复现未核实。B.5的checkpoint取最好口径使表内相邻证据的严格比较条件仍待核实。"
+    }
   }
 }

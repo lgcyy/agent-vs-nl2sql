@@ -2,7 +2,7 @@
 
 首轮核查日期：**2026-10-29**。共 **51 项资料**，其中 **34 篇形成阅读笔记**，另 **17 项保留初筛记录**。资料包含会议论文、预印本、技术报告及 1 项模型发布说明；不把全部条目统称为已精读论文。
 
-[当前只读五篇](../reading/top-5.md) · [调研总图](../topics/00-research-map.md) · [问题定义](../problem.md) · [机器可读总目录](../resources/paper-catalog.json) · [代码地图](../resources/repository-catalog.md)
+[当前只读五篇](../reading/top-5-v2-proposal.md) · [第一篇 DiFT 精读](../reading/01-dift.md) · [调研总图](../topics/00-research-map.md) · [问题定义](../problem.md) · [机器可读总目录](../resources/paper-catalog.json) · [代码地图](../resources/repository-catalog.md)
 
 ## 阅读方式
 
@@ -14,7 +14,7 @@
 
 | 笔记 | 发表身份 | 阅读深度 | 代码范围 |
 | --- | --- | --- | --- |
-| [A01 · DiFT：多推理任务的差异化更新](a-01-dift.md) · P0 | ICLR 2026 | 关键正文／表格；详见卡片 | 作者仓库未核实 |
+| [A01 · DiFT：多推理任务的差异化更新](a-01-dift.md) · P0 | ICLR 2026 | 方法、表格、算法与官方附件静态核查 | 官方附件含分析／选择／训练相关源码；完整复现链未核实 |
 | [A02 · Data Mixing Optimization](a-02-data-mixing-optimization.md) · P0 | ICML 2025 (PMLR 267) | 关键正文／表格；详见卡片 | [采样、训练封装与权重求解](https://github.com/realYuanLi/Data-Mixing-Optimization) |
 | [A03 · DynamixSFT](a-03-dynamixsft.md) · P0 | Findings of ACL 2026 | 关键正文／表格；详见卡片 | 作者仓库未核实 |
 | [A04 · Data Composition / DMT](a-04-dmt-data-composition.md) · P0 | ACL 2024 Main Conference (Long Papers) | 关键正文／表格；详见卡片 | 作者仓库未核实 |

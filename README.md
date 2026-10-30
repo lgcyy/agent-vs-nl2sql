@@ -24,13 +24,14 @@
 
 ## 从这里开始
 
-**新版五篇候选（待确认）：DiFT → MFTCoder → DMO → Agent-FLAN → DFT。** [查看候选名单与取舍](reading/top-5-v2-proposal.md)。本次只保存提案，待用户确认后再统一切换主读入口。
+**当前共同精读：DiFT → MFTCoder → DMO → Agent-FLAN → DFT。** 用户于 **2026-10-30** 确认并开始第一篇。[五篇名单与取舍](reading/top-5-v2-proposal.md)保留选入理由、指标范围和局限。
 
-**第一版共同精读收敛为五篇：MFTCoder → SFT Data Composition / DMT → AgentTuning → Agent-FLAN → DFT。** [五篇阅读指南](reading/top-5.md)列出匹配度、正式发表、OpenAlex 引用与作者项目 Stars，并提供入门讲解。**2026-10-30 复核：这一版偏重成熟度与基础覆盖，不能代表前沿相关性前五。** 指南已补充 2025—2026 年候选被低估的原因；下一步问题对齐优先核读 [DiFT 的单训／混训／base 原始证据](papers/a-01-dift.md)。完整资料池继续作为查阅背景。
+**正在学习：[第一篇 DiFT：问题、参数选择与原始证据](reading/01-dift.md)。** 新增官方补充源码的静态核查；尚未运行论文复现。早期名单及年代偏差复核保存在[第一版记录](reading/top-5.md)，完整资料池继续作为查阅背景。
 
 | 入口 | 主要内容 |
 | --- | --- |
-| [五篇共同精读](reading/top-5.md) | 当前优先名单、筛选理由、引用核查及第一篇导读 |
+| [五篇共同精读](reading/top-5-v2-proposal.md) | 已确认名单、筛选理由与指标范围 |
+| [第一篇：DiFT 精读](reading/01-dift.md) | 参数行选择的教学例子、原表比较及官方源码核查 |
 | [调研总图](topics/00-research-map.md) | 大问题、已有成果、分歧、研究空间与建议阅读顺序 |
 | [多任务 SFT 与混合](topics/01-multitask-sft-and-mixtures.md) | DiFT、DMO、CoBa、mSFT、DynamixSFT 等 |
 | [Agent 轨迹与保持](topics/02-agent-trajectories-and-retention.md) | Agent-FLAN、AgentBank、SWE-Gym、SWE-smith 等 |

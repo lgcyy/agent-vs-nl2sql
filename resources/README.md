@@ -1,10 +1,11 @@
 # 相关资源
 
-更新时间：2026-10-29。集中保存代码、训练实现入口、资料目录和来源核查信息。
+更新时间：2026-10-30。集中保存代码、训练实现入口、资料目录和来源核查信息。
 
 | 文件 | 用途 |
 | --- | --- |
-| [前五筛选证据 JSON](top5-selection-evidence.json) | 15 篇候选的 OpenAlex 引用与版本范围、项目 Stars、最终取舍 |
+| [当前五篇名单 JSON](top5-v2-proposal.json) | 已确认的第二版、阅读顺序、候选取舍及指标快照 |
+| [第一版筛选证据 JSON](top5-selection-evidence.json) | 15 篇候选的 OpenAlex 引用与版本范围、项目 Stars、初选及年代复核 |
 | [代码与资源地图](repository-catalog.md) | 37 个主要项目的资产范围、作者归属、Stars 与维护快照 |
 | [训练实现与多任务参考库](training-infrastructure.md) | LlamaFactory、TRL、ms-swift、Axolotl、Open Instruct 等关键源码 |
 | [检索与核查说明](search-and-verification.md) | 纳入范围、阅读深度、发表状态、版本与统计口径 |
