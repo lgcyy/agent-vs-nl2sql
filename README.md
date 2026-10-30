@@ -24,7 +24,7 @@
 
 ## 从这里开始
 
-**当前共同精读收敛为五篇：MFTCoder → SFT Data Composition / DMT → AgentTuning → Agent-FLAN → DFT。** [五篇阅读指南](reading/top-5.md)列出匹配度、正式发表、OpenAlex 引用与作者项目 Stars，并从第一篇开始讲解。完整资料池继续作为查阅背景。
+**第一版共同精读收敛为五篇：MFTCoder → SFT Data Composition / DMT → AgentTuning → Agent-FLAN → DFT。** [五篇阅读指南](reading/top-5.md)列出匹配度、正式发表、OpenAlex 引用与作者项目 Stars，并提供入门讲解。**2026-10-30 复核：这一版偏重成熟度与基础覆盖，不能代表前沿相关性前五。** 指南已补充 2025—2026 年候选被低估的原因；下一步问题对齐优先核读 [DiFT 的单训／混训／base 原始证据](papers/a-01-dift.md)。完整资料池继续作为查阅背景。
 
 | 入口 | 主要内容 |
 | --- | --- |

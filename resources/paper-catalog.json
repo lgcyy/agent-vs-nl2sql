@@ -26,7 +26,7 @@
       "reading_depth": "primary_paper_methods_main_tables_appendix_B6",
       "priority": "P0",
       "local_note": "papers/a-01-dift.md",
-      "scope_match": "直接多任务/连续SFT；推理任务而非SQL+长程agent",
+      "scope_match": "直接多任务/连续SFT；Table 1有一个数值上双侧低于对应单训和共同base的组合，任务为代码与逻辑而非SQL+长程Agent；表内箭头及小幅下降须谨慎核读。",
       "repo_notes": "官方公开GitHub仓库未核实；正式页有Supplemental入口，但附件代码未核实；不要混入同名图像DiFT或token-loss DFT。",
       "metadata_checked_at": "2026-10-29",
       "github_stars": null,
@@ -44,7 +44,43 @@
       "source_id": "A01",
       "source_register": "resources/a-source-register.json",
       "group": "A",
-      "record_type": "paper"
+      "record_type": "paper",
+      "evidence_reviewed_at": "2026-10-30",
+      "adjacent_dual_regression_case": {
+        "model": "Mistral-7B",
+        "setting": "Mix-Code-Logic",
+        "source_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/b304a04c6a4ac168aa692923814ace17-Paper-Conference.pdf",
+        "table_1_pdf_page": 4,
+        "table_2_pdf_page": 8,
+        "columns": [
+          "xGLUE (paper code-side column)",
+          "LogiQA2"
+        ],
+        "base": [
+          1.2449,
+          31.87
+        ],
+        "corresponding_single_task_sft": [
+          1.7146,
+          31.23
+        ],
+        "mixed_sft": [
+          1.2342,
+          31.17
+        ],
+        "mixed_sft_with_dift": [
+          1.2555,
+          32.51
+        ],
+        "interpretation": "按原表数值，混训两目标均低于对应单训与共同base；加DiFT后两列超过base，但代码侧仍低于Code-only。",
+        "caveats": [
+          "这是本仓库对Table 1/2数值的比较，不是作者对本业务的机制结论。",
+          "Table 1部分箭头与相对base的数值不一致；已核对PDF截图，保留矛盾。",
+          "部分降幅很小；该行没有误差范围，不主张稳健普遍双降。",
+          "Logic-only本身低于逻辑侧base；不能声称两个单训都超过base。",
+          "代码与逻辑任务，不是NL2SQL-noCoT与长程Agent；没有本业务复现。"
+        ]
+      }
     },
     {
       "id": "A02",

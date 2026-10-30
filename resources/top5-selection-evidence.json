@@ -852,5 +852,107 @@
       "decision": "保留轨迹工程参考",
       "reason": "ICML2025且有实现；问题重点是SWE轨迹和验证器，与混合SFT双降的直接距离较大"
     }
-  ]
+  ],
+  "recency_audit": {
+    "reviewed_on": "2026-10-30",
+    "trigger": "用户询问五篇为何以2024年为主，2025和2026年工作是否匹配度不足。",
+    "selection_snapshot_preserved": true,
+    "original_counts_as_of": "2026-10-29",
+    "finding": "初选偏重引用及项目关注度的可核查性、成熟度和入门互补；近期工作不足并非已成立结论。",
+    "biases": [
+      "累计引用与Stars的公开积累期不同；原有警示没有充分消除实际选择偏差。",
+      "将作者代码或统一引用未核实转化为阅读优先级降低，混淆了核查状态与问题价值。",
+      "AgentTuning与Agent-FLAN同时承担背景入门，减少近期直接方法的阅读席位。"
+    ],
+    "corrected_priority_order": [
+      "问题及比较对象匹配",
+      "实证证据与局限",
+      "正式发表与实质实现",
+      "同等公开时长下的引用和项目关注度"
+    ],
+    "candidate_reassessment": [
+      {
+        "id": "A01",
+        "name": "DiFT",
+        "venue": "ICLR 2026",
+        "judgment": "优先回到核心精读；当前已核对的数值近邻证据比上一轮排序体现的更直接。",
+        "source_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/b304a04c6a4ac168aa692923814ace17-Abstract-Conference.html"
+      },
+      {
+        "id": "A02",
+        "name": "DMO",
+        "venue": "ICML 2025",
+        "judgment": "直接研究SFT混合权重；低Stars不构成研究阅读价值较低的充分理由。验证损失优化不保证两个业务任务同时恢复。",
+        "source_url": "https://proceedings.mlr.press/v267/li25bh.html"
+      },
+      {
+        "id": "C02",
+        "name": "PSFT",
+        "venue": "ICLR 2026",
+        "judgment": "能力保持方法值得关注，但正式PDF Appendix A仍将混合数据有效性留作未来工作；不能仅因更新而优于直接混训证据。",
+        "source_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/da75d2bbf862b86f10241d0887613b41-Paper-Conference.pdf"
+      }
+    ],
+    "first_publication_dates": [
+      {
+        "id": "R01",
+        "name": "MFTCoder",
+        "date": "2023-11-04",
+        "conference_year": 2024,
+        "source_url": "https://arxiv.org/abs/2311.02303"
+      },
+      {
+        "id": "A04",
+        "name": "DMT",
+        "date": "2023-10-09",
+        "conference_year": 2024,
+        "source_url": "https://arxiv.org/abs/2310.05492"
+      },
+      {
+        "id": "C01",
+        "name": "DFT",
+        "date": "2025-08-07",
+        "conference_year": 2026,
+        "source_url": "https://arxiv.org/abs/2508.05629"
+      }
+    ],
+    "dift_adjacent_case": {
+      "model": "Mistral-7B",
+      "setting": "Mix-Code-Logic",
+      "source_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/b304a04c6a4ac168aa692923814ace17-Paper-Conference.pdf",
+      "table_1_pdf_page": 4,
+      "table_2_pdf_page": 8,
+      "columns": [
+        "xGLUE (paper code-side column)",
+        "LogiQA2"
+      ],
+      "base": [
+        1.2449,
+        31.87
+      ],
+      "corresponding_single_task_sft": [
+        1.7146,
+        31.23
+      ],
+      "mixed_sft": [
+        1.2342,
+        31.17
+      ],
+      "mixed_sft_with_dift": [
+        1.2555,
+        32.51
+      ],
+      "interpretation": "按原表数值，混训两目标均低于对应单训与共同base；加DiFT后两列超过base，但代码侧仍低于Code-only。",
+      "caveats": [
+        "这是本仓库对Table 1/2数值的比较，不是作者对本业务的机制结论。",
+        "Table 1部分箭头与相对base的数值不一致；已核对PDF截图，保留矛盾。",
+        "部分降幅很小；该行没有误差范围，不主张稳健普遍双降。",
+        "Logic-only本身低于逻辑侧base；不能声称两个单训都超过base。",
+        "代码与逻辑任务，不是NL2SQL-noCoT与长程Agent；没有本业务复现。"
+      ]
+    },
+    "recommendation": "保留第一版五篇及当时取舍作为记录，不在解释轮次无声重排；若严格保留五篇且优先问题匹配，优先考虑DiFT替换AgentTuning，保留Agent-FLAN的监督结构视角。",
+    "next_reading_focus": "DiFT原文中单训、混训与共同base的对照及证据限制。",
+    "experiment_run": false
+  }
 }
