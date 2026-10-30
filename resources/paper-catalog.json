@@ -156,6 +156,15 @@
         "same_checkpoint_verified": false,
         "business_solution_established": false,
         "experiment_run": false
+      },
+      "current_disposition": {
+        "updated_on": "2026-10-30",
+        "source": "explicit_user_preference",
+        "status": "background_not_current_method_priority",
+        "reason": "用户表示目前不喜欢 DiFT 方法，要求推进后续阅读。",
+        "evidence_preserved": true,
+        "claim_of_method_invalidity": false,
+        "next_paper_id": "R01"
       }
     },
     {
@@ -1671,9 +1680,14 @@
       "repo_type": "author",
       "evidence_urls": [
         "https://arxiv.org/pdf/2311.02303",
-        "https://github.com/codefuse-ai/MFTCoder/blob/8ba13f44e2036f1412a343bc343dc6cda7383d73/mftcoder_accelerate/src/utils/loss_utils.py"
+        "https://github.com/codefuse-ai/MFTCoder/blob/8ba13f44e2036f1412a343bc343dc6cda7383d73/mftcoder_accelerate/src/utils/loss_utils.py",
+        "https://arxiv.org/html/2311.02303v1",
+        "https://arxiv.org/pdf/2311.02303v1",
+        "https://github.com/codefuse-ai/MFTCoder/blob/8ba13f44e2036f1412a343bc343dc6cda7383d73/mftcoder_accelerate/src/pefts/mft_trainer.py",
+        "https://github.com/codefuse-ai/MFTCoder/blob/8ba13f44e2036f1412a343bc343dc6cda7383d73/mftcoder_accelerate/src/pefts/mft_accelerate.py",
+        "https://github.com/codefuse-ai/MFTCoder/blob/8ba13f44e2036f1412a343bc343dc6cda7383d73/mftcoder_accelerate/src/data/preprocess_data.py"
       ],
-      "reading_depth": "关键正文（可获取预印本v1）+README+损失与训练源码；正式发表另核实",
+      "reading_depth": "arxiv_v1_methods_results_discussion_and_pinned_loss_caller_collator_preprocessing_static_audit",
       "priority": "P1",
       "local_note": "papers/r-01-mftcoder.md",
       "scope_match": "direct_multitask_sft",
@@ -1685,7 +1699,40 @@
       "source_id": "R01",
       "source_register": "resources/root-source-register.json",
       "group": "R",
-      "record_type": "paper"
+      "record_type": "paper",
+      "evidence_reviewed_at": "2026-10-30",
+      "reading_guide": "reading/02-mftcoder.md",
+      "reading_status": "in_progress",
+      "version_read": "arXiv:2311.02303v1; formal KDD identity verified separately",
+      "code_commit": "8ba13f44e2036f1412a343bc343dc6cda7383d73",
+      "code_audit_depth": "static_source_review_not_executed",
+      "reading_evidence": "resources/mftcoder-reading-evidence.json",
+      "main_result_summary": {
+        "vs_mixed_pp": [
+          2.44,
+          2.4
+        ],
+        "vs_corresponding_single_pp": [
+          0.61,
+          1.8
+        ],
+        "metric_order": [
+          "HumanEval",
+          "MBPP"
+        ],
+        "source": "arXiv v1 Table 2"
+      },
+      "implementation_limits": [
+        "Input row is not necessarily an original sample after packing.",
+        "Only case3/case4/coba use task_weights.",
+        "Local present-task normalization does not automatically implement global task equality.",
+        "Instance weight is not passed into this loss by the inspected primary collator."
+      ],
+      "experimental_limits": [
+        "Main comparison specifies Eq.1; later CoBa is separate.",
+        "Independent early stopping does not establish equal cumulative training budget.",
+        "No direct SQL-plus-long-horizon-Agent mixed-training validation."
+      ]
     },
     {
       "id": "R02",

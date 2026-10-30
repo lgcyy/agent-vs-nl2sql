@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0",
+  "paper_id": "R01",
+  "checked_on": "2026-10-30",
+  "formal_publication": {
+    "venue": "KDD 2024",
+    "url": "https://doi.org/10.1145/3637528.3671609"
+  },
+  "technical_version_read": {
+    "version": "arXiv:2311.02303v1",
+    "url": "https://arxiv.org/html/2311.02303v1",
+    "pdf": "https://arxiv.org/pdf/2311.02303v1",
+    "sections": [
+      "3.3",
+      "3.5 Eq.1",
+      "4.1",
+      "4.3 Tables 2/3/5",
+      "6"
+    ],
+    "conference_final_full_text_equivalence_verified": false
+  },
+  "paper_method": {
+    "main_comparison_loss": "Data-Balance Loss, Eq.1; within-task supervised-token mean, then equal task mean",
+    "simple_mixed_interpretation": "The paper describes SFT-Mixed as treating combined tasks as one. Under this grouping Eq.1 reduces to a combined token mean; this reformulation is our mathematical explanation.",
+    "extensions_boundary": "Focal and FAMO-inspired balancing appear in section 3.5, but the main comparison specifies Eq.1. Later CoBa code must not be attributed to all original results."
+  },
+  "table_2": {
+    "location": "v1 PDF printed p.10, Table 2",
+    "base_model": "CodeLlama-13B-Python",
+    "decoding": "zero-shot, greedy",
+    "rows": [
+      {
+        "metric": "HumanEval",
+        "unit": "pass@1 percent",
+        "corresponding_single_task": 59.76,
+        "ordinary_mixed": 57.93,
+        "mft_5tasks": 60.37,
+        "mft_minus_mixed_pp": 2.44,
+        "mft_minus_single_pp": 0.61
+      },
+      {
+        "metric": "MBPP",
+        "unit": "pass@1 percent",
+        "corresponding_single_task": 54.2,
+        "ordinary_mixed": 53.6,
+        "mft_5tasks": 56.0,
+        "mft_minus_mixed_pp": 2.4,
+        "mft_minus_single_pp": 1.8
+      }
+    ],
+    "corresponding_single_reference_is_two_models": true,
+    "multi_run_uncertainty_reported": false
+  },
+  "experimental_scope": {
+    "mixed_and_mft_same_five_task_data_reported": true,
+    "shared_setup_reported": [
+      "base model",
+      "QLoRA trainable parameter locations and initial values",
+      "pack tokenization",
+      "training hyperparameter settings"
+    ],
+    "stopping": "Each model independently stopped using its validation-loss criterion.",
+    "equal_total_tokens_or_steps_verified": false,
+    "sql_evaluation": "Text-to-SQL is an unseen-task transfer evaluation, not SQL-plus-Agent mixed training.",
+    "business_dual_regression_reproduced": false
+  },
+  "code_audit": {
+    "repository": "https://github.com/codefuse-ai/MFTCoder",
+    "commit": "8ba13f44e2036f1412a343bc343dc6cda7383d73",
+    "executed": false,
+    "scope": "Static inspection of CE reduction and primary caller; not a complete reproduction or distributed-backend run.",
+    "files": [
+      {
+        "path": "mftcoder_accelerate/src/utils/loss_utils.py",
+        "git_blob_sha": "5ca7c73a1201db097f6143fab86fd45e11f40b6c",
+        "url": "https://github.com/codefuse-ai/MFTCoder/blob/8ba13f44e2036f1412a343bc343dc6cda7383d73/mftcoder_accelerate/src/utils/loss_utils.py",
+        "focus": "CE reductions, task_weights, effective-token denominators"
+      },
+      {
+        "path": "mftcoder_accelerate/src/pefts/mft_trainer.py",
+        "git_blob_sha": "a2b00fb5ecd23d4221e5e8bbbd9a6e6e39bd6c40",
+        "url": "https://github.com/codefuse-ai/MFTCoder/blob/8ba13f44e2036f1412a343bc343dc6cda7383d73/mftcoder_accelerate/src/pefts/mft_trainer.py",
+        "focus": "training loss call, task weight source, per-microbatch backward"
+      },
+      {
+        "path": "mftcoder_accelerate/src/pefts/mft_accelerate.py",
+        "git_blob_sha": "0a0d42a06685a9a39b1310277fe9221360bdaee4",
+        "url": "https://github.com/codefuse-ai/MFTCoder/blob/8ba13f44e2036f1412a343bc343dc6cda7383d73/mftcoder_accelerate/src/pefts/mft_accelerate.py",
+        "focus": "collator mask alignment, unused instance weight, args.task_weights"
+      },
+      {
+        "path": "mftcoder_accelerate/src/data/preprocess_data.py",
+        "git_blob_sha": "f7226bd3fca94931c198127ef6a6d47f13bbdbfe",
+        "url": "https://github.com/codefuse-ai/MFTCoder/blob/8ba13f44e2036f1412a343bc343dc6cda7383d73/mftcoder_accelerate/src/data/preprocess_data.py",
+        "focus": "role-dependent loss mask, packing and sequence-row units"
+      }
+    ],
+    "reductions": {
+      "case1": {
+        "unit": "all effective tokens in the current call",
+        "uses_task_weights": false
+      },
+      "case2": {
+        "unit": "per-input-row token mean, then mean over input rows",
+        "uses_task_weights": false
+      },
+      "case3": {
+        "unit": "within-task token mean, then task_weights over tasks present in the current call",
+        "uses_task_weights": true
+      },
+      "case4": {
+        "unit": "within-task input-row mean, then task_weights over tasks present in the current call",
+        "uses_task_weights": true
+      },
+      "coba": {
+        "unit": "same reduction branch as case3",
+        "uses_task_weights": true,
+        "weights_updated_by_trainer": true
+      }
+    },
+    "mask_paths": [
+      "When loss_mask is absent, labels=-100 are ignored.",
+      "When loss_mask is supplied, CE is multiplied by it and denominators use its sums.",
+      "The inspected primary collator supplies and aligns loss_mask with next-token labels."
+    ],
+    "instance_weight_limit": "The collator reads instance weight but does not return it in result_batch. The trainer passes task_weights; these are separate from sampling-related weights.",
+    "packing_limit": "case2/case4 average tensor rows, not necessarily original data records or trajectories.",
+    "local_normalization_limit": "Only current rank/microbatch tasks enter weights_sum; the loss function does not aggregate denominators across microbatches or ranks before normalization.",
+    "denominator_assumption": "All relevant per-row/per-task denominators are positive.",
+    "auxiliary_loss_scope": "The formulas describe the CE component; some model configurations may add auxiliary losses."
+  },
+  "teaching_example": {
+    "origin": "Original illustrative arithmetic, not observed business data or a paper experiment.",
+    "scope": "One local aggregation with both tasks present, no packing or splitting, positive masks.",
+    "sql": {
+      "records": 10,
+      "effective_tokens_per_record": 50,
+      "effective_tokens": 500
+    },
+    "agent": {
+      "records": 1,
+      "effective_tokens_per_record": 2000,
+      "effective_tokens": 2000
+    },
+    "coefficients": {
+      "token_mean": {
+        "sql": 0.2,
+        "agent": 0.8
+      },
+      "record_mean": {
+        "sql": 0.9090909090909091,
+        "agent": 0.09090909090909091
+      },
+      "equal_task_mean": {
+        "sql": 0.5,
+        "agent": 0.5
+      }
+    },
+    "limit": "Objective coefficients do not equal measured gradient norms or task-performance gains."
+  },
+  "current_assessment": "A directly inspectable framework for defining the mixture objective; equal task weights are not established as the business optimum or a cure for dual regression.",
+  "reading_guide": "reading/02-mftcoder.md",
+  "training_or_replication_run": false
+}

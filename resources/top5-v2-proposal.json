@@ -65,6 +65,16 @@
         "same_checkpoint_verified": false,
         "business_solution_established": false,
         "experiment_run": false
+      },
+      "reading_status": "background_after_two_sessions",
+      "current_disposition": {
+        "updated_on": "2026-10-30",
+        "source": "explicit_user_preference",
+        "status": "background_not_current_method_priority",
+        "reason": "用户表示目前不喜欢 DiFT 方法，要求推进后续阅读。",
+        "evidence_preserved": true,
+        "claim_of_method_invalidity": false,
+        "next_paper_id": "R01"
       }
     },
     {
@@ -79,7 +89,10 @@
       "stars": 711,
       "citations_display": "OpenAlex合并条目23（2026-10-29）",
       "citation_work": "W4401863706",
-      "caveat": "当前代码含后续CoBa，需与原论文贡献区分；代码任务证据不等于当前业务适用"
+      "caveat": "当前代码含后续CoBa，需与原论文贡献区分；代码任务证据不等于当前业务适用",
+      "reading_status": "in_progress",
+      "reading_guide": "reading/02-mftcoder.md",
+      "reading_evidence": "resources/mftcoder-reading-evidence.json"
     },
     {
       "rank": 3,
@@ -92,7 +105,8 @@
       "repo": "realYuanLi/Data-Mixing-Optimization",
       "stars": 0,
       "citations_display": "跨版本未核全",
-      "caveat": "0 Stars是查询值；已有实质代码，未复现；平均验证损失不保证两业务指标同时恢复"
+      "caveat": "0 Stars是查询值；已有实质代码，未复现；平均验证损失不保证两业务指标同时恢复",
+      "reading_status": "queued"
     },
     {
       "rank": 4,
@@ -106,7 +120,8 @@
       "stars": 363,
       "citations_display": "OpenAlex合并条目13（2026-10-29）",
       "citation_work": "W4402683785",
-      "caveat": "公开仓库主要为数据/模型发布与文档，主训练实现未核实；不能据此认定当前原因"
+      "caveat": "公开仓库主要为数据/模型发布与文档，主训练实现未核实；不能据此认定当前原因",
+      "reading_status": "queued"
     },
     {
       "rank": 5,
@@ -119,7 +134,8 @@
       "repo": "yongliang-wu/DFT",
       "stars": 928,
       "citations_display": "跨版本未核全",
-      "caveat": "与DiFT不同；必须连同事实知识负例阅读，未直接验证SQL+Agent混训"
+      "caveat": "与DiFT不同；必须连同事实知识负例阅读，未直接验证SQL+Agent混训",
+      "reading_status": "queued"
     }
   ],
   "changes": {
@@ -189,15 +205,44 @@
   "confirmed_on": "2026-10-30",
   "confirmation_context": "用户同意并要求从第一篇开始讲解。",
   "current_reading": {
-    "id": "A01",
-    "guide": "reading/01-dift.md",
+    "id": "R01",
+    "guide": "reading/02-mftcoder.md",
     "started_on": "2026-10-30",
-    "latest_guide": "reading/01-dift-evidence.md",
-    "guides": [
-      "reading/01-dift.md",
-      "reading/01-dift-evidence.md"
-    ],
     "last_reviewed_on": "2026-10-30",
-    "latest_focus": "效果强度、随机消融、参数位置与更新方向的区别"
+    "latest_focus": "有效监督token、输入行和任务级损失汇聚；主表效果与局部实现边界"
+  },
+  "reading_history": [
+    {
+      "id": "A01",
+      "guide": "reading/01-dift.md",
+      "started_on": "2026-10-30",
+      "latest_guide": "reading/01-dift-evidence.md",
+      "guides": [
+        "reading/01-dift.md",
+        "reading/01-dift-evidence.md"
+      ],
+      "last_reviewed_on": "2026-10-30",
+      "latest_focus": "效果强度、随机消融、参数位置与更新方向的区别",
+      "status": "background_after_two_sessions",
+      "paused_on": "2026-10-30",
+      "reason": "user_deprioritized_method"
+    }
+  ],
+  "active_reading_queue": [
+    "R01",
+    "A02",
+    "B02",
+    "C01"
+  ],
+  "method_dispositions": {
+    "A01": {
+      "updated_on": "2026-10-30",
+      "source": "explicit_user_preference",
+      "status": "background_not_current_method_priority",
+      "reason": "用户表示目前不喜欢 DiFT 方法，要求推进后续阅读。",
+      "evidence_preserved": true,
+      "claim_of_method_invalidity": false,
+      "next_paper_id": "R01"
+    }
   }
 }
